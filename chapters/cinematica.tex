@@ -1,2 +1,419 @@
 \chapter{Cinematica}
-[WIP]
+
+La \textbf{cinematica} è il ramo della meccanica che si occupa dello studio del \textbf{moto dei corpi}, descrivendone le caratteristiche geometriche e temporali \emph{senza analizzare le cause fisiche} che lo producono. In altre parole, la cinematica si concentra sullo studio di \emph{come} un corpo si muove, prescindendo dalle forze o dalle interazioni responsabili del moto stesso.
+
+Per poter descrivere quantitativamente il movimento di un corpo è necessario introdurre alcuni \textbf{concetti fondamentali}, quali il \textbf{sistema di riferimento}, la \textbf{posizione}, la \textbf{traiettoria}, la \textbf{velocità} e l'\textbf{accelerazione}. Tali grandezze permettono di costruire una descrizione matematica completa del moto, valida indipendentemente dalla natura fisica del corpo considerato.
+
+Nello studio della cinematica, i corpi reali vengono spesso schematizzati come \emph{punti materiali}, ovvero oggetti dotati di massa ma privi di estensione spaziale. Questa approssimazione risulta lecita quando le dimensioni del corpo sono trascurabili rispetto alle distanze percorse o quando la forma e la rotazione del corpo non influenzano in modo significativo il moto analizzato.
+
+In questo capitolo verranno introdotti i concetti fondamentali della \textbf{cinematica del punto materiale}, partendo dalla definizione di sistema di riferimento e di posizione, per poi analizzare le grandezze cinematiche principali e le loro relazioni matematiche.
+
+\section{Sistema di riferimento e posizione}
+
+\subsection{Vettori}
+
+Un vettore è caratterizzato da \textbf{modulo}, \textbf{direzione} e \textbf{verso}. Il \textbf{modulo} del vettore posizione $\vec{r}$, indicato con $|\vec{r}|$, rappresenta la distanza del punto materiale dall'origine del sistema di riferimento ed è dato da:
+\[
+|\vec{r}| = \sqrt{x^2 + y^2 + z^2}
+\]
+
+Tra le operazioni fondamentali sui vettori si ricordano:
+\begin{itemize}
+    \item \textbf{Somma vettoriale}: $\vec{a} + \vec{b}$
+    \item \textbf{Differenza vettoriale}: $\vec{a} - \vec{b}$
+    \item \textbf{Moltiplicazione per uno scalare}: $\lambda \vec{a}$
+    \item \textbf{Prodotto scalare}:
+    \[
+    \vec{a} \cdot \vec{b} = |\vec{a}|\,|\vec{b}| \cos\theta
+    \]
+\end{itemize}
+
+Il prodotto scalare è una grandezza \emph{scalare} e risulta particolarmente utile nello studio delle grandezze cinematiche e dinamiche.
+
+\subsection{Sistema di riferimento}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/coordinate_cartesiane_sistema.png}
+    \caption{Esempio di sistema di riferimento cartesiano tridimensionale.}
+    \label{fig:sistema_riferimento}
+\end{figure}
+
+La descrizione del moto di un corpo non può prescindere dalla scelta di un \textbf{sistema di riferimento}. Un sistema di riferimento è costituito da:
+\begin{itemize}
+    \item un \textbf{osservatore};
+    \item un \textbf{sistema di coordinate spaziali};
+    \item un \textbf{orologio} per la misura del tempo.
+\end{itemize}
+
+Ogni misura di posizione, velocità o accelerazione è sempre \emph{relativa al sistema di riferimento adottato}. Di conseguenza, lo stesso fenomeno fisico può essere descritto in modo differente se osservato da sistemi di riferimento diversi.
+
+Nel caso più semplice si utilizza un \textbf{sistema di riferimento cartesiano}. Nel moto unidimensionale è sufficiente introdurre un solo asse orientato, generalmente indicato con l'asse $x$, dotato di un'origine e di un verso positivo.
+
+\subsection{Posizione e vettore posizione}
+
+La \textbf{posizione} di un punto materiale è individuata, in generale, da un \emph{vettore}, detto \textbf{vettore posizione}. Esso è definito come il vettore che congiunge l'origine del sistema di riferimento con la posizione occupata dal punto materiale all'istante di tempo considerato.
+
+Indicando con $\vec{r}(t)$ il vettore posizione, si ha:
+\[
+\vec{r} = \vec{r}(t)
+\]
+
+Nel caso tridimensionale, il vettore posizione può essere espresso in coordinate cartesiane come:
+\[
+\vec{r}(t) = x(t)\,\hat{\imath} + y(t)\,\hat{\jmath} + z(t)\,\hat{k}
+\]
+dove $x(t)$, $y(t)$ e $z(t)$ sono le coordinate del punto materiale lungo i tre assi cartesiani, mentre $\hat{\imath}$, $\hat{\jmath}$ e $\hat{k}$ sono i \textbf{versori} associati agli assi.
+
+
+\section{Traiettoria, legge oraria e velocità}
+
+\subsection{Traiettoria}
+
+La \textbf{traiettoria} di un punto materiale è il \emph{luogo geometrico} dei punti occupati dal corpo durante il suo moto in un dato sistema di riferimento. Essa rappresenta l'insieme delle posizioni assunte dal vettore posizione $\vec{r}(t)$ al variare del tempo.
+
+Se la traiettoria è una linea retta si parla di \emph{moto rettilineo}, mentre se è una curva il moto è detto \emph{curvilineo}. La forma della traiettoria dipende dalla scelta del sistema di riferimento.
+
+\subsection{Legge oraria del moto}
+
+Per descrivere completamente un moto non è sufficiente conoscere la traiettoria, ma è necessario sapere \emph{come la posizione varia nel tempo}. A tal fine si introduce la \textbf{legge oraria del moto}, definita come la relazione matematica:
+\[
+\vec{r} = \vec{r}(t)
+\]
+
+Nel caso di un moto unidimensionale lungo l'asse $x$, la legge oraria si riduce a:
+\[
+x = x(t)
+\]
+
+\subsection{Velocità media e velocità istantanea}
+
+La \textbf{velocità media} è definita come il rapporto tra lo spostamento del punto materiale e l'intervallo di tempo impiegato:
+\[
+\vec{v}_m = \frac{\Delta \vec{r}}{\Delta t}
+\]
+
+Nel limite in cui l'intervallo di tempo tende a zero si ottiene la \textbf{velocità istantanea}, definita come:
+\[
+\vec{v}(t) = \frac{d\vec{r}}{dt}
+\]
+
+La velocità istantanea è un vettore tangente alla traiettoria in ogni punto e rappresenta una delle grandezze fondamentali della cinematica.
+
+\section{Spostamento e accelerazione}
+
+\subsection{Spostamento}
+
+Nel descrivere il moto di un punto materiale è importante distinguere tra \textbf{posizione} e \textbf{spostamento}.  
+Lo \textbf{spostamento} è una grandezza vettoriale che descrive la variazione della posizione del punto materiale tra due istanti di tempo $t_1$ e $t_2$.
+
+Indicando con $\vec{r}(t_1)$ e $\vec{r}(t_2)$ i vettori posizione agli istanti iniziale e finale, il vettore spostamento $\Delta \vec{r}$ è definito come:
+\[
+\Delta \vec{r} = \vec{r}(t_2) - \vec{r}(t_1)
+\]
+
+Lo spostamento dipende \emph{solo} dalla posizione iniziale e finale del punto materiale e non dal percorso seguito durante il moto. Per questo motivo, due moti differenti possono avere lo stesso spostamento.
+
+Nel caso di un moto unidimensionale lungo l'asse $x$, lo spostamento si riduce a una grandezza scalare:
+\[
+\Delta x = x(t_2) - x(t_1)
+\]
+
+È importante non confondere lo spostamento con la \textbf{distanza percorsa}, che rappresenta invece la lunghezza totale della traiettoria seguita dal punto materiale ed è una grandezza \emph{scalare}.
+
+\subsection{Accelerazione media}
+
+Così come la velocità descrive la variazione della posizione nel tempo, l'\textbf{accelerazione} descrive la variazione della velocità nel tempo.  
+L'\textbf{accelerazione media} è definita come il rapporto tra la variazione della velocità e l'intervallo di tempo in cui tale variazione avviene:
+\[
+\vec{a}_m = \frac{\Delta \vec{v}}{\Delta t}
+\]
+dove:
+\[
+\Delta \vec{v} = \vec{v}(t_2) - \vec{v}(t_1)
+\]
+
+L'accelerazione media è una grandezza \textbf{vettoriale} e può essere diversa da zero anche quando il modulo della velocità rimane costante, come accade nel moto circolare.
+
+\subsection{Accelerazione istantanea}
+
+Nel limite in cui l'intervallo di tempo tende a zero, si definisce l'\textbf{accelerazione istantanea} come:
+\[
+\vec{a}(t) = \frac{d\vec{v}}{dt}
+\]
+
+Poiché la velocità è a sua volta la derivata temporale del vettore posizione, l'accelerazione può essere espressa anche come:
+\[
+\vec{a}(t) = \frac{d^2\vec{r}}{dt^2}
+\]
+
+L'accelerazione istantanea fornisce una descrizione completa delle variazioni del moto, poiché tiene conto sia delle variazioni del \emph{modulo} della velocità sia delle variazioni della sua \emph{direzione}. Essa rappresenta una delle grandezze fondamentali della cinematica ed è alla base dello studio della dinamica.
+
+\section{Moti rettilinei}
+
+I \textbf{moti rettilinei} sono quei moti in cui la traiettoria del punto materiale è una \emph{linea retta}. In questi casi, il moto può essere descritto completamente mediante una sola coordinata spaziale, generalmente indicata con $x$.
+
+Tra i moti rettilinei rivestono particolare importanza il \textbf{moto rettilineo uniforme} e il \textbf{moto rettilineo uniformemente accelerato}, che rappresentano modelli fondamentali della cinematica.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{images/mr_graphs.png}
+    \caption{Grafici velocità--tempo per diversi tipi di moto: 
+    (a) \textbf{moto rettilineo uniforme}, caratterizzato da velocità costante nel tempo e accelerazione nulla; 
+    (b) \textbf{moto rettilineo uniformemente accelerato}, in cui la velocità varia linearmente nel tempo a causa di un'accelerazione costante; 
+    (c) \textbf{moto con accelerazione variabile}, nel quale la velocità cresce in modo non lineare nel tempo.}
+    \label{fig:mr_graphs}
+\end{figure}
+
+\subsection{Moto rettilineo uniforme (MRU)}
+
+Il \textbf{moto rettilineo uniforme} è caratterizzato da una \textbf{velocità costante nel tempo}.  
+Di conseguenza:
+\begin{itemize}
+    \item l'accelerazione è nulla;
+    \item il corpo percorre spazi uguali in tempi uguali.
+\end{itemize}
+
+La legge oraria del MRU è:
+\[
+x(t) = x_0 + vt
+\]
+dove:
+\begin{itemize}
+    \item $x_0$ è la posizione iniziale;
+    \item $v$ è la velocità costante;
+    \item $t$ è il tempo.
+\end{itemize}
+
+La velocità istantanea coincide in ogni istante con la velocità media:
+\[
+v = \frac{\Delta x}{\Delta t}
+\]
+
+\subsubsection*{Esempio: MRU}
+
+Un punto materiale si muove con velocità costante $v = 2\,\mathrm{m/s}$ e posizione iniziale $x_0 = 1\,\mathrm{m}$.  
+Determinare la posizione al tempo $t = 4\,\mathrm{s}$.
+
+\emph{Soluzione.}  
+Applicando la legge oraria:
+\[
+x(4) = 1 + 2 \cdot 4 = 9\,\mathrm{m}
+\]
+
+\subsection{Moto rettilineo uniformemente accelerato (MRUA)}
+
+Il \textbf{moto rettilineo uniformemente accelerato} è caratterizzato da una \textbf{accelerazione costante}. In questo caso, la velocità varia linearmente nel tempo.
+
+Le equazioni fondamentali del MRUA sono:
+\[
+\begin{aligned}
+v(t) &= v_0 + at \\
+x(t) &= x_0 + v_0 t + \frac{1}{2} a t^2 \\
+v^2 &= v_0^2 + 2a(x - x_0)
+\end{aligned}
+\]
+
+dove:
+\begin{itemize}
+    \item $x_0$ è la posizione iniziale;
+    \item $v_0$ è la velocità iniziale;
+    \item $a$ è l'accelerazione costante.
+\end{itemize}
+
+\subsubsection*{Esempio: MRUA}
+
+Un punto materiale parte dalla posizione $x_0 = 0$ con velocità iniziale $v_0 = 2\,\mathrm{m/s}$ ed è soggetto a un'accelerazione costante $a = 1\,\mathrm{m/s^2}$.  
+Determinare la posizione al tempo $t = 3\,\mathrm{s}$.
+
+\emph{Soluzione.}  
+Utilizzando la legge oraria:
+\[
+x(3) = 0 + 2 \cdot 3 + \frac{1}{2} \cdot 1 \cdot 3^2 = 6 + 4.5 = 10.5\,\mathrm{m}
+\]
+
+\subsection{Confronto tra MRU e MRUA}
+
+Dal confronto tra i due moti emerge che:
+\begin{itemize}
+    \item nel MRU la velocità è costante e l'accelerazione è nulla;
+    \item nel MRUA l'accelerazione è costante e la velocità varia linearmente nel tempo;
+    \item i grafici $x(t)$, $v(t)$ e $a(t)$ assumono forme caratteristiche differenti.
+\end{itemize}
+
+\section{Moto balistico e moto parabolico}
+
+Il \textbf{moto balistico}, detto anche \textbf{moto parabolico}, è un esempio fondamentale di \emph{moto curvilineo nel piano}. Esso descrive il movimento di un punto materiale soggetto unicamente alla forza di gravità, trascurando la resistenza dell’aria. In tali condizioni, l’accelerazione è costante e diretta verticalmente verso il basso.
+
+Il moto balistico può essere interpretato come la \textbf{composizione di due moti indipendenti}:
+\begin{itemize}
+    \item un \emph{moto rettilineo uniforme} lungo la direzione orizzontale;
+    \item un \emph{moto rettilineo uniformemente accelerato} lungo la direzione verticale.
+\end{itemize}
+
+\subsection{Sistema di riferimento e velocità iniziale}
+
+Si consideri un sistema di riferimento cartesiano con asse $x$ orizzontale e asse $y$ verticale, con origine nel punto di lancio.  
+La velocità iniziale $\vec{v}_0$ forma un angolo $\alpha$ con l’orizzontale ed è scomposta nelle sue componenti lungo gli assi cartesiani, come mostrato in Fig.~\ref{fig:moto_parabolico}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/moto_parabolico.png}
+    \caption{Schema del moto parabolico: scomposizione della velocità iniziale $\vec{v}_0$ nelle componenti $v_{0x}$ e $v_{0y}$ e traiettoria parabolica del punto materiale nel piano $x$--$y$.}
+    \label{fig:moto_parabolico}
+\end{figure}
+
+Le componenti della velocità iniziale sono:
+\[
+\begin{aligned}
+v_{0x} &= v_0 \cos\alpha \\
+v_{0y} &= v_0 \sin\alpha
+\end{aligned}
+\]
+
+L’accelerazione di gravità è rappresentata dal vettore:
+\[
+\vec{a} = (0,\,-g)
+\qquad g \simeq 9{,}81\,\mathrm{m/s^2}
+\]
+
+\subsection{Leggi orarie del moto}
+
+Tenendo conto dell’indipendenza dei moti lungo gli assi $x$ e $y$, le leggi orarie del moto balistico risultano:
+\[
+\begin{aligned}
+x(t) &= x_0 + v_{0x}\, t \\
+y(t) &= y_0 + v_{0y}\, t - \frac{1}{2} g t^2
+\end{aligned}
+\]
+
+Nel caso di lancio dall’origine ($x_0 = 0$, $y_0 = 0$) tali equazioni si semplificano ulteriormente.
+
+\subsection{Equazione della traiettoria}
+
+Eliminando il tempo $t$ dalle leggi orarie, si ottiene l’equazione della traiettoria.  
+Dalla prima equazione:
+\[
+t = \frac{x}{v_{0x}}
+\]
+
+Sostituendo nella seconda:
+\[
+y = x \tan\alpha - \frac{g}{2 v_0^2 \cos^2\alpha}\, x^2
+\]
+
+Questa equazione rappresenta una \textbf{parabola}, da cui il nome di \emph{moto parabolico}.
+
+\subsection{Gittata e altezza massima}
+
+Nel caso di lancio dal suolo, la \textbf{gittata} $R$ del moto è:
+\[
+R = \frac{v_0^2}{g} \sin(2\alpha)
+\]
+
+L’\textbf{altezza massima} raggiunta dal punto materiale è:
+\[
+h_{\text{max}} = \frac{v_0^2 \sin^2\alpha}{2g}
+\]
+
+La gittata risulta massima per un angolo di lancio pari a $\alpha = 45^\circ$.
+
+\subsection{Esempio: lancio parabolico}
+
+Un punto materiale viene lanciato dal suolo con velocità iniziale $v_0 = 20\,\mathrm{m/s}$ e angolo $\alpha = 30^\circ$.  
+Determinare la gittata del moto.
+
+\emph{Soluzione.}  
+Applicando la formula della gittata:
+\[
+R = \frac{20^2}{9{,}81} \sin(60^\circ) \approx 35{,}3\,\mathrm{m}
+\]
+
+\section{Moto circolare uniforme}
+
+Il \textbf{moto circolare uniforme} è un particolare caso di \emph{moto curvilineo} in cui un punto materiale si muove lungo una \textbf{circonferenza} con \textbf{velocità di modulo costante}.  
+Sebbene il modulo della velocità rimanga costante, il moto non è uniforme nel senso vettoriale, poiché la \emph{direzione} della velocità cambia continuamente nel tempo.
+
+\subsection{Descrizione geometrica del moto}
+
+Si consideri un punto materiale che si muove su una circonferenza di raggio $R$, con centro $O$.  
+La posizione del punto può essere descritta mediante l’\textbf{angolo} $\theta(t)$ individuato dal raggio vettore rispetto a un asse di riferimento fissato.
+
+La lunghezza dell’arco di circonferenza percorso è legata all’angolo $\theta$ dalla relazione:
+\[
+s = R \theta
+\]
+
+\subsection{Velocità angolare}
+
+Si definisce \textbf{velocità angolare} $\omega$ il rapporto tra la variazione dell’angolo e l’intervallo di tempo:
+\[
+\omega = \frac{d\theta}{dt}
+\]
+
+Nel moto circolare uniforme la velocità angolare è \textbf{costante}:
+\[
+\theta(t) = \theta_0 + \omega t
+\]
+
+La velocità angolare è legata al \textbf{periodo} $T$ del moto (tempo necessario per compiere un giro completo) dalla relazione:
+\[
+\omega = \frac{2\pi}{T}
+\]
+
+\subsection{Velocità tangenziale}
+
+La \textbf{velocità tangenziale} $\vec{v}$ è una grandezza vettoriale sempre \emph{tangente} alla traiettoria circolare e perpendicolare al raggio vettore.  
+Il suo modulo è dato da:
+\[
+v = R \omega
+\]
+
+Sebbene il modulo della velocità sia costante, la velocità varia nel tempo a causa del continuo cambiamento della sua direzione.
+
+\subsection{Accelerazione centripeta}
+
+Nel moto circolare uniforme è presente un’accelerazione non nulla, detta \textbf{accelerazione centripeta}, diretta sempre verso il centro della circonferenza.
+
+Il modulo dell’accelerazione centripeta è:
+\[
+a_c = \frac{v^2}{R} = R \omega^2
+\]
+
+L’accelerazione centripeta è responsabile esclusivamente del cambiamento di direzione della velocità e non del suo modulo.
+
+\subsection{Significato fisico}
+
+Il moto circolare uniforme costituisce un esempio fondamentale di moto in cui:
+\begin{itemize}
+    \item la velocità ha modulo costante ma direzione variabile;
+    \item l’accelerazione è sempre perpendicolare alla velocità;
+    \item la presenza di accelerazione non implica necessariamente una variazione del modulo della velocità.
+\end{itemize}
+
+Tali caratteristiche rendono il moto circolare uniforme un modello essenziale per la comprensione di numerosi fenomeni fisici, come il moto dei pianeti, il funzionamento delle giostre e il moto di cariche in campi magnetici.
+
+\subsection{Esempio: moto circolare uniforme}
+
+Un punto materiale si muove di moto circolare uniforme su una circonferenza di raggio $R = 2\,\mathrm{m}$ con velocità angolare $\omega = 3\,\mathrm{rad/s}$.  
+Determinare il modulo della velocità e dell’accelerazione centripeta.
+
+\emph{Soluzione.}  
+La velocità tangenziale vale:
+\[
+v = R \omega = 2 \cdot 3 = 6\,\mathrm{m/s}
+\]
+
+L’accelerazione centripeta risulta:
+\[
+a_c = R \omega^2 = 2 \cdot 3^2 = 18\,\mathrm{m/s^2}
+\]
+
+\section*{Riferimenti}
+\begin{itemize}
+    \item Capitolo 1 del libro \citetitle{gasparini2019fisica} \cite{gasparini2019fisica}.
+    \item Materiale visto a lezione.
+    \item Figura \ref{fig:sistema_riferimento} da Wikipedia Commons: \url{https://commons.wikimedia.org/wiki/Main_Page}.
+    \item Figura \ref{fig:mr_graphs}: \url{https://seo-fe.vedantu.com/physics/velocity-time-graph}.
+    \item Figura \ref{fig:moto_parabolico} da Youmath: \url{https://www.youmath.it/lezioni/fisica/cinematica/2956-moto-parabolico-moto-del-proiettile.html}.
+\end{itemize}
