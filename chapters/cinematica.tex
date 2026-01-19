@@ -95,7 +95,7 @@ La \textbf{velocità media} è definita come il rapporto tra lo spostamento del 
 
 Nel limite in cui l'intervallo di tempo tende a zero si ottiene la \textbf{velocità istantanea}, definita come:
 \[
-\vec{v}(t) = \frac{d\vec{r}}{dt}
+\boxed{\vec{v}(t) = \frac{d\vec{r}}{dt}}
 \]
 
 La velocità istantanea è un vettore tangente alla traiettoria in ogni punto e rappresenta una delle grandezze fondamentali della cinematica.
@@ -139,12 +139,12 @@ L'accelerazione media è una grandezza \textbf{vettoriale} e può essere diversa
 
 Nel limite in cui l'intervallo di tempo tende a zero, si definisce l'\textbf{accelerazione istantanea} come:
 \[
-\vec{a}(t) = \frac{d\vec{v}}{dt}
+\boxed{\vec{a}(t) = \frac{d\vec{v}}{dt}}
 \]
 
 Poiché la velocità è a sua volta la derivata temporale del vettore posizione, l'accelerazione può essere espressa anche come:
 \[
-\vec{a}(t) = \frac{d^2\vec{r}}{dt^2}
+\boxed{\vec{a}(t) = \frac{d^2\vec{r}}{dt^2}}
 \]
 
 L'accelerazione istantanea fornisce una descrizione completa delle variazioni del moto, poiché tiene conto sia delle variazioni del \emph{modulo} della velocità sia delle variazioni della sua \emph{direzione}. Essa rappresenta una delle grandezze fondamentali della cinematica ed è alla base dello studio della dinamica.
@@ -174,10 +174,40 @@ Di conseguenza:
     \item il corpo percorre spazi uguali in tempi uguali.
 \end{itemize}
 
-La legge oraria del MRU è:
+\paragraph{Derivazione della legge oraria.}
+
+Nel moto rettilineo uniforme la velocità è costante nel tempo. In forma differenziale, il legame tra posizione e velocità è espresso dalla relazione:
 \[
-x(t) = x_0 + vt
+d\vec{r} = \vec{v}\,dt
 \]
+
+Integrando entrambi i membri tra un istante iniziale $t_0$ e un generico istante $t$, si ottiene:
+\[
+\int_{\vec{r}(t_0)}^{\vec{r}(t)} d\vec{r}
+=
+\int_{t_0}^{t} \vec{v}\,dt
+\]
+
+Poiché la velocità $\vec{v}$ è costante, essa può essere portata fuori dall'integrale:
+\[
+\int_{\vec{r}(t_0)}^{\vec{r}(t)} d\vec{r}
+=
+\vec{v}\,\int_{t_0}^{t} dt \quad
+\Rightarrow
+\quad
+\vec{r}(t) - \vec{r}(t_0) = \vec{v}(t - t_0)
+\]
+
+Da cui segue l'espressione della legge oraria vettoriale del moto rettilineo uniforme:
+\[
+\vec{r}(t) = \vec{r}(t_0) + \vec{v}(t - t_0)
+\]
+
+Nel caso di moto unidimensionale lungo l'asse $x$, ponendo $t_0 = 0$ e indicando con $x_0$ la posizione iniziale, la legge oraria assume la forma scalare:
+\[
+\boxed{x(t) = x_0 + vt}
+\]
+
 dove:
 \begin{itemize}
     \item $x_0$ è la posizione iniziale;
@@ -185,10 +215,11 @@ dove:
     \item $t$ è il tempo.
 \end{itemize}
 
-La velocità istantanea coincide in ogni istante con la velocità media:
+Nel moto rettilineo uniforme la velocità istantanea coincide in ogni istante con la velocità media, infatti:
 \[
 v = \frac{\Delta x}{\Delta t}
 \]
+poiché lo spostamento è direttamente proporzionale all'intervallo di tempo considerato.
 
 \subsubsection*{Esempio: MRU}
 
@@ -203,7 +234,7 @@ x(4) = 1 + 2 \cdot 4 = 9\,\mathrm{m}
 
 \subsection{Moto rettilineo uniformemente accelerato (MRUA)}
 
-Il \textbf{moto rettilineo uniformemente accelerato} è caratterizzato da una \textbf{accelerazione costante}. In questo caso, la velocità varia linearmente nel tempo.
+Il \textbf{moto rettilineo uniformemente accelerato} è caratterizzato da una \textbf{accelerazione costante}. In questo tipo di moto la velocità varia linearmente nel tempo, mentre la posizione varia quadraticamente.
 
 Le equazioni fondamentali del MRUA sono:
 \[
@@ -221,6 +252,58 @@ dove:
     \item $a$ è l'accelerazione costante.
 \end{itemize}
 
+\paragraph{Derivazione della legge oraria.}
+
+Nel moto rettilineo uniformemente accelerato l'accelerazione è costante. La relazione fondamentale tra velocità e accelerazione è:
+\[
+a = \frac{dv}{dt}
+\]
+
+Scritta in forma differenziale, essa diventa:
+\[
+dv = a\,dt
+\]
+
+Integrando tra un istante iniziale $t_0$ e un generico istante $t$, si ottiene:
+\[
+\int_{v(t_0)}^{v(t)} dv = \int_{t_0}^{t} a\,dt
+\]
+
+Poiché l'accelerazione $a$ è costante:
+\[
+v(t) - v(t_0) = a(t - t_0)
+\]
+
+Indicando con $v_0 = v(t_0)$ la velocità iniziale e ponendo, senza perdita di generalità, $t_0 = 0$, si ricava la legge oraria della velocità:
+\[
+\boxed{v(t) = v_0 + at}
+\]
+
+Per ottenere la legge oraria della posizione, si utilizza la relazione fondamentale:
+\[
+v = \frac{dx}{dt}
+\]
+
+ovvero, in forma differenziale:
+\[
+dx = v(t)\,dt = (v_0 + at)\,dt
+\]
+
+Integrando tra $t_0 = 0$ e $t$, si ottiene:
+\[
+\int_{x_0}^{x(t)} dx = \int_{0}^{t} (v_0 + at)\,dt
+\]
+
+da cui:
+\[
+x(t) - x_0 = v_0 t + \frac{1}{2} a t^2
+\]
+
+e quindi la legge oraria del MRUA:
+\[
+\boxed{x(t) = x_0 + v_0 t + \frac{1}{2} a t^2}
+\]
+
 \subsubsection*{Esempio: MRUA}
 
 Un punto materiale parte dalla posizione $x_0 = 0$ con velocità iniziale $v_0 = 2\,\mathrm{m/s}$ ed è soggetto a un'accelerazione costante $a = 1\,\mathrm{m/s^2}$.  
@@ -232,91 +315,157 @@ Utilizzando la legge oraria:
 x(3) = 0 + 2 \cdot 3 + \frac{1}{2} \cdot 1 \cdot 3^2 = 6 + 4.5 = 10.5\,\mathrm{m}
 \]
 
-\subsection{Confronto tra MRU e MRUA}
-
-Dal confronto tra i due moti emerge che:
-\begin{itemize}
-    \item nel MRU la velocità è costante e l'accelerazione è nulla;
-    \item nel MRUA l'accelerazione è costante e la velocità varia linearmente nel tempo;
-    \item i grafici $x(t)$, $v(t)$ e $a(t)$ assumono forme caratteristiche differenti.
-\end{itemize}
-
 \section{Moto balistico e moto parabolico}
 
-Il \textbf{moto balistico}, detto anche \textbf{moto parabolico}, è un esempio fondamentale di \emph{moto curvilineo nel piano}. Esso descrive il movimento di un punto materiale soggetto unicamente alla forza di gravità, trascurando la resistenza dell’aria. In tali condizioni, l’accelerazione è costante e diretta verticalmente verso il basso.
+Il \textbf{moto balistico}, detto anche \textbf{moto parabolico}, è un caso di \emph{moto curvilineo nel piano}. Esso descrive il movimento di un punto materiale soggetto unicamente alla forza di gravità, trascurando la resistenza dell’aria. In tali condizioni l’accelerazione è costante e diretta verticalmente verso il basso.
 
-Il moto balistico può essere interpretato come la \textbf{composizione di due moti indipendenti}:
-\begin{itemize}
-    \item un \emph{moto rettilineo uniforme} lungo la direzione orizzontale;
-    \item un \emph{moto rettilineo uniformemente accelerato} lungo la direzione verticale.
-\end{itemize}
-
-\subsection{Sistema di riferimento e velocità iniziale}
-
-Si consideri un sistema di riferimento cartesiano con asse $x$ orizzontale e asse $y$ verticale, con origine nel punto di lancio.  
-La velocità iniziale $\vec{v}_0$ forma un angolo $\alpha$ con l’orizzontale ed è scomposta nelle sue componenti lungo gli assi cartesiani, come mostrato in Fig.~\ref{fig:moto_parabolico}.
-
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/moto_parabolico.png}
-    \caption{Schema del moto parabolico: scomposizione della velocità iniziale $\vec{v}_0$ nelle componenti $v_{0x}$ e $v_{0y}$ e traiettoria parabolica del punto materiale nel piano $x$--$y$.}
+    \includegraphics[width=0.6\textwidth]{images/moto_parabolico.png}
+    \caption{Moto balistico: un punto materiale viene lanciato con velocità iniziale $\vec{v}_0$ che forma un angolo $\alpha$ con l’orizzontale. La traiettoria seguita è una parabola.}
     \label{fig:moto_parabolico}
 \end{figure}
 
-Le componenti della velocità iniziale sono:
+Il moto balistico può essere interpretato come la \textbf{composizione di due moti indipendenti}:
+\begin{itemize}
+    \item un moto rettilineo uniforme lungo la direzione orizzontale;
+    \item un moto rettilineo uniformemente accelerato lungo la direzione verticale.
+\end{itemize}
+
+\subsection{Sistema di riferimento e condizioni iniziali}
+
+Si consideri un sistema di riferimento cartesiano con asse $x$ orizzontale e asse $y$ verticale, con origine nel punto di lancio.  
+La velocità iniziale $\vec{v}_0$ forma un angolo $\alpha$ con l’orizzontale ed è scomposta nelle componenti:
 \[
-\begin{aligned}
-v_{0x} &= v_0 \cos\alpha \\
-v_{0y} &= v_0 \sin\alpha
-\end{aligned}
+\vec{v}_0 = (v_{0x}, v_{0y}) = (v_0\cos\alpha,\, v_0\sin\alpha)
 \]
 
-L’accelerazione di gravità è rappresentata dal vettore:
+L’unica accelerazione agente è quella di gravità:
 \[
-\vec{a} = (0,\,-g)
+\vec{a} = (0,\,-g),
 \qquad g \simeq 9{,}81\,\mathrm{m/s^2}
 \]
 
-\subsection{Leggi orarie del moto}
+\subsection{Derivazione delle leggi orarie}
 
-Tenendo conto dell’indipendenza dei moti lungo gli assi $x$ e $y$, le leggi orarie del moto balistico risultano:
+Le componenti dell’accelerazione sono:
+\[
+a_x = 0,
+\qquad
+a_y = -g
+\]
+
+Dalla relazione fondamentale della cinematica:
+\[
+\vec{a} = \frac{d\vec{v}}{dt}
+\]
+si ottengono, separatamente lungo i due assi:
 \[
 \begin{aligned}
-x(t) &= x_0 + v_{0x}\, t \\
-y(t) &= y_0 + v_{0y}\, t - \frac{1}{2} g t^2
+\frac{dv_x}{dt} &= 0 \\
+\frac{dv_y}{dt} &= -g
 \end{aligned}
 \]
 
-Nel caso di lancio dall’origine ($x_0 = 0$, $y_0 = 0$) tali equazioni si semplificano ulteriormente.
+Integrando rispetto al tempo:
+\[
+\begin{aligned}
+v_x(t) &= v_{0x} \\
+v_y(t) &= v_{0y} - gt
+\end{aligned}
+\]
+
+Per determinare le leggi orarie della posizione si utilizza la relazione:
+\[
+\vec{v} = \frac{d\vec{r}}{dt}
+\]
+che lungo i due assi diventa:
+\[
+\begin{aligned}
+\frac{dx}{dt} &= v_{0x} \\
+\frac{dy}{dt} &= v_{0y} - gt
+\end{aligned}
+\]
+
+Integrando e ponendo $x_0 = 0$ e $y_0 = 0$, si ottengono le leggi orarie del moto balistico:
+\[
+\boxed{
+\begin{aligned}
+x(t) &= v_{0x}\,t \\
+y(t) &= v_{0y}\,t - \frac{1}{2}gt^2
+\end{aligned}
+}
+\]
 
 \subsection{Equazione della traiettoria}
 
-Eliminando il tempo $t$ dalle leggi orarie, si ottiene l’equazione della traiettoria.  
-Dalla prima equazione:
+Dalla legge oraria del moto orizzontale si ricava:
 \[
 t = \frac{x}{v_{0x}}
 \]
 
-Sostituendo nella seconda:
+Sostituendo nella legge oraria verticale:
 \[
-y = x \tan\alpha - \frac{g}{2 v_0^2 \cos^2\alpha}\, x^2
+y = \frac{v_{0y}}{v_{0x}}\,x - \frac{g}{2v_{0x}^2}\,x^2
 \]
 
-Questa equazione rappresenta una \textbf{parabola}, da cui il nome di \emph{moto parabolico}.
-
-\subsection{Gittata e altezza massima}
-
-Nel caso di lancio dal suolo, la \textbf{gittata} $R$ del moto è:
+Esplicitando le componenti della velocità iniziale:
 \[
-R = \frac{v_0^2}{g} \sin(2\alpha)
+\boxed{
+y = x\tan\alpha - \frac{g}{2v_0^2\cos^2\alpha}\,x^2
+}
+\]
+
+Tale equazione rappresenta una \textbf{parabola} con concavità rivolta verso il basso, da cui il nome di \emph{moto parabolico}.
+
+\subsection{Tempo di volo, gittata e altezza massima}
+
+Il tempo di volo $t_f$ si ottiene imponendo $y(t_f)=0$:
+\[
+v_{0y}t_f - \frac{1}{2}gt_f^2 = 0
+\quad \Rightarrow \quad
+t_f = \frac{2v_0\sin\alpha}{g}
+\]
+
+La \textbf{gittata} del moto è:
+\[
+R = x(t_f) = v_{0x}t_f
+= \frac{v_0^2}{g}\sin(2\alpha)
 \]
 
 L’\textbf{altezza massima} raggiunta dal punto materiale è:
 \[
-h_{\text{max}} = \frac{v_0^2 \sin^2\alpha}{2g}
+h_{\text{max}} = \frac{v_0^2\sin^2\alpha}{2g}
 \]
 
-La gittata risulta massima per un angolo di lancio pari a $\alpha = 45^\circ$.
+La gittata risulta massima per un angolo di lancio:
+\[
+\alpha = 45^\circ
+\]
+
+\paragraph{Quota massima come caso di MRUA.}
+
+Il moto verticale del punto materiale è un moto rettilineo uniformemente accelerato con accelerazione $-g$.  
+La legge oraria della velocità lungo l’asse $y$ è:
+\[
+v_y(t) = v_0 - gt
+\]
+
+La quota massima viene raggiunta quando $v_y=0$:
+\[
+t = \frac{v_0}{g}
+\]
+
+Sostituendo nella legge oraria della posizione:
+\[
+y(t) = v_0t - \frac{1}{2}gt^2
+\]
+si ottiene:
+\[
+\boxed{
+y_{\text{max}} = \frac{v_0^2}{2g}
+}
+\]
 
 \subsection{Esempio: lancio parabolico}
 
@@ -326,34 +475,49 @@ Determinare la gittata del moto.
 \emph{Soluzione.}  
 Applicando la formula della gittata:
 \[
-R = \frac{20^2}{9{,}81} \sin(60^\circ) \approx 35{,}3\,\mathrm{m}
+R = \frac{20^2}{9{,}81}\sin(60^\circ) \approx 35{,}3\,\mathrm{m}
 \]
 
 \section{Moto circolare uniforme}
 
-Il \textbf{moto circolare uniforme} è un particolare caso di \emph{moto curvilineo} in cui un punto materiale si muove lungo una \textbf{circonferenza} con \textbf{velocità di modulo costante}.  
-Sebbene il modulo della velocità rimanga costante, il moto non è uniforme nel senso vettoriale, poiché la \emph{direzione} della velocità cambia continuamente nel tempo.
+Il \textbf{moto circolare uniforme} è un particolare caso di \emph{moto curvilineo} in cui un punto materiale si muove lungo una \textbf{circonferenza} di raggio costante $R$ con \textbf{velocità di modulo costante}.  
+
+Sebbene il modulo della velocità rimanga costante, il moto non è uniforme in senso vettoriale, poiché la \emph{direzione} della velocità cambia continuamente nel tempo. Ne segue che l’accelerazione del punto materiale non è nulla.
 
 \subsection{Descrizione geometrica del moto}
 
-Si consideri un punto materiale che si muove su una circonferenza di raggio $R$, con centro $O$.  
-La posizione del punto può essere descritta mediante l’\textbf{angolo} $\theta(t)$ individuato dal raggio vettore rispetto a un asse di riferimento fissato.
+Si consideri un punto materiale che si muove su una circonferenza di raggio $R$ e centro $O$.  
+La posizione del punto è individuata dall’angolo $\theta(t)$ formato dal raggio vettore con un asse di riferimento fissato.
 
-La lunghezza dell’arco di circonferenza percorso è legata all’angolo $\theta$ dalla relazione:
+La lunghezza dell’arco di circonferenza percorso è legata all’angolo dalla relazione geometrica:
 \[
-s = R \theta
+s = R\theta
 \]
 
 \subsection{Velocità angolare}
 
-Si definisce \textbf{velocità angolare} $\omega$ il rapporto tra la variazione dell’angolo e l’intervallo di tempo:
+Si definisce \textbf{velocità angolare} $\omega$ come la derivata temporale dell’angolo:
 \[
 \omega = \frac{d\theta}{dt}
 \]
 
-Nel moto circolare uniforme la velocità angolare è \textbf{costante}:
+Nel moto circolare uniforme la velocità angolare è \textbf{costante}. L’equazione differenziale:
 \[
-\theta(t) = \theta_0 + \omega t
+\frac{d\theta}{dt} = \omega
+\]
+integrata tra $t_0$ e $t$ fornisce:
+\[
+\theta(t) - \theta(t_0) = \omega (t - t_0)
+\]
+
+Indicando con $\theta_0 = \theta(t_0)$ l’angolo iniziale, si ottiene la legge oraria angolare:
+\[
+\boxed{\theta(t) = \theta_0 + \omega(t - t_0)}
+\]
+
+Ponendo $t_0 = 0$:
+\[
+\boxed{\theta(t) = \theta_0 + \omega t}
 \]
 
 La velocità angolare è legata al \textbf{periodo} $T$ del moto (tempo necessario per compiere un giro completo) dalla relazione:
@@ -363,50 +527,79 @@ La velocità angolare è legata al \textbf{periodo} $T$ del moto (tempo necessar
 
 \subsection{Velocità tangenziale}
 
-La \textbf{velocità tangenziale} $\vec{v}$ è una grandezza vettoriale sempre \emph{tangente} alla traiettoria circolare e perpendicolare al raggio vettore.  
-Il suo modulo è dato da:
+La \textbf{velocità tangenziale} $\vec{v}$ è sempre tangente alla traiettoria circolare e perpendicolare al raggio vettore.  
+
+Il suo modulo si ottiene derivando l’arco di circonferenza rispetto al tempo:
 \[
-v = R \omega
+v = \frac{ds}{dt}
 \]
 
-Sebbene il modulo della velocità sia costante, la velocità varia nel tempo a causa del continuo cambiamento della sua direzione.
+Usando la relazione $s = R\theta$:
+\[
+v = R\frac{d\theta}{dt}
+\]
+
+Poiché $\omega = \frac{d\theta}{dt}$, segue:
+\[
+\boxed{v = R\omega}
+\]
+
+Il modulo della velocità è costante, mentre la direzione varia continuamente.
 
 \subsection{Accelerazione centripeta}
 
-Nel moto circolare uniforme è presente un’accelerazione non nulla, detta \textbf{accelerazione centripeta}, diretta sempre verso il centro della circonferenza.
+Nel moto circolare uniforme l’accelerazione è dovuta esclusivamente al cambiamento di direzione della velocità.  
+Consideriamo due istanti molto vicini $t_1$ e $t_2$ e le corrispondenti velocità $\vec{v}_1$ e $\vec{v}_2$, di uguale modulo $v$ ma direzione diversa.
 
-Il modulo dell’accelerazione centripeta è:
+La variazione di velocità è:
 \[
-a_c = \frac{v^2}{R} = R \omega^2
+\Delta\vec{v} = \vec{v}_2 - \vec{v}_1
 \]
 
-L’accelerazione centripeta è responsabile esclusivamente del cambiamento di direzione della velocità e non del suo modulo.
+Dal triangolo delle velocità si ricava, per piccoli angoli $\Delta\theta$:
+\[
+|\Delta\vec{v}| \simeq v\,\Delta\theta
+\]
 
-\subsection{Significato fisico}
+Il modulo dell’accelerazione è definito come:
+\[
+|\vec{a}| = \lim_{\Delta t \to 0} \frac{|\Delta\vec{v}|}{\Delta t}
+\]
 
-Il moto circolare uniforme costituisce un esempio fondamentale di moto in cui:
-\begin{itemize}
-    \item la velocità ha modulo costante ma direzione variabile;
-    \item l’accelerazione è sempre perpendicolare alla velocità;
-    \item la presenza di accelerazione non implica necessariamente una variazione del modulo della velocità.
-\end{itemize}
+Sostituendo:
+\[
+|\vec{a}| = \lim_{\Delta t \to 0} v\,\frac{\Delta\theta}{\Delta t}
+\]
 
-Tali caratteristiche rendono il moto circolare uniforme un modello essenziale per la comprensione di numerosi fenomeni fisici, come il moto dei pianeti, il funzionamento delle giostre e il moto di cariche in campi magnetici.
+Nel limite $\Delta t \to 0$:
+\[
+|\vec{a}| = v\,\frac{d\theta}{dt} = v\omega
+\]
+
+Usando la relazione $v = R\omega$, si ottiene:
+\[
+\boxed{a_c = R\omega^2 = \frac{v^2}{R}}
+\]
+
+L’accelerazione è detta \textbf{centripeta} ed è sempre diretta verso il centro della circonferenza.
+
+Poiché la velocità angolare è costante, l’\textbf{accelerazione tangenziale è nulla}.
 
 \subsection{Esempio: moto circolare uniforme}
 
 Un punto materiale si muove di moto circolare uniforme su una circonferenza di raggio $R = 2\,\mathrm{m}$ con velocità angolare $\omega = 3\,\mathrm{rad/s}$.  
+
 Determinare il modulo della velocità e dell’accelerazione centripeta.
 
 \emph{Soluzione.}  
 La velocità tangenziale vale:
 \[
-v = R \omega = 2 \cdot 3 = 6\,\mathrm{m/s}
+v = R\omega = 2 \cdot 3 = 6\,\mathrm{m/s}
 \]
 
 L’accelerazione centripeta risulta:
 \[
-a_c = R \omega^2 = 2 \cdot 3^2 = 18\,\mathrm{m/s^2}
+a_c = R\omega^2 = 2 \cdot 3^2 = 18\,\mathrm{m/s^2}
 \]
 
 \section*{Riferimenti}
