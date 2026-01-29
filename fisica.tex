@@ -8,23 +8,56 @@
 \usepackage[italian]{babel}
 
 % =====================================================
-% TYPOGRAPHY 
+% TYPOGRAPHY
 % =====================================================
-\usepackage{libertinus}          % main serif font + math
-\usepackage[scale=0.95]{sourcesanspro} % sans-serif for metadata
+\usepackage{libertinus}                 % main serif font + math
+\usepackage[scale=0.95]{sourcesanspro}  % sans-serif for metadata
 
 \usepackage{microtype}
 \usepackage{xcolor}
 
+% =====================================================
+% BIBLIOGRAPHY
+% =====================================================
 \usepackage{biblatex}
 \addbibresource{references.bib}
 
-% -----------------------------------------------------
-% Color palette
-% -----------------------------------------------------
+% =====================================================
+% COLOR PALETTE
+% =====================================================
 \definecolor{Accent}{HTML}{0B3A3E}
 \definecolor{TextGray}{gray}{0.25}
 \definecolor{RuleGray}{gray}{0.75}
+
+% =====================================================
+% GRAPHICS + COVER PATTERN
+% =====================================================
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning}
+
+% Helper: pattern leggero in copertina
+\newcommand{\DataPattern}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \foreach \x in {0.12,0.22,...,0.88} {
+      \foreach \y in {0.10,0.20,...,0.90} {
+        \fill[Accent!7] ($(current page.south west) + (\x\paperwidth,\y\paperheight)$)
+          circle[radius=0.55pt];
+      }
+    }
+    \draw[Accent!10,line width=0.6pt]
+      ($(current page.south west)+(0.06\paperwidth,0.30\paperheight)$)
+      .. controls ($(current page.south west)+(0.35\paperwidth,0.55\paperheight)$)
+      and ($(current page.south west)+(0.55\paperwidth,0.20\paperheight)$)
+      .. ($(current page.south west)+(0.92\paperwidth,0.48\paperheight)$);
+
+    \draw[Accent!10,line width=0.6pt]
+      ($(current page.south west)+(0.08\paperwidth,0.78\paperheight)$)
+      .. controls ($(current page.south west)+(0.35\paperwidth,0.62\paperheight)$)
+      and ($(current page.south west)+(0.62\paperwidth,0.90\paperheight)$)
+      .. ($(current page.south west)+(0.92\paperwidth,0.74\paperheight)$);
+  \end{tikzpicture}
+}
 
 % =====================================================
 % PAGE LAYOUT
@@ -60,11 +93,6 @@
 \usepackage[hidelinks]{hyperref}
 
 % =====================================================
-% GRAPHICS
-% =====================================================
-\usepackage{graphicx}
-
-% =====================================================
 % TABLES
 % =====================================================
 \usepackage{booktabs}
@@ -93,7 +121,10 @@ Emanuele Galiano\\
 Andrea Leone\\
 Sofia Lo Vecchio%
 }
-\newcommand{\BookYear}{2025/2026}
+\newcommand{\BookUni}{Università degli Studi di Catania}
+\newcommand{\BookDept}{Dipartimento di Matematica e Informatica}
+\newcommand{\BookAY}{Anno Accademico 2025/2026}
+\newcommand{\BookLogoPath}{images/unict_logo.jpg}
 
 \begin{document}
 
@@ -104,8 +135,8 @@ Sofia Lo Vecchio%
 % =====================================================
 \begin{titlepage}
 \thispagestyle{empty}
+\DataPattern
 
-% ---------- Title block (centered)
 \begin{center}
 \vspace*{18mm}
 
@@ -117,26 +148,38 @@ Sofia Lo Vecchio%
 \vspace{10mm}
 {\Large\sffamily\color{TextGray}\BookSubtitle\par}
 
-\end{center}
+\vspace{20mm}
+\includegraphics[height=14mm]{\BookLogoPath}
+
+\vspace{12mm}
+{\sffamily\color{TextGray}
+\BookUni\\[1mm]
+\BookDept\\[1mm]
+\BookAY
+\par}
 
 \vfill
 
-% ---------- Authors (left) and year (right)
-{\sffamily\small\color{TextGray}
-\noindent
-\begin{minipage}[t]{0.7\textwidth}
-\raggedright
-\BookAuthor
-\end{minipage}%
-\begin{minipage}[t]{0.3\textwidth}
-\raggedleft
-\BookYear
+\begin{minipage}{0.92\textwidth}
+\sffamily\small\color{TextGray}
+\begin{flushleft}
+\textbf{\color{Accent}Autori}\hfill \textbf{\color{Accent}Anno accademico}\\
+\BookAuthor \hfill \BookAY
+\end{flushleft}
+
+\vspace{4mm}
+{\color{RuleGray}\rule{\textwidth}{0.4pt}}
+
+\vspace{4mm}
+\begin{flushleft}
+\footnotesize
+Versione: \today
+\end{flushleft}
 \end{minipage}
-}
 
 \vspace*{6mm}
+\end{center}
 \end{titlepage}
-
 
 % =====================================================
 % FRONT MATTER

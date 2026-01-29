@@ -1,2 +1,660 @@
 \chapter{Dinamica del punto materiale}
-[WIP]
+
+La dinamica del punto materiale studia il moto dei corpi materiali sotto l'azione di forze esterne. A differenza della cinematica, che descrive il movimento prescindendo dalle cause che lo generano, la dinamica si propone di individuare e analizzare le \emph{interazioni fisiche} responsabili delle variazioni dello stato di moto dei corpi.
+
+Nello studio della dinamica, i corpi reali vengono spesso schematizzati come \textbf{punti materiali}, ossia oggetti dotati di massa ma privi di dimensioni spaziali apprezzabili rispetto al fenomeno considerato. Tale modello consente di semplificare l’analisi del moto, concentrandosi esclusivamente sugli effetti delle forze applicate al corpo.
+
+L’obiettivo fondamentale della dinamica è stabilire una relazione quantitativa tra le \textbf{forze agenti} su un corpo e il suo \textbf{moto}, in particolare attraverso lo studio delle variazioni della velocità nel tempo. Questo legame è formalizzato dai \emph{principi della dinamica}, enunciati da Newton, che costituiscono il fondamento della meccanica classica.
+
+\section{Il concetto di forza}
+
+In dinamica, il concetto centrale è quello di \textbf{forza}. In modo intuitivo, una forza rappresenta un’interazione tra corpi capace di modificare lo stato di moto di un corpo oppure di deformarlo. Dal punto di vista fisico, una forza è dunque la causa delle variazioni del moto osservate sperimentalmente.
+
+La forza è una \textbf{grandezza vettoriale}, caratterizzata da:
+\begin{itemize}
+    \item un \textbf{modulo}, che ne misura l’intensità;
+    \item una \textbf{direzione};
+    \item un \textbf{verso};
+    \item un \textbf{punto di applicazione}.
+\end{itemize}
+Per descrivere correttamente l’azione di una forza su un corpo è necessario specificare tutte queste caratteristiche.
+
+Nel Sistema Internazionale, l’unità di misura della forza è il \textbf{newton} (N), definito come la forza che, applicata a un corpo di massa pari a $1\,\text{kg}$, gli imprime un’accelerazione di $1\,\text{m/s}^2$.
+
+Quando su un corpo agiscono più forze contemporaneamente, l’effetto complessivo sul moto è determinato dalla \textbf{forza risultante}, ottenuta come somma vettoriale di tutte le forze applicate:
+\[
+\vec{F}_{\text{tot}} = \sum_i \vec{F}_i
+\]
+È la forza totale agente sul corpo a determinare le eventuali variazioni del suo stato di moto.
+
+\section{I principi della dinamica}
+
+I principi della dinamica, formulati da Isaac Newton, costituiscono il fondamento della meccanica classica. Essi stabiliscono le leggi che governano il moto dei corpi in relazione alle forze che agiscono su di essi e risultano validi, con ottima approssimazione, per sistemi macroscopici che si muovono a velocità molto inferiori a quella della luce.
+
+\subsection{Primo principio della dinamica}
+
+Il primo principio della dinamica, noto anche come \textbf{principio di inerzia}, afferma che:
+
+\begin{quote}
+Un corpo permane nel suo stato di quiete o di moto rettilineo uniforme finché una forza esterna risultante non interviene a modificarne lo stato.
+\end{quote}
+
+Questo principio introduce il concetto di \textbf{inerzia}, ossia la tendenza dei corpi a opporsi alle variazioni del proprio stato di moto. In assenza di forze esterne, oppure quando la forza risultante agente su un corpo è nulla, il corpo non subisce alcuna accelerazione.
+
+Il primo principio permette di identificare i sistemi di riferimento \textbf{inerziali}: sono tali quei sistemi nei quali un corpo non soggetto a forze si muove di moto rettilineo uniforme.
+
+\subsection{Secondo principio della dinamica}
+
+Il secondo principio della dinamica stabilisce una relazione quantitativa tra la forza risultante applicata a un corpo e l’accelerazione che esso acquista. Esso afferma che:
+
+\begin{quote}
+L’accelerazione di un corpo è direttamente proporzionale alla forza risultante che agisce su di esso ed è inversamente proporzionale alla sua massa.
+\end{quote}
+
+In forma matematica, il secondo principio si esprime come:
+\[
+\vec{F}_{\text{tot}} = m \vec{a}
+\]
+
+dove $\vec{F}_{\text{tot}}$ è la forza risultante agente sul corpo, $m$ è la massa del corpo e $\vec{a}$ è l’accelerazione prodotta.
+
+La massa rappresenta una misura dell’inerzia del corpo: a parità di forza applicata, un corpo di massa maggiore subisce un’accelerazione minore. In generale, il problema fondamentale della dinamica consiste nel determinare il \textbf{moto di un corpo}, ossia la sua legge oraria $\vec{x}(t)$, a partire dalla conoscenza delle forze agenti su di esso. Poiché l’accelerazione è la derivata seconda della posizione rispetto al tempo, il secondo principio della dinamica conduce, in generale, a un’equazione differenziale del secondo ordine. La determinazione del moto richiede quindi la risoluzione di tale equazione, una volta assegnate le condizioni iniziali.
+
+\subsection{Terzo principio della dinamica}
+
+Il terzo principio della dinamica, detto \textbf{principio di azione e reazione}, afferma che:
+
+\begin{quote}
+Se un corpo A esercita una forza su un corpo B, allora il corpo B esercita simultaneamente su A una forza uguale in modulo e direzione, ma opposta in verso.
+\end{quote}
+
+Le due forze di azione e reazione costituiscono una coppia e agiscono sempre su \emph{corpi diversi}. Per questo motivo, esse non si annullano a vicenda e non violano il secondo principio della dinamica.
+
+Il terzo principio evidenzia che le forze sono sempre il risultato di un’interazione reciproca tra corpi e che non esistono forze isolate.
+
+\section{Forze nella meccanica classica}
+
+In generale, la forza agente su un punto materiale può dipendere dalla posizione del corpo nello spazio. In tal caso, il secondo principio della dinamica assume la forma di un’equazione differenziale in cui la forza non è costante, rendendo la determinazione analitica della legge oraria più complessa. Nei casi più semplici, come quello della forza peso, la forza può essere invece considerata costante, permettendo una integrazione diretta delle equazioni del moto.
+
+Nello studio della dinamica del punto materiale, alcune forze compaiono in modo ricorrente e permettono di costruire modelli semplici ma molto efficaci. In questa sezione introduciamo le forze fondamentali e, quando possibile, ricaviamo le corrispondenti \textbf{leggi orarie} a partire dal secondo principio della dinamica.
+
+\subsection{Forza peso}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/forza_peso.png}
+    \caption{Rappresentazione della forza peso $\vec{P}$ agente su un punto materiale di massa $m$.} 
+    \label{fig:forza_peso}
+\end{figure}
+
+La \textbf{forza peso} è la forza gravitazionale esercitata dalla Terra su un corpo di massa $m$. In prossimità della superficie terrestre può essere considerata costante in modulo e direzione:
+\[
+\vec{P}=m\vec{g},
+\]
+dove $\vec{g}$ è l'accelerazione di gravità che vale $\approx 9.81 m/s^2$ (diretta verticalmente verso il basso).
+
+Applicando il secondo principio della dinamica:
+\[
+m\vec{a}=\vec{P}=m\vec{g}
+\qquad \Longrightarrow \qquad
+\vec{a}=\vec{g}.
+\]
+Si ottiene quindi un risultato fondamentale: L'accelerazione di un corpo soggetto alla sola forza peso è \textbf{costante} ed è \textbf{indipendente dalla massa} del corpo.
+
+\subsubsection{Derivazione delle leggi orarie}
+
+Scegliamo un sistema di riferimento con asse $y$ verticale e verso positivo verso l'alto. Consideriamo un punto materiale soggetto unicamente alla forza peso. In prossimità della superficie terrestre, tale forza può essere considerata costante e diretta verso il basso:
+\[
+\vec{P} = (0,-mg,0).
+\]
+
+Applicando il secondo principio della dinamica,
+\[
+\sum \vec{F} = m \vec{a},
+\]
+si ottiene che l'accelerazione del punto materiale è costante e pari a:
+\[
+\vec{a} = (0,-g,0),
+\]
+dove $g$ è il modulo dell'accelerazione di gravità. Dividendo in componenti si ha:
+\[
+\begin{cases}
+m\,\dfrac{d^2 x(t)}{dt^2}=0,\\[8pt]
+m\,\dfrac{d^2 y(t)}{dt^2}=-mg,\\[8pt]
+m\,\dfrac{d^2 z(t)}{dt^2}=0.
+\end{cases}
+\qquad \Longrightarrow \qquad
+\begin{cases}
+\dfrac{d^2 x(t)}{dt^2}=0,\\[8pt]
+\dfrac{d^2 y(t)}{dt^2}=-g,\\[8pt]
+\dfrac{d^2 z(t)}{dt^2}=0.
+\end{cases}
+\]
+
+\paragraph{Componente $x$ (moto rettilineo uniforme).}
+\[
+\dfrac{d^2 x(t)}{dt^2}=0
+\quad\Longrightarrow\quad
+\dfrac{dx(t)}{dt}=v_x(t)=v_{x0}
+\quad\Longrightarrow\quad
+x(t)=x_0+v_{x0}\,t.
+\]
+
+\paragraph{Componente $z$ (moto rettilineo uniforme).}
+\[
+\dfrac{d^2 z(t)}{dt^2}=0
+\quad\Longrightarrow\quad
+\dfrac{dz(t)}{dt}=v_z(t)=v_{z0}
+\quad\Longrightarrow\quad
+z(t)=z_0+v_{z0}\,t.
+\]
+
+\paragraph{Componente $y$ (moto uniformemente accelerato).}
+\[
+\dfrac{d^2 y(t)}{dt^2}=-g
+\quad\Longrightarrow\quad
+\dfrac{dy(t)}{dt}=v_y(t)=v_{y0}-g\,t
+\]
+e integrando ulteriormente:
+\[
+y(t)=y_0+v_{y0}\,t-\frac{1}{2}g\,t^2.
+\]
+
+\medskip
+In forma vettoriale, le leggi orarie del moto possono essere raccolte come:
+\[
+\vec{x}(t)=
+\begin{pmatrix}
+x_0\\y_0\\z_0
+\end{pmatrix}
++
+\begin{pmatrix}
+v_{x0}\\v_{y0}\\v_{z0}
+\end{pmatrix}t
++
+\frac{1}{2}
+\begin{pmatrix}
+0\\-g\\0
+\end{pmatrix}t^2.
+\]
+
+\subsubsection*{Caso particolare: forza costante lungo un asse}
+
+Consideriamo un punto materiale soggetto a una forza costante diretta lungo l’asse $x$:
+\[
+\vec{F}=(F,0,0)=\text{costante}.
+\]
+Applicando il secondo principio della dinamica si ha:
+\[
+F_x=F=m a_x=m\,\dfrac{d^2 x(t)}{dt^2}
+\qquad \Longrightarrow \qquad
+\dfrac{d^2 x(t)}{dt^2}=\frac{F}{m}.
+\]
+
+Integrando rispetto al tempo:
+\[
+\dfrac{d^2 x(t)}{dt^2}=\frac{d v_x(t)}{dt}=\frac{F}{m}
+\quad\Longrightarrow\quad
+\int_{v_{x0}}^{v_x(t)} dv_x=\int_{0}^{t}\frac{F}{m}\,dt
+\]
+\[
+v_x(t)-v_{x0}=\frac{F}{m}\,t
+\qquad \Longrightarrow \qquad
+v_x(t)=v_{x0}+\frac{F}{m}\,t.
+\]
+
+Poiché $v_x(t)=\dfrac{dx(t)}{dt}$, integrando nuovamente:
+\[
+\int_{x_0}^{x(t)} dx=\int_0^t\left(v_{x0}+\frac{F}{m}\,t\right)dt
+\]
+\[
+x(t)-x_0=v_{x0}t+\frac{1}{2}\frac{F}{m}t^2
+\qquad \Longrightarrow \qquad
+x(t)=x_0+v_{x0}t+\frac{1}{2}\frac{F}{m}t^2.
+\]
+
+\medskip
+Questo risultato mostra esplicitamente che, nel caso di forza costante, il moto è \textbf{uniformemente accelerato} e che le leggi del moto derivano direttamente dal secondo principio della dinamica.
+
+\subsection{Forza elastica (legge di Hooke)}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/forza_elastica.png}
+    \caption{Sistema massa--molla su piano orizzontale: una massa $m$ è collegata a una molla ideale e può muoversi lungo l’asse $x$. La posizione di equilibrio è indicata con $x_0$; per uno spostamento $\Delta x = x - x_0$ la molla esercita una forza elastica diretta verso la posizione di equilibrio.}
+    \label{fig:forza_elastica}
+\end{figure}
+
+La \textbf{forza elastica} è una \textbf{forza di richiamo}: tende a riportare il punto materiale verso la \textbf{posizione di equilibrio}. Essa è la forza esercitata dalla molla quando questa viene deformata (allungata o compressa).
+
+Nel caso unidimensionale (moto lungo l’asse $x$), indicando con $x_0$ la posizione di equilibrio e con $\Delta x = x - x_0$ lo spostamento dall’equilibrio, la legge di Hooke afferma che:
+\[
+F_e = -k\,\Delta x = -k(x-x_0),
+\]
+dove $k$ è la \textbf{costante elastica} della molla. Il segno meno indica che la forza è sempre opposta allo spostamento: se $\Delta x>0$ la forza è diretta verso sinistra, se $\Delta x<0$ è diretta verso destra.
+
+\paragraph{Derivazione della legge oraria (moto armonico).}
+
+Applichiamo il secondo principio della dinamica lungo l’asse $x$:
+\[
+\sum F_x = m\,\frac{d^2 x(t)}{dt^2}.
+\]
+Se l’unica forza lungo $x$ è la forza elastica, allora:
+\[
+-k(x(t)-x_0)=m\,\frac{d^2 x(t)}{dt^2}.
+\]
+Portando tutto a primo membro:
+\[
+\frac{d^2 x(t)}{dt^2}+\frac{k}{m}\bigl(x(t)-x_0\bigr)=0.
+\]
+
+È spesso comodo riscrivere l’equazione in termini dello spostamento dall’equilibrio $\Delta x(t)=x(t)-x_0$:
+\[
+\frac{d^2 \Delta x(t)}{dt^2}+\omega^2\,\Delta x(t)=0,
+\qquad \text{con } \omega=\sqrt{\frac{k}{m}}.
+\]
+Questa è l’equazione del moto \textbf{armonico} (moto periodico).
+
+Una soluzione generale può essere scritta come:
+\[
+\Delta x(t)=A\cos(\omega t+\varphi),
+\]
+dove $A$ è l’ampiezza dell’oscillazione e $\varphi$ è la fase iniziale. Di conseguenza:
+\[
+x(t)=x_0 + A\cos(\omega t+\varphi).
+\]
+
+Il moto è periodico con periodo:
+\[
+T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{m}{k}}.
+\]
+
+Caso particolare: se il corpo viene lasciato da fermo con elongazione iniziale $L$ rispetto all’equilibrio, cioè $\Delta x(0)=L$ e $v(0)=0$, allora $\varphi=0$ e:
+\[
+\Delta x(t)=L\cos(\omega t),
+\qquad
+x(t)=x_0+L\cos(\omega t).
+\]
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/grafico_oscillazione_armonica.png}
+    \caption{Andamento temporale dello spostamento $\Delta x(t)$ nel moto armonico: l’oscillazione è periodica attorno alla posizione di equilibrio, con ampiezza $L$ e periodo $T=2\pi\sqrt{m/k}$.}
+    \label{fig:grafico_oscillazione_armonica}
+\end{figure}
+
+\subsection{Forza viscosa}
+
+La \textbf{forza viscosa} è una forza dissipativa che si manifesta quando un corpo si muove all’interno di un fluido (aria, acqua, ecc.). Essa è diretta in verso opposto alla velocità del corpo e, nel regime di basse velocità, è proporzionale al modulo della velocità stessa:
+\[
+\vec{F}_v = -\beta\,\vec{v},
+\]
+dove $\beta$ è una costante positiva che dipende dalle proprietà del fluido e dalle dimensioni del corpo.
+
+\paragraph{Velocità limite.}
+
+Consideriamo un corpo che si muove verticalmente sotto l’azione della forza peso e della forza viscosa. Scegliamo l’asse $y$ orientato verso il basso. Le forze agenti lungo $y$ sono:
+\[
+\vec{P} = m\vec{g}, 
+\qquad
+\vec{F}_v = -\beta \vec{v}.
+\]
+
+Dopo un certo intervallo di tempo, il corpo raggiunge una \textbf{velocità limite} $v_L$, che rimane costante. In tale condizione l’accelerazione è nulla e la forza risultante si annulla:
+\[
+\vec{a}=0
+\quad\Longrightarrow\quad
+\vec{P} + \vec{F}_v = 0.
+\]
+Proiettando lungo l’asse $y$:
+\[
+mg - \beta v_L = 0
+\quad\Longrightarrow\quad
+v_L = \frac{mg}{\beta}.
+\]
+
+La velocità limite non dipende dalla quota iniziale del corpo, ma solo dai parametri fisici del sistema.
+
+\paragraph{Equazione del moto e legge della velocità.}
+
+Prima di raggiungere la velocità limite, il corpo è accelerato. Applicando il secondo principio della dinamica lungo l’asse $y$ si ottiene:
+\[
+m\frac{dv_y(t)}{dt} = mg - \beta v_y(t).
+\]
+Questa è un’equazione differenziale del primo ordine. La sua soluzione, imponendo la condizione iniziale $v_y(0)=0$, è:
+\[
+v_y(t) = v_L\left(1 - e^{-\alpha t}\right),
+\qquad
+\text{con } \alpha = \frac{\beta}{m}.
+\]
+
+Il parametro $\alpha$ indica la rapidità con cui il corpo raggiunge la velocità limite:
+\[
+\lim_{t\to\infty} v_y(t) = v_L,
+\qquad
+v_y(0)=0.
+\]
+
+La presenza della forza viscosa modifica profondamente il moto rispetto al caso della sola forza peso: l’accelerazione non è costante e il moto non è uniformemente accelerato. La forza viscosa introduce inoltre una dissipazione di energia meccanica.
+
+
+\subsection{Forza normale}
+
+La \textbf{forza normale} $\vec{N}$ è una forza vincolare esercitata da una superficie su un corpo a contatto con essa. Essa è diretta perpendicolarmente alla superficie di contatto e impedisce al corpo di attraversarla.
+
+In molte situazioni di interesse, come nel caso di un corpo appoggiato su un piano orizzontale, l'accelerazione lungo la direzione verticale è nulla. Applicando il secondo principio della dinamica lungo l'asse verticale si ha:
+\[
+\sum F_y = 0
+\quad\Longrightarrow\quad
+N - mg = 0
+\quad\Longrightarrow\quad
+N = mg.
+\]
+
+\subsection{Forza di attrito}
+
+La \textbf{forza di attrito} si oppone al moto relativo, o alla tendenza al moto, tra due superfici a contatto. Essa agisce lungo la superficie di contatto ed è diretta in verso opposto alla velocità relativa o alla forza che tende a mettere il corpo in movimento.
+
+\subsubsection{Attrito statico}
+
+Quando il corpo è fermo rispetto alla superficie di contatto, l'attrito è di tipo statico. Il modulo della forza di attrito statico si adatta al valore necessario a mantenere il corpo in quiete, fino a un valore massimo:
+\[
+|\vec{F}_s| \le \mu_s N,
+\]
+dove $\mu_s$ è il coefficiente di attrito statico e $N$ è il modulo della forza normale.
+
+\subsubsection{Attrito dinamico}
+
+Quando il corpo è in movimento rispetto alla superficie, l'attrito è di tipo dinamico. In questo caso il modulo della forza di attrito è costante e vale:
+\[
+|\vec{F}_d| = \mu_d N,
+\]
+dove $\mu_d$ è il coefficiente di attrito dinamico, in genere minore del coefficiente di attrito statico ($\mu_d < \mu_s$). La forza di attrito dinamico è sempre diretta in verso opposto alla velocità del corpo.
+
+\subsubsection*{Esempio: piano inclinato}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/piano_inclinato.png}
+    \caption{Punto materiale di massa $m$ su un piano inclinato di angolo $\alpha$. Sono rappresentate la forza peso, la reazione normale e la componente tangenziale della forza peso lungo il piano.}
+    \label{fig:piano_inclinato}
+\end{figure}
+
+Consideriamo un punto materiale di massa $m$ appoggiato su un piano inclinato di angolo $\alpha$ rispetto all’orizzontale. Sul corpo agiscono la forza peso $\vec{P}$, la forza normale $\vec{N}$ e la forza di attrito.
+
+Scomponiamo la forza peso nelle componenti perpendicolare e parallela al piano. Lungo la direzione perpendicolare al piano il corpo non accelera, quindi vale la condizione di equilibrio:
+\[
+N - mg\cos\alpha = 0
+\quad\Longrightarrow\quad
+N = mg\cos\alpha.
+\]
+
+La componente della forza peso parallela al piano vale invece:
+\[
+P_{\parallel} = mg\sin\alpha,
+\]
+ed è la forza responsabile del moto lungo il piano.
+
+\medskip
+\noindent
+\textbf{Condizione di distacco.}
+La forza di attrito statico può assumere valori fino a un massimo:
+\[
+F_s^{\max} = \mu_s N = \mu_s mg\cos\alpha.
+\]
+Il corpo rimane in quiete se la componente tangenziale della forza peso non supera tale valore, cioè se:
+\[
+mg\sin\alpha \le \mu_s mg\cos\alpha
+\quad\Longrightarrow\quad
+\tan\alpha \le \mu_s.
+\]
+L’angolo $\alpha_c$ tale che $\tan\alpha_c = \mu_s$ prende il nome di \textbf{angolo critico di distacco}.  
+Per $\alpha > \alpha_c$ il corpo inizia a muoversi lungo il piano.
+
+\medskip
+\noindent
+\textbf{Calcolo dell’accelerazione (attrito dinamico).}
+Supponiamo ora che il corpo sia in moto lungo il piano e che agisca l’attrito dinamico. Il modulo della forza di attrito dinamico è:
+\[
+F_d = \mu_d N = \mu_d mg\cos\alpha,
+\]
+diretta in verso opposto al moto.
+
+Applicando il secondo principio della dinamica lungo la direzione del piano inclinato si ottiene:
+\[
+mg\sin\alpha - \mu_d mg\cos\alpha = m a.
+\]
+Da cui segue l’accelerazione del corpo:
+\[
+a = g\sin\alpha - \mu_d g\cos\alpha
+= g\sin\alpha\left(1 - \frac{\mu_d}{\tan\alpha}\right).
+\]
+
+\medskip
+\noindent
+\textbf{Legge oraria del moto.}
+Poiché l’accelerazione è costante, il moto lungo il piano è uniformemente accelerato. Supponendo che il corpo parta da fermo, la legge oraria lungo la direzione del piano è:
+\[
+x(t) = x_0 - \frac{1}{2} a t^2
+= x_0 - \frac{1}{2} g\sin\alpha
+\left(1 - \frac{\mu_d}{\tan\alpha}\right)t^2.
+\]
+
+Questo esempio mostra come, una volta individuate correttamente le forze agenti sul corpo e le loro componenti lungo la direzione del moto, il secondo principio della dinamica permetta di determinare completamente l’evoluzione temporale del sistema.
+
+\section{Pendolo semplice}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/pendolo_schema.png}
+    \caption{Pendolo semplice: un punto materiale di massa $m$ è vincolato a muoversi lungo una circonferenza di raggio $\ell$, collegato a un filo inestensibile. Sono indicati l’angolo $\theta$ rispetto alla verticale, la tensione del filo e la forza peso.}
+    \label{fig:pendolo_schema}
+\end{figure}
+
+Il \textbf{pendolo semplice} è un sistema costituito da un punto materiale di massa $m$ collegato a un filo ideale (inesistente massa e inestensibile) di lunghezza $\ell$, fissato a un estremo. Il moto del punto materiale avviene su un arco di circonferenza in un piano verticale.
+
+Sul corpo agiscono due forze:
+\begin{itemize}
+    \item la forza peso $\vec{P}$;
+    \item la tensione del filo $\vec{T}$, che rappresenta una forza vincolare.
+\end{itemize}
+
+Indichiamo con $\theta$ l’angolo che il filo forma con la verticale. Per convenzione, $\theta>0$ se il corpo si trova a destra della verticale e $\theta<0$ se si trova a sinistra.
+
+\subsection{Forze agenti e direzione del moto}
+
+La tensione del filo è sempre diretta lungo il filo e impedisce al corpo di allontanarsi dal centro della traiettoria. Di conseguenza, essa non contribuisce al moto lungo la direzione tangenziale.
+
+Il moto del pendolo è quindi dovuto esclusivamente alla \textbf{componente tangenziale della forza peso}. Scomponendo $\vec{P}$ lungo le direzioni radiale e tangenziale si ottiene che:
+\[
+P_{\text{t}} = -mg\sin\theta,
+\]
+dove il segno meno indica che la forza è diretta in verso opposto all’aumento di $\theta$.
+
+\subsection{Equazione del moto}
+
+Poiché il corpo si muove lungo una circonferenza di raggio $\ell$, la coordinata naturale del moto è l’arco $s=\ell\theta$. L’accelerazione tangenziale vale:
+\[
+a_{\text{t}} = \frac{d^2 s}{dt^2} = \ell \frac{d^2 \theta(t)}{dt^2}.
+\]
+
+Applicando il secondo principio della dinamica lungo la direzione tangenziale:
+\[
+-mg\sin\theta = m a_{\text{t}} = m \ell \frac{d^2 \theta(t)}{dt^2}.
+\]
+Dividendo per $m$ e riordinando si ottiene l’equazione del moto del pendolo:
+\[
+\frac{d^2 \theta(t)}{dt^2} + \frac{g}{\ell}\sin\theta(t) = 0.
+\]
+
+Questa equazione differenziale è non lineare e, in generale, non ammette una soluzione analitica semplice.
+
+\subsection{Approssimazione per piccole oscillazioni}
+
+Se l’angolo $\theta$ è sufficientemente piccolo (tipicamente $|\theta|\lesssim 10^\circ$), è possibile utilizzare l’approssimazione:
+\[
+\sin\theta \simeq \theta.
+\]
+In questo caso l’equazione del moto diventa:
+\[
+\frac{d^2 \theta(t)}{dt^2} + \frac{g}{\ell}\,\theta(t) = 0,
+\]
+che è l’equazione del \textbf{moto armonico semplice}.
+
+\paragraph{Nota sull'approssimazione.} 
+\textit{L'approssimazione nasce dal fatto che la serie di Taylor di $\sin\theta$ attorno a $\theta=0$ può essere approssimata come $\sin\theta \approx \theta$ per angoli piccoli, poiché i termini di ordine superiore diventano trascurabili. Per angoli maggiori, l'errore introdotto dall'approssimazione aumenta, rendendo la soluzione meno accurata.}
+
+\subsection{Soluzione dell’equazione del moto}
+
+Poiché il moto è oscillatorio, cerchiamo una soluzione del tipo:
+\[
+\theta(t) = A \cos(\omega t + \varphi).
+\]
+Derivando due volte rispetto al tempo:
+\[
+\frac{d^2 \theta}{dt^2} = -\omega^2 A \cos(\omega t + \varphi).
+\]
+Sostituendo nell’equazione del moto si ottiene:
+\[
+-\omega^2 A \cos(\omega t + \varphi) + \frac{g}{\ell} A \cos(\omega t + \varphi) = 0,
+\]
+da cui segue la condizione:
+\[
+\omega = \sqrt{\frac{g}{\ell}}.
+\]
+
+La pulsazione $\omega$ determina il periodo del moto:
+\[
+T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{\ell}{g}}.
+\]
+
+\subsection{Condizioni iniziali e leggi orarie}
+
+Se il pendolo viene lasciato da fermo con angolo iniziale $\theta_{\max}$, si ha:
+\[
+\theta(0) = \theta_{\max}, \qquad \frac{d\theta}{dt}(0) = 0.
+\]
+In questo caso la legge oraria diventa:
+\[
+\theta(t) = \theta_{\max} \cos(\omega t).
+\]
+
+È possibile anche scegliere condizioni iniziali diverse, ad esempio angolo iniziale nullo e velocità angolare iniziale $\Omega$:
+\[
+\theta(0)=0, \qquad \frac{d\theta}{dt}(0)=\Omega.
+\]
+La soluzione risulta allora:
+\[
+\theta(t) = \frac{\Omega}{\omega}\sin(\omega t).
+\]
+
+Il pendolo semplice, per piccole oscillazioni, rappresenta quindi un esempio fondamentale di moto armonico, del tutto analogo al sistema massa--molla.
+
+\section{Lavoro}
+
+Il \textbf{lavoro} di una forza misura l'effetto della forza quando il punto materiale subisce uno spostamento. Nel caso in cui la forza $\vec{F}$ sia \textbf{costante} e lo spostamento complessivo sia $\Delta \vec{s}$, il lavoro si definisce come prodotto scalare:
+\[
+L = \vec{F}\cdot \Delta \vec{s} = F\,\Delta s \cos\alpha,
+\]
+dove $\alpha$ è l'angolo tra la direzione della forza e quella dello spostamento.
+
+Da questa definizione seguono alcuni casi importanti:
+\begin{itemize}
+    \item $L$ è \textbf{massimo} se $\vec{F}$ è parallela a $\Delta\vec{s}$ ($\alpha=0$);
+    \item $L=0$ se $\vec{F}$ è perpendicolare a $\Delta\vec{s}$ ($\alpha=\frac{\pi}{2}$);
+    \item $L$ è \textbf{minimo} (negativo) se $\vec{F}$ e $\Delta\vec{s}$ sono antiparalleli ($\alpha=\pi$).
+\end{itemize}
+
+\subsection{Esempi qualitativi: peso e attrito}
+
+La forza peso può compiere lavoro positivo o negativo a seconda del verso dello spostamento (verso il basso o verso l'alto). La forza di attrito, essendo diretta in verso opposto al moto, compie invece \textbf{lavoro negativo}:
+\[
+L_{\text{attr}}<0.
+\]
+
+\subsection{Generalizzazione: forze non costanti}
+
+Se la forza non è costante, la definizione si estende considerando uno spostamento infinitesimo $d\vec{s}$. Si definisce il \textbf{lavoro elementare}:
+\[
+dL = \vec{F}\cdot d\vec{s}.
+\]
+Il \textbf{lavoro totale} compiuto dalla forza nello spostamento da un punto $A$ a un punto $B$ è:
+\[
+L_{A\to B}=\int_{A}^{B} \vec{F}\cdot d\vec{s}.
+\]
+Questa quantità rappresenta il lavoro complessivo compiuto dalla forza per portare il punto materiale da $A$ a $B$ lungo una certa traiettoria.
+
+\subsection{Lavoro della forza peso: lancio verso l'alto e caduta verso il basso}
+Consideriamo un moto verticale e scegliamo l'asse $y$ verso l'alto. La forza peso vale:
+\[
+\vec{P}=(0,-mg,0).
+\]
+
+\paragraph{Lancio verso l'alto.}
+Durante lo spostamento verso l'alto, $d\vec{s}$ è diretto verso l'alto mentre $\vec{P}$ è verso il basso: sono antiparalleli e dunque il lavoro è negativo.
+Scrivendo in forma scalare lungo $y$:
+\[
+dL=\vec{P}\cdot d\vec{s}=P_y\,dy=(-mg)\,dy.
+\]
+Integrando da $y=0$ a $y=h$:
+\[
+L_{0\to h}=\int_{0}^{h}(-mg)\,dy=-mgh<0.
+\]
+
+\paragraph{Caduta verso il basso.}
+Durante la caduta, lo spostamento è verso il basso e quindi è parallelo alla forza peso: il lavoro è positivo.
+Se il corpo scende di un dislivello $h$:
+\[
+L_{h\to 0}=+mgh>0.
+\]
+
+\medskip
+In sintesi, per la forza peso vale:
+\[
+L_{\text{peso}} = m g (y_A - y_B),
+\]
+cioè il lavoro dipende solo dalle quote iniziale e finale.
+
+\subsection{Ricavare il lavoro usando la legge oraria}
+
+Nel moto verticale, $d\vec{s}$ è lungo $y$ e vale $dy = v_y(t)\,dt$. Pertanto:
+\[
+dL = P_y\,dy = (-mg)\,v_y(t)\,dt.
+\]
+Nel caso di lancio verso l'alto, con $v_y(t)=v_0-g t$, si integra fino all'istante $t_f$ in cui $v_y(t_f)=0$:
+\[
+L=\int_{0}^{t_f}(-mg)\,v_y(t)\,dt.
+\]
+Il risultato coincide con $L=-mgh$, dove $h$ è la quota massima raggiunta. Questo mostra che il lavoro della forza peso può essere espresso in funzione del dislivello.
+
+\subsection{Lavoro della forza peso nel pendolo}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/lavoro_pendolo.png} % <-- ritaglio dagli appunti (pendolo: ds = l d\theta e integrale)
+    \caption{Pendolo: la tensione non compie lavoro lungo la traiettoria; il lavoro è dovuto alla componente tangenziale del peso.}
+    \label{fig:lavoro_pendolo}
+\end{figure}
+
+Nel pendolo semplice il punto materiale si muove lungo un arco di circonferenza. La tensione del filo è radiale e dunque è perpendicolare allo spostamento tangenziale: \textbf{non compie lavoro}. Il lavoro lungo la traiettoria è quindi dovuto alla sola componente tangenziale del peso.
+
+Indicando con $\theta$ l'angolo rispetto alla verticale e con $s$ l'arco, vale:
+\[
+ds = \ell\,d\theta.
+\]
+La componente tangenziale della forza peso (opposta all'aumento di $\theta$) ha modulo $mg\sin\theta$, quindi:
+\[
+dL = \vec{P}\cdot d\vec{s} = (mg\sin\theta)\,ds = mg\sin\theta\,\ell\,d\theta.
+\]
+Integrando, ad esempio, dalla posizione iniziale $\theta=\theta_0$ alla posizione finale $\theta=0$:
+\[
+L_{\theta_0\to 0}=mg\ell\int_{\theta_0}^{0}\sin\theta\,d\theta
+=mg\ell\bigl(\cos 0-\cos\theta_0\bigr)
+=mg\ell\,(1-\cos\theta_0)>0.
+\]
+
+Poiché la variazione di quota tra le due posizioni è $h=\ell(1-\cos\theta_0)$, si ottiene ancora:
+\[
+L_{\text{peso}} = mgh.
+\]
+Questo evidenzia un fatto importante: il lavoro della forza peso \textbf{non dipende dalla traiettoria}, ma solo dai punti iniziale e finale (cioè dal dislivello).
