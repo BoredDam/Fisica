@@ -41,7 +41,7 @@ Un corpo permane nel suo stato di quiete o di moto rettilineo uniforme finché u
 
 Questo principio introduce il concetto di \textbf{inerzia}, ossia la tendenza dei corpi a opporsi alle variazioni del proprio stato di moto. In assenza di forze esterne, oppure quando la forza risultante agente su un corpo è nulla, il corpo non subisce alcuna accelerazione.
 
-Il primo principio permette di identificare i sistemi di riferimento \textbf{inerziali}: sono tali quei sistemi nei quali un corpo non soggetto a forze si muove di moto rettilineo uniforme.
+\textit{Il primo principio permette di identificare i sistemi di riferimento \textbf{inerziali}: sono tali quei sistemi nei quali un corpo non soggetto a forze si muove di moto rettilineo uniforme.}
 
 \subsection{Secondo principio della dinamica}
 
@@ -60,6 +60,8 @@ dove $\vec{F}_{\text{tot}}$ è la forza risultante agente sul corpo, $m$ è la m
 
 La massa rappresenta una misura dell’inerzia del corpo: a parità di forza applicata, un corpo di massa maggiore subisce un’accelerazione minore. In generale, il problema fondamentale della dinamica consiste nel determinare il \textbf{moto di un corpo}, ossia la sua legge oraria $\vec{x}(t)$, a partire dalla conoscenza delle forze agenti su di esso. Poiché l’accelerazione è la derivata seconda della posizione rispetto al tempo, il secondo principio della dinamica conduce, in generale, a un’equazione differenziale del secondo ordine. La determinazione del moto richiede quindi la risoluzione di tale equazione, una volta assegnate le condizioni iniziali.
 
+\textit{Il secondo principio della dinamica mette in relazione le grandezze fondamentali della meccanica classica: forza, massa e accelerazione. Esso costituisce la base per l’analisi quantitativa del moto dei corpi sotto l’azione di forze esterne.}
+
 \subsection{Terzo principio della dinamica}
 
 Il terzo principio della dinamica, detto \textbf{principio di azione e reazione}, afferma che:
@@ -70,7 +72,7 @@ Se un corpo A esercita una forza su un corpo B, allora il corpo B esercita simul
 
 Le due forze di azione e reazione costituiscono una coppia e agiscono sempre su \emph{corpi diversi}. Per questo motivo, esse non si annullano a vicenda e non violano il secondo principio della dinamica.
 
-Il terzo principio evidenzia che le forze sono sempre il risultato di un’interazione reciproca tra corpi e che non esistono forze isolate.
+\textit{Il terzo principio evidenzia che le forze sono sempre il risultato di un’interazione reciproca tra corpi e che non esistono forze isolate.}
 
 \section{Forze nella meccanica classica}
 
@@ -631,7 +633,7 @@ Il risultato coincide con $L=-mgh$, dove $h$ è la quota massima raggiunta. Ques
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/lavoro_pendolo.png} % <-- ritaglio dagli appunti (pendolo: ds = l d\theta e integrale)
+    \includegraphics[width=0.8\textwidth]{images/lavoro_pendolo.png}
     \caption{Pendolo: la tensione non compie lavoro lungo la traiettoria; il lavoro è dovuto alla componente tangenziale del peso.}
     \label{fig:lavoro_pendolo}
 \end{figure}
@@ -658,3 +660,815 @@ Poiché la variazione di quota tra le due posizioni è $h=\ell(1-\cos\theta_0)$,
 L_{\text{peso}} = mgh.
 \]
 Questo evidenzia un fatto importante: il lavoro della forza peso \textbf{non dipende dalla traiettoria}, ma solo dai punti iniziale e finale (cioè dal dislivello).
+
+\section{Teorema del lavoro e dell'energia cinetica}
+
+\subsection{Energia cinetica}
+
+Quando un punto materiale di massa $m$ si muove con velocità di modulo $v$, gli associamo una grandezza che misura ``quanto moto'' possiede: l'\textbf{energia cinetica}. Essa è definita come
+\[
+K=\frac{1}{2}mv^2.
+\]
+Se il corpo aumenta la propria velocità, allora $K$ aumenta; se invece rallenta, $K$ diminuisce.
+
+\subsection{Enunciato del teorema}
+
+Il \textbf{teorema del lavoro e dell'energia cinetica} afferma che:
+
+\begin{quote}
+Il lavoro totale compiuto dalla forza risultante su un punto materiale nello spostamento da una posizione iniziale $A$ a una posizione finale $B$ è uguale alla variazione della sua energia cinetica.
+\end{quote}
+
+In formule:
+\[
+L_{A\to B}=K_B-K_A.
+\]
+
+Di conseguenza:
+\begin{itemize}
+\item se $L_{A\to B}>0$, allora $K$ aumenta (il corpo accelera);
+\item se $L_{A\to B}<0$, allora $K$ diminuisce (il corpo rallenta);
+\item se $L_{A\to B}=0$, allora $K$ resta costante.
+\end{itemize}
+
+\paragraph{Dimostrazione.}
+
+Consideriamo un lavoro elementare $dL$ compiuto dalla forza risultante $\vec{F}$ durante uno spostamento infinitesimo $d\vec{s}$:
+\[
+dL=\vec{F}\cdot d\vec{s}.
+\]
+
+Poiché la velocità è
+\[
+\vec{v}=\frac{d\vec{s}}{dt}
+\qquad \Longrightarrow \qquad
+d\vec{s}=\vec{v}\,dt,
+\]
+si ottiene:
+\[
+dL=\vec{F}\cdot \vec{v}\,dt.
+\]
+
+Usando il secondo principio della dinamica $\vec{F}=m\dfrac{d\vec{v}}{dt}$:
+\[
+dL=m\frac{d\vec{v}}{dt}\cdot \vec{v}\,dt
+= m\,\vec{v}\cdot d\vec{v}.
+\]
+
+Ora osserviamo che:
+\[
+d(v^2)=d(\vec{v}\cdot\vec{v})
+=2\,\vec{v}\cdot d\vec{v}
+\qquad \Longrightarrow \qquad
+\vec{v}\cdot d\vec{v}=\frac{1}{2}\,d(v^2).
+\]
+Quindi:
+\[
+dL = m\left(\frac{1}{2}\,d(v^2)\right)
+= d\!\left(\frac{1}{2}mv^2\right)
+= dK.
+\]
+
+Integrando tra $A$ e $B$:
+\[
+L_{A\to B}=\int_A^B dL
+=\int_A^B dK
+=K_B-K_A,
+\]
+che è esattamente il teorema del lavoro e dell'energia cinetica.
+
+\paragraph{Osservazioni.}
+
+Il teorema del lavoro e dell'energia cinetica mette in evidenza un fatto molto intuitivo: il lavoro della forza risultante misura quanto cambia la velocità del corpo. Infatti, se il lavoro totale nello spostamento $A\to B$ è positivo ($L_{A\to B}>0$), allora l'energia cinetica aumenta e quindi aumenta anche il modulo della velocità; viceversa, se il lavoro è negativo ($L_{A\to B}<0$), l'energia cinetica diminuisce e il corpo rallenta. Nel caso limite $L_{A\to B}=0$ l'energia cinetica resta costante: ciò significa che il modulo della velocità non cambia.
+
+Un aspetto importante è che il teorema vale per \emph{qualunque tipo di forza}: non è necessario che la forza sia costante, né che il moto sia rettilineo. L'unica cosa che cambia da un problema all'altro è il modo in cui si calcola il lavoro $L_{A\to B}$, cioè l'integrale del prodotto scalare $\vec{F}\cdot d\vec{s}$ lungo la traiettoria. Per questo motivo, il teorema è uno strumento molto potente: permette di collegare direttamente le forze al cambiamento di velocità, spesso evitando di risolvere esplicitamente le equazioni del moto.
+
+\paragraph{Esempio 1: lavoro della forza peso.}
+Considerando il lavoro della forza peso calcolato in precedenza:
+\[
+L_{\text{peso}} = m g (y_A - y_B),
+\]
+il teorema del lavoro e dell'energia cinetica si traduce in:
+\[
+m g (y_A - y_B) = K_B - K_A.
+\]
+Questo risultato mostra che, quando un corpo si sposta verticalmente sotto l'azione della forza peso, la variazione della sua energia cinetica dipende solo dalla differenza di quota tra i punti iniziale e finale.
+
+\section{Legge di conservazione dell'energia meccanica}
+
+\subsection{Forze conservative}
+
+Una forza si dice \textbf{conservativa} se il lavoro da essa compiuto nello spostamento di un punto materiale dipende solo dalla posizione iniziale e finale e non dalla traiettoria seguita.
+
+In questo caso, il lavoro della forza nello spostamento da $A$ a $B$ può essere scritto come:
+\[
+L_{A\to B} = U_A - U_B,
+\]
+dove $U$ è detta \textbf{energia potenziale} associata alla forza. L'energia potenziale è una misura del lavoro che la forza può compiere in un certo punto dello spazio. Questa relazione \emph{può essere assunta come definizione di forza conservativa}.
+
+\subsection{Energia meccanica}
+
+Dal teorema del lavoro e dell'energia cinetica si ha:
+\[
+K_B - K_A = L_{A\to B}.
+\]
+Se la forza è conservativa, allora:
+\[
+K_B - K_A = U_A - U_B.
+\]
+Riordinando i termini:
+\[
+K_B + U_B = K_A + U_A.
+\]
+
+Definendo l'\textbf{energia meccanica} come:
+\[
+E = K + U,
+\]
+si ottiene la \textbf{legge di conservazione dell'energia meccanica}:
+\[
+E_B = E_A,
+\]
+ovvero l'energia meccanica di un sistema soggetto a sole forze conservative rimane costante durante il moto.
+
+\subsection{Energia potenziale della forza peso}
+
+In prossimità della superficie terrestre, la forza peso è una forza conservativa. Il lavoro della forza peso nello spostamento verticale da una quota $y_A$ a una quota $y_B$ vale:
+\[
+L_{\text{peso}} = mg(y_A - y_B).
+\]
+
+Per definizione di energia potenziale:
+\[
+L_{\text{peso}} = U_A - U_B.
+\]
+Ne segue che l'energia potenziale associata alla forza peso può essere scritta come:
+\[
+U(y) = mgy + C,
+\]
+dove $C$ è una costante arbitraria. Ponendo come riferimento $U(0)=0$, si ottiene:
+\[
+U(y) = mgy.
+\]
+
+\subsection{Energia potenziale della forza elastica}
+
+Anche la forza elastica è una forza conservativa. In una dimensione, la forza elastica è data da:
+\[
+F_e = -kx.
+\]
+
+Il lavoro della forza elastica nello spostamento dalla posizione $0$ alla posizione $x$ è:
+\[
+L_{0\to x} = \int_0^x \vec{F}_e \cdot d\vec{x}
+= \int_0^x (-kx)\,dx
+= -\frac{1}{2}kx^2.
+\]
+
+Poiché:
+\[
+L_{0\to x} = U(0) - U(x),
+\]
+ponendo $U(0)=0$ si ottiene:
+\[
+U(x) = \frac{1}{2}kx^2.
+\]
+
+\subsection{Applicazioni della conservazione dell'energia meccanica}
+
+\paragraph{Lancio verticale verso l'alto.}
+
+Consideriamo un punto materiale lanciato verticalmente verso l'alto con velocità iniziale $v_0$. Applicando la conservazione dell'energia meccanica tra l'istante iniziale e il punto di massima quota:
+\[
+E_i = E_f
+\quad\Longrightarrow\quad
+K_i + U_i = K_f + U_f.
+\]
+Poiché nel punto più alto la velocità è nulla:
+\[
+\frac{1}{2}mv_0^2 = mgh,
+\]
+da cui:
+\[
+h = \frac{v_0^2}{2g}.
+\]
+
+\paragraph{Caduta libera.}
+
+Consideriamo un punto materiale che cade da un'altezza $h$. All'istante iniziale:
+\[
+K_i = 0, \qquad U_i = mgh,
+\]
+mentre al suolo:
+\[
+U_f = 0, \qquad K_f = \frac{1}{2}mv_f^2.
+\]
+Dalla conservazione dell'energia:
+\[
+mgh = \frac{1}{2}mv_f^2
+\qquad \Longrightarrow \qquad
+v_f = \sqrt{2gh}.
+\]
+
+\paragraph{Moto parabolico.}
+
+Nel moto parabolico, se si trascurano gli attriti, agisce solo la forza peso, che è conservativa. Pertanto l'energia meccanica si conserva.
+
+Se il punto materiale parte e arriva alla stessa quota:
+\[
+U_i = U_f
+\quad\Longrightarrow\quad
+K_i = K_f
+\quad\Longrightarrow\quad
+|v_i| = |v_f|.
+\]
+
+\paragraph{Pendolo semplice.}
+
+Consideriamo un pendolo semplice di lunghezza $\ell$, lasciato partire da un angolo iniziale $\theta_0$. Applicando la conservazione dell'energia meccanica tra la posizione iniziale e la posizione più bassa della traiettoria:
+\[
+E_i = E_f.
+\]
+
+L'energia potenziale iniziale è:
+\[
+U_i = mgh,
+\qquad
+h = \ell(1-\cos\theta_0),
+\]
+mentre l'energia cinetica iniziale è nulla. Nella posizione più bassa:
+\[
+U_f = 0, \qquad K_f = \frac{1}{2}mv^2.
+\]
+Dalla conservazione dell'energia:
+\[
+m g \ell (1-\cos\theta_0) = \frac{1}{2} m v^2,
+\]
+da cui:
+\[
+v = \sqrt{2g\ell(1-\cos\theta_0)}.
+\]
+
+Questo risultato è valido per qualunque valore dell'angolo iniziale $\theta_0$ e mostra che, durante il moto, l'energia cinetica viene continuamente convertita in energia potenziale e viceversa, in modo tale che la loro somma rimanga costante.
+
+\section{Impulso della forza e quantità di moto}
+
+\subsection{Quantità di moto}
+
+Si definisce \textbf{quantità di moto} di un punto materiale la grandezza vettoriale:
+\[
+\vec{p} = m \vec{v}.
+\]
+
+La quantità di moto è direttamente proporzionale alla massa del corpo e alla sua velocità e rappresenta una misura dello stato di moto del punto materiale.
+
+\subsection{Impulso della forza}
+
+Partendo dal secondo principio della dinamica, nella forma:
+\[
+\vec{F} = m \frac{d\vec{v}}{dt},
+\]
+si moltiplica entrambi i membri per $dt$:
+\[
+\vec{F}\,dt = m\, d\vec{v}.
+\]
+
+Integrando tra un istante iniziale $t_i$ e un istante finale $t_f$:
+\[
+\int_{t_i}^{t_f} \vec{F}\,dt
+= m \int_{\vec{v}_i}^{\vec{v}_f} d\vec{v}
+= m(\vec{v}_f - \vec{v}_i).
+\]
+
+Si definisce \textbf{impulso della forza} la grandezza:
+\[
+\vec{I} = \int_{t_i}^{t_f} \vec{F}\,dt.
+\]
+
+Pertanto si ottiene:
+\[
+\vec{I} = m\vec{v}_f - m\vec{v}_i
+= \vec{p}_f - \vec{p}_i
+= \Delta \vec{p}.
+\]
+
+Questo risultato prende il nome di \textbf{teorema dell'impulso e della quantità di moto} (o teorema dell'impulso della forza) e afferma che:
+\begin{quote}
+L'impulso della forza risultante agente su un punto materiale è uguale alla variazione della sua quantità di moto.
+\end{quote}
+
+\subsection{Forma generale del secondo principio della dinamica}
+
+Poiché la quantità di moto è definita come $\vec{p} = m\vec{v} \Rightarrow \vec{v} = \vec{p}/{m}$, il secondo principio della dinamica può essere riscritto nella forma:
+\[
+\vec{F} = m\vec{a} = m \frac{d\vec{v}}{dt} = m \frac{d}{dt}\left(\frac{\vec{p}}{m}\right) = \frac{d\vec{p}}{dt}.
+\]
+
+Questa espressione rappresenta la forma più generale del secondo principio della dinamica ed è valida anche nel caso in cui la massa del corpo non sia costante.
+
+\subsection{Conservazione della quantità di moto}
+
+Se la forza risultante agente su un punto materiale è nulla, si ha:
+\[
+\vec{F} = 0
+\quad\Longrightarrow\quad
+\frac{d\vec{p}}{dt} = 0
+\quad\Longrightarrow\quad
+\vec{p} = \text{costante}.
+\]
+
+In un sistema di più punti materiali, la quantità di moto totale è definita come:
+\[
+\vec{P} = \sum_i \vec{p}_i.
+\]
+
+Se il sistema è \textbf{isolato}, cioè se la risultante delle forze esterne è nulla ($\vec{F}_{\text{ext}}=0$), allora:
+\[
+\frac{d\vec{P}}{dt} = 0
+\quad\Longrightarrow\quad
+\vec{P} = \text{costante}.
+\]
+
+La quantità di moto totale di un sistema isolato si conserva. Questa legge di conservazione è una conseguenza diretta dell'invarianza delle leggi fisiche per traslazioni nello spazio.
+
+\subsection{Urto di una biglia contro una parete}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/urto_biglia_parete.png}
+    \caption{Urto di una biglia contro una parete rigida: gli angoli di incidenza e riflessione sono uguali.}
+    \label{fig:urto_biglia_parete}
+\end{figure}
+
+Consideriamo l'urto di una biglia contro una parete rigida. Indichiamo con $\theta_i$ l'angolo di incidenza e con $\theta_f$ l'angolo di riflessione, entrambi misurati rispetto alla normale alla parete.
+
+Si assume che la parete abbia massa infinita e sia priva di attrito. Di conseguenza, la forza esercitata dalla parete sulla biglia è diretta esclusivamente lungo la direzione perpendicolare alla parete (direzione normale), mentre non sono presenti componenti parallele alla parete.
+
+\paragraph{Quantità di moto prima e dopo l'urto.}
+
+Indichiamo con $\vec{p}_i = m\vec{v}_i$ la quantità di moto della biglia prima dell'urto e con $\vec{p}_f = m\vec{v}_f$ la quantità di moto dopo l'urto.
+
+Poiché non agiscono forze di attrito, la componente parallela alla parete della forza esercitata sulla biglia è nulla. In particolare, lungo la direzione $y$:
+\[
+F_y = 0
+\quad \Longrightarrow \quad
+\Delta p_y = 0
+\quad \Longrightarrow \quad
+p_{y,f} = p_{y,i}
+\quad \Longrightarrow \quad
+v_{y,f} = v_{y,i}.
+\]
+
+\paragraph{Urto elastico.}
+
+Sperimentalmente si osserva che, nell'urto di una biglia contro una parete rigida, l'energia cinetica si conserva:
+\[
+K_i = K_f
+\quad \Longrightarrow \quad
+\frac{1}{2}m v_i^2 = \frac{1}{2}m v_f^2
+\quad \Longrightarrow \quad
+v_i = v_f.
+\]
+
+Scrivendo il modulo della velocità in termini delle componenti:
+\[
+v_i^2 = v_{x,i}^2 + v_{y,i}^2,
+\qquad
+v_f^2 = v_{x,f}^2 + v_{y,f}^2,
+\]
+e usando il fatto che $v_{y,f} = v_{y,i}$, si ottiene:
+\[
+v_{x,f}^2 = v_{x,i}^2
+\quad \Longrightarrow \quad
+v_{x,f} = -v_{x,i}.
+\]
+
+La componente della velocità perpendicolare alla parete cambia segno, mentre quella parallela resta invariata.
+
+\paragraph{Angoli di incidenza e riflessione.}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/angoli_incidenza_riflessione.png}
+    \caption{Schema dell'urto elastico di una biglia contro una parete liscia: sono indicati l'angolo di incidenza $\theta_i$, l'angolo di riflessione $\theta_f$ (uguale a $\theta_i$), l'asse $x$ perpendicolare alla parete e le direzioni delle velocità prima e dopo l'urto.}
+    \label{fig:angoli_incidenza_riflessione}
+\end{figure}
+
+Dalla definizione di angolo di incidenza e riflessione si ha:
+\[
+\cos\theta_i = \frac{v_{x,i}}{v_i},
+\qquad
+\cos\theta_f = \frac{v_{x,f}}{v_f}.
+\]
+
+Poiché $v_f = v_i$ e $v_{x,f} = -v_{x,i}$:
+\[
+\cos\theta_f = -\cos\theta_i = \cos(\pi - \theta_i).
+\]
+Ne segue che:
+\[
+\theta_f = \theta_i.
+\]
+
+Questo risultato mostra che, nell'urto elastico contro una parete liscia, l'angolo di riflessione è uguale all'angolo di incidenza.
+
+\paragraph{Impulso della forza esercitata dalla parete.}
+
+L'urto avviene in un intervallo di tempo molto breve $\tau$. L'impulso della forza esercitata dalla parete sulla biglia è:
+\[
+\vec{I} = \vec{p}_f - \vec{p}_i.
+\]
+
+Lungo la direzione perpendicolare alla parete si ha:
+\[
+I_x = p_{x,f} - p_{x,i}
+= m v_{x,f} - m v_{x,i}
+= -2m v_{x,i}
+= 2m v \cos\theta_i.
+\]
+
+Per definizione di impulso:
+\[
+I_x = \int_0^{\tau} F_x\,dt.
+\]
+
+Definendo la forza media lungo $x$ come:
+\[
+\langle F_x \rangle = \frac{1}{\tau} \int_0^{\tau} F_x\,dt,
+\]
+si ottiene:
+\[
+\langle F_x \rangle = \frac{2m v \cos\theta_i}{\tau}.
+\]
+
+La forza media esercitata dalla parete sulla biglia è quindi diretta perpendicolarmente alla parete.
+
+\paragraph{Urti impulsivi e conservazione della quantità di moto.}
+
+L'urto di una biglia contro una parete è un \textbf{processo impulsivo}, cioè un processo in cui la quantità di moto del punto materiale viene modificata per effetto di una forza molto intensa agente per un tempo molto breve.
+
+Durante un processo impulsivo è possibile trascurare l'effetto delle forze esterne (come la forza peso) e considerare il sistema isolato. In tal caso:
+\[
+\vec{F}_{\text{ext}} \simeq 0
+\quad \Longrightarrow \quad
+\vec{P}_{\text{tot}} = \text{costante}.
+\]
+
+\paragraph{Urti elastici e anelastici.}
+
+Gli urti si classificano in:
+\begin{itemize}
+\item \textbf{urti elastici}, nei quali si conserva l'energia cinetica totale del sistema;
+\item \textbf{urti anelastici}, nei quali l'energia cinetica totale non si conserva.
+\end{itemize}
+
+\subsection{Urto elastico tra due particelle}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/urto_elastico_due_particelle.png}
+    \caption{Urto elastico unidimensionale tra due particelle: la particella di massa $m_1$ si muove inizialmente lungo l’asse $x$ con velocità $\vec{v}_1$, mentre la particella di massa $m_2$ è inizialmente ferma ($\vec{v}_2=0$).}
+    \label{fig:urto_elastico_due_particelle}
+\end{figure}
+
+Consideriamo un urto elastico unidimensionale tra due particelle di masse $m_1$ e $m_2$. La particella 1 si muove inizialmente lungo l’asse $x$ con velocità $v_1$, mentre la particella 2 è inizialmente ferma:
+\[
+v_2 = 0.
+\]
+Dopo l’urto, le velocità delle due particelle diventano rispettivamente $V_1$ e $V_2$. Vogliamo determinare tali velocità finali.
+
+\paragraph{Equazioni di conservazione.}
+
+Poiché il sistema è isolato, la quantità di moto totale si conserva:
+\[
+p_{\text{tot}} = \text{costante}
+\quad \Longrightarrow \quad
+m_1 v_1 + m_2 v_2 = m_1 V_1 + m_2 V_2.
+\]
+Dato che $v_2=0$, si ottiene:
+\[
+m_1 v_1 = m_1 V_1 + m_2 V_2
+\quad \Longrightarrow \quad
+v_1 = V_1 + \frac{m_2}{m_1} V_2.
+\]
+
+Essendo l’urto elastico, si conserva anche l’energia cinetica:
+\[
+K_i = K_f
+\quad \Longrightarrow \quad
+\frac{1}{2}m_1 v_1^2
+= \frac{1}{2}m_1 V_1^2 + \frac{1}{2}m_2 V_2^2.
+\]
+Dividendo per $\tfrac{1}{2}m_1$:
+\[
+v_1^2 = V_1^2 + \frac{m_2}{m_1} V_2^2.
+\]
+
+\paragraph{Risoluzione del sistema.}
+
+Sostituendo l’espressione di $V_1$ ricavata dalla conservazione della quantità di moto:
+\[
+V_1 = v_1 - \frac{m_2}{m_1} V_2,
+\]
+nell’equazione dell’energia, si ottiene:
+\[
+v_1^2 =
+\left(v_1 - \frac{m_2}{m_1} V_2\right)^2
++ \frac{m_2}{m_1} V_2^2.
+\]
+
+Sviluppando:
+\[
+v_1^2 =
+v_1^2 - 2v_1 \frac{m_2}{m_1} V_2
++ \frac{m_2^2}{m_1^2} V_2^2
++ \frac{m_2}{m_1} V_2^2.
+\]
+
+Semplificando e raccogliendo:
+\[
+\frac{m_2}{m_1} V_2
+\left(
+\frac{m_2}{m_1} V_2 - 2v_1 + V_2
+\right) = 0.
+\]
+
+La soluzione $V_2=0$ corrisponde all’assenza dell’urto e viene scartata. Rimane quindi:
+\[
+\left(\frac{m_1}{m_2} + 1\right)V_2 = 2v_1
+\quad \Longrightarrow \quad
+V_2 = \frac{2m_1}{m_1+m_2} v_1.
+\]
+
+Sostituendo in $V_1$:
+\[
+V_1 = v_1 - \frac{m_2}{m_1} V_2
+= \frac{m_1 - m_2}{m_1 + m_2} v_1.
+\]
+
+\paragraph{Risultati finali.}
+
+Le velocità finali delle due particelle dopo l’urto elastico sono quindi:
+\[
+V_1 = \frac{m_1 - m_2}{m_1 + m_2} v_1,
+\qquad
+V_2 = \frac{2m_1}{m_1 + m_2} v_1.
+\]
+
+\paragraph{Casi limite.}
+
+\begin{itemize}
+\item \textbf{$m_1 = m_2$:}  
+\[
+V_1 = 0,
+\qquad
+V_2 = v_1.
+\]
+Le due particelle si scambiano la velocità.
+
+\item \textbf{$m_2 \gg m_1$:}  
+\[
+V_2 \simeq 0,
+\qquad
+V_1 \simeq -v_1.
+\]
+La particella 2 rimane praticamente ferma, mentre la particella 1 viene riflessa.
+
+\item \textbf{$m_1 \gg m_2$:}  
+\[
+V_1 \simeq v_1,
+\qquad
+V_2 \simeq 2v_1.
+\]
+La particella 1 trasferisce parte del moto alla particella 2, che viene ``lanciata in avanti''.
+\end{itemize}
+
+\subsection{Urto elastico con entrambe le particelle in movimento}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/urto_elastico_due_particelle_generale.png}
+    \caption{Urto elastico tra due particelle osservato in due sistemi di riferimento: a sinistra il sistema dell’osservatore, a destra il sistema solidale con la particella di massa $m_2$.}
+    \label{fig:urto_elastico_due_particelle_generale}
+\end{figure}
+
+Nel caso generale in cui entrambe le particelle siano inizialmente in movimento con velocità $v_1$ e $v_2$, è conveniente considerare un sistema di riferimento solidale con la particella 2. In tale sistema, la velocità iniziale della particella 2 è nulla.
+
+Applicando le formule precedenti e tornando poi al sistema di riferimento dell’osservatore, si ottengono le velocità finali:
+\[
+V_1 = \frac{m_1 - m_2}{m_1 + m_2} v_1
++ \frac{2m_2}{m_1 + m_2} v_2,
+\]
+\[
+V_2 = \frac{2m_1}{m_1 + m_2} v_1
++ \frac{m_2 - m_1}{m_1 + m_2} v_2.
+\]
+
+Queste espressioni descrivono completamente l’urto elastico unidimensionale tra due particelle.
+
+\subsection{Urto perfettamente anelastico}
+
+Si ha un \textbf{urto perfettamente anelastico} quando due punti materiali, dopo una collisione, proseguono il moto come se fossero un unico punto materiale. In altre parole, dopo l’urto le due particelle hanno la stessa velocità finale.
+
+In un urto perfettamente anelastico non si conserva l’energia cinetica totale del sistema, mentre si conserva la quantità di moto totale.
+
+\paragraph{Conservazione della quantità di moto.}
+
+Consideriamo due particelle di masse $m_1$ e $m_2$ che si muovono lungo una stessa direzione. Supponiamo che la particella 2 sia inizialmente ferma:
+\[
+v_2 = 0.
+\]
+
+Poiché il sistema è isolato, la quantità di moto totale si conserva:
+\[
+\vec{p}_{\text{tot}} = \text{costante}.
+\]
+
+Indicando con $V$ la velocità comune delle due particelle dopo l’urto, si ha:
+\[
+m_1 v_1 + m_2 v_2 = m_1 V + m_2 V.
+\]
+
+Dato che $v_2 = 0$:
+\[
+m_1 v_1 = (m_1 + m_2) V
+\quad \Longrightarrow \quad
+V = \frac{m_1}{m_1 + m_2} v_1.
+\]
+
+\paragraph{Osservazioni.}
+
+\begin{itemize}
+\item Se $m_2 \gg m_1$, allora $V \simeq 0$: la particella 1 si arresta quasi completamente dopo l’urto.
+\item Se $m_1 \gg m_2$, allora $V \simeq v_1$: la velocità della particella 1 rimane praticamente invariata.
+\end{itemize}
+
+Questo tipo di urto rappresenta il caso di massima perdita di energia cinetica compatibile con la conservazione della quantità di moto.
+
+\section{Legge della gravitazione universale di Newton}
+
+La \textbf{legge della gravitazione universale} descrive l’interazione attrattiva tra due masse puntiformi. Essa afferma che due corpi di masse $m_1$ e $m_2$ si attraggono con una forza diretta lungo la congiungente\footnote{La congiungente è la linea immaginaria che unisce i centri di massa dei due corpi} dei due corpi e di modulo inversamente proporzionale al quadrato della loro distanza.
+
+Indicando con $\vec{r}_{12}$ il vettore posizione che va dal corpo 2 al corpo 1, con modulo $r_{12}=|\vec{r}_{12}|$ e versore $\hat{r}$, la forza esercitata da $m_2$ su $m_1$ è:
+\[
+\vec{F}_{12} = -G \frac{m_1 m_2}{r_{12}^2}\,\hat{r}.
+\]
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/legge_gravitazione_universale.png}
+    \caption{Due masse puntiformi $m_1$ e $m_2$ separate da una distanza $r_{12}$ si attraggono con una forza di gravitazione universale $\vec{F}_{12}$.}
+    \label{fig:legge_gravitazione_universale}
+\end{figure}
+
+La forza di gravitazione universale presenta le seguenti caratteristiche:
+\begin{itemize}
+\item è sempre \textbf{attrattiva};
+\item decresce con il \textbf{quadrato della distanza};
+\item è una \textbf{forza conservativa};
+\item la formula vale anche per corpi sferici omogenei, purché si consideri la regione esterna ai corpi.
+\end{itemize}
+
+\subsection{Dimostrazione della conservatività della forza di gravitazione universale}
+
+Vogliamo dimostrare che la forza di gravitazione universale è una forza conservativa, cioè che il lavoro da essa compiuto dipende solo dalla posizione iniziale e finale e non dal percorso seguito.
+
+\paragraph{Ipotesi.}
+
+\begin{itemize}
+\item Siano $m_1$ e $m_2$ le masse di due corpi che si attraggono gravitazionalmente.
+\item Siano $\vec{r}_1$ e $\vec{r}_2$ i vettori posizione delle masse $m_1$ e $m_2$.
+\item Sia $\vec{r}_{12} = \vec{r}_1 - \vec{r}_2$ il vettore posizione relativa, con modulo $r_{12} = |\vec{r}_{12}|$ e versore $\hat{r}$.
+\end{itemize}
+
+\paragraph{Tesi.}
+
+Vogliamo dimostrare che la forza di gravitazione universale
+\[
+\vec{F}_{12} = -G \frac{m_1 m_2}{r_{12}^2}\,\hat{r}
+\]
+è una forza conservativa.
+
+\paragraph{Dimostrazione.}
+
+Dalla legge di gravitazione universale osserviamo che la forza $\vec{F}_{12}$ è sempre diretta lungo il versore $\hat{r}$, cioè lungo la congiungente dei due corpi. Essa è quindi una forza centrale e non possiede componenti perpendicolari allo spostamento radiale.
+
+Per verificare la conservatività della forza, calcoliamo il lavoro elementare compiuto durante uno spostamento infinitesimo $d\vec{r}$. Per definizione:
+\[
+dL = \vec{F} \cdot d\vec{r}.
+\]
+
+Nel nostro caso:
+\[
+dL = \vec{F}_{12} \cdot d\vec{r}.
+\]
+
+Il vettore posizione può essere scritto come:
+\[
+\vec{r} = r\,\hat{r}.
+\]
+Derivando:
+\[
+d\vec{r} = d(r\hat{r}) = \hat{r}\,dr + r\,d\hat{r}.
+\]
+
+Sostituendo:
+\[
+dL = -G \frac{m_1 m_2}{r^2}\,\hat{r} \cdot (\hat{r}\,dr + r\,d\hat{r})
+= -G \frac{m_1 m_2}{r^2}\left( dr + r\,\hat{r}\cdot d\hat{r} \right).
+\]
+
+Poiché:
+\[
+\hat{r}\cdot\hat{r} = 1
+\quad \Longrightarrow \quad
+d(\hat{r}\cdot\hat{r}) = 2\hat{r}\cdot d\hat{r} = 0
+\quad \Longrightarrow \quad
+\hat{r}\cdot d\hat{r} = 0,
+\]
+segue che:
+\[
+dL = -G \frac{m_1 m_2}{r^2}\,dr.
+\]
+
+Integrando tra una posizione iniziale $r_A$ e una posizione finale $r_B$:
+\[
+L_{A\to B}
+= \int_{r_A}^{r_B} -G \frac{m_1 m_2}{r^2}\,dr
+= -G m_1 m_2 \int_{r_A}^{r_B} \frac{1}{r^2}\,dr.
+\]
+
+Poiché:
+\[
+\int \frac{1}{r^2}\,dr = -\frac{1}{r},
+\]
+si ottiene:
+\[
+L_{A\to B}
+= -G m_1 m_2 \left(-\frac{1}{r}\right)\Big|_{r_A}^{r_B}.
+\]
+
+Il lavoro dipende esclusivamente dalle posizioni iniziale e finale e non dal percorso seguito. Questo dimostra che la forza di gravitazione universale è una forza conservativa.
+
+\subsection{Energia potenziale gravitazionale}
+
+Poiché la forza di gravitazione universale è conservativa, è possibile associare ad essa un’energia potenziale $U(r)$. Per una forza centrale di tipo gravitazionale si ha:
+\[
+U(r) = -G \frac{m_1 m_2}{r}.
+\]
+
+L’energia potenziale gravitazionale è definita a meno di una costante additiva; convenzionalmente si sceglie:
+\[
+U(\infty) = 0.
+\]
+
+Il segno negativo indica che la forza è attrattiva e che l’energia potenziale diminuisce avvicinando i due corpi.
+
+\subsection{Forza peso come caso particolare}
+
+La forza peso può essere ricavata come caso particolare della legge di gravitazione universale. Consideriamo un corpo di massa $m$ posto sulla superficie terrestre. La forza gravitazionale esercitata dalla Terra (di massa $M_T$) sul corpo vale:
+\[
+F = G \frac{M_T m}{R_T^2},
+\]
+dove $R_T$ è il raggio terrestre.
+
+Ponendo:
+\[
+g = G \frac{M_T}{R_T^2},
+\]
+si ottiene:
+\[
+F = mg,
+\]
+che coincide con l’espressione della forza peso.
+
+\subsection{Velocità di fuga}
+
+La \textbf{velocità di fuga} è la velocità minima che deve essere impressa a un punto materiale affinché esso possa allontanarsi da un corpo celeste fino a distanza infinita con velocità finale nulla.
+
+Consideriamo un corpo di massa $m$ sulla superficie di un corpo celeste di massa $M$ e raggio $R$. L’energia meccanica iniziale è:
+\[
+E_i = \frac{1}{2} m v_0^2 - G \frac{M m}{R}.
+\]
+
+All’infinito si ha:
+\[
+E_f = 0,
+\]
+poiché $v_f=0$ e $U(\infty)=0$.
+
+Imponendo la conservazione dell’energia meccanica:
+\[
+E_i = E_f,
+\]
+si ottiene:
+\[
+\frac{1}{2} m v_0^2 - G \frac{M m}{R} = 0.
+\]
+
+Da cui:
+\[
+v_0 = \sqrt{\frac{2GM}{R}}.
+\]
+
+Questa è l’espressione della velocità di fuga, che dipende solo dalla massa e dal raggio del corpo celeste e non dalla massa del corpo lanciato.
