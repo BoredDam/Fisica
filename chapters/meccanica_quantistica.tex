@@ -1,2 +1,32 @@
-\chapter{Cenni di Meccanica Quantistica}
-[WIP]
+\chapter{Introduzione alla Meccanica Quantistica}
+
+La meccanica quantistica è una teoria fondamentale della fisica che descrive il comportamento dei sistemi fisici a scala microscopica, come elettroni, fotoni, atomi e molecole. Essa nasce all’inizio del XX secolo come risposta a una profonda crisi della fisica classica, che, pur avendo ottenuto enormi successi nella descrizione dei fenomeni macroscopici, si dimostrò incapace di spiegare correttamente numerosi risultati sperimentali osservati a piccole scale.
+
+La meccanica classica si fonda su una visione deterministica della natura: una volta note le condizioni iniziali di un sistema, le leggi del moto permettono di determinarne univocamente l’evoluzione temporale. Tuttavia, quando si analizzano fenomeni che coinvolgono la radiazione elettromagnetica e la struttura della materia su scale atomiche, questa descrizione risulta inadeguata. In particolare, emergono discrepanze tra le previsioni teoriche e i dati sperimentali che non possono essere risolte mediante semplici correzioni dei modelli classici.
+
+La meccanica quantistica introduce quindi un cambiamento radicale di paradigma. In questo nuovo quadro teorico, lo stato fisico di un sistema non è più descritto in termini di traiettorie ben definite, ma attraverso una funzione d’onda, dalla quale è possibile ricavare solo le probabilità dei possibili risultati di una misura. L’indeterminazione e la probabilità non rappresentano limiti sperimentali o imperfezioni nella misura, ma sono caratteristiche intrinseche della descrizione quantistica della natura.
+
+Nel seguito, ricostruiremo il percorso storico e concettuale che ha condotto alla nascita della meccanica quantistica, partendo dall’analisi delle onde classiche e dalla crisi della fisica classica, fino all’introduzione della funzione d’onda e dell’equazione di Schrödinger, che costituiscono il cuore del formalismo quantistico.
+
+\section{La crisi della Fisica Classica}
+
+Alla fine del XIX secolo, la fisica classica appariva come una teoria sostanzialmente completa. La meccanica newtoniana, l’elettromagnetismo di Maxwell e la termodinamica fornivano una descrizione estremamente accurata di una vasta gamma di fenomeni naturali. Tuttavia, proprio nello studio dei sistemi che coinvolgono la radiazione elettromagnetica e la materia a scale microscopiche iniziarono ad emergere risultati sperimentali incompatibili con le previsioni teoriche.
+
+\subsection{Il problema della radiazione del corpo nero}
+Un esempio emblematico di questa crisi è rappresentato dallo studio della radiazione emessa da un corpo nero. 
+\begin{quote}
+Un corpo nero è un sistema ideale che assorbe completamente la radiazione elettromagnetica incidente, indipendentemente dalla lunghezza d’onda, e che emette radiazione con uno spettro che dipende unicamente dalla sua temperatura. 
+\end{quote}
+Le misure sperimentali dello spettro di emissione mostravano una distribuzione ben definita dell’energia in funzione della frequenza, con un massimo a una frequenza caratteristica che cresce all’aumentare della temperatura.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/corpo_nero.png}
+    \caption{Modello di corpo nero. Una cavità con pareti interne annerite e un piccolo forellino assorbe quasi completamente la radiazione elettromagnetica incidente. La radiazione che emerge dal forellino è indipendente dal materiale delle pareti e dipende unicamente dalla temperatura $T$ del sistema, realizzando una buona approssimazione di un corpo nero ideale. A sinistra è mostrato lo spettro di emissione per diverse temperature $T_1 < T_2 < T_3$, evidenziando lo spostamento del massimo verso lunghezze d’onda minori all’aumentare della temperatura.}
+    \label{fig:corpo_nero}
+\end{figure}
+
+La fisica classica tentò di spiegare questo fenomeno modellando la radiazione elettromagnetica all’interno del corpo nero come un insieme di onde stazionarie. Secondo la teoria classica, l’energia associata a ciascuna modalità di oscillazione poteva assumere qualsiasi valore continuo, portando alla cosiddetta \textit{catastrofe ultravioletta}: la previsione teorica indicava che l’energia totale emessa dal corpo nero sarebbe dovuta essere infinita, in netto contrasto con i risultati sperimentali che mostravano un’energia finita e ben definita.
+
+\paragraph{Un esempio di corpo nero: il Sole.}
+Il sole è un esempio naturale di corpo nero approssimato. La sua superficie assorbe quasi completamente la radiazione elettromagnetica di qualsiasi lunghezza d'onda incidente su di esso a qualsiasi angolo, e la radiazione emessa dipende principalmente dalla sua temperatura superficiale, che è di circa 5778 K. Lo spettro di emissione del sole segue approssimativamente la legge di Planck per un corpo nero, con un picco di emissione nella regione visibile dello spettro elettromagnetico, il che spiega perché il sole appare luminoso per l'occhio umano.
