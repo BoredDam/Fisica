@@ -701,10 +701,13 @@ Questo evidenzia un fatto importante: il lavoro della forza peso \textbf{non dip
 \subsection{Energia cinetica}
 
 Quando un punto materiale di massa $m$ si muove con velocità di modulo $v$, gli associamo una grandezza che misura ``quanto moto'' possiede: l'\textbf{energia cinetica}. Essa è definita come
-\[
-K=\frac{1}{2}mv^2.
-\]
-Se il corpo aumenta la propria velocità, allora $K$ aumenta; se invece rallenta, $K$ diminuisce.
+\begin{equation}
+\boxed{
+K = \frac{1}{2} m v^2.
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Energia cinetica}
+L'energia cinetica è sempre positiva (o nulla se il corpo è fermo). Se il corpo aumenta la propria velocità, allora $K$ aumenta; se invece rallenta, $K$ diminuisce.
 
 \subsection{Enunciato del teorema}
 
@@ -715,9 +718,12 @@ Il lavoro totale compiuto dalla forza risultante su un punto materiale nello spo
 \end{quote}
 
 In formule:
-\[
+\begin{equation}
+\boxed{
 L_{A\to B}=K_B-K_A.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Teorema del lavoro e dell'energia cinetica}
 
 Di conseguenza:
 \begin{itemize}
@@ -750,7 +756,7 @@ dL=m\frac{d\vec{v}}{dt}\cdot \vec{v}\,dt
 = m\,\vec{v}\cdot d\vec{v}.
 \]
 
-Ora osserviamo che:
+Ora osserviamo che, dato $d(f(x)) = f'(x)\,dx$ (derivata di una funzione composta), si ha:
 \[
 d(v^2)=d(\vec{v}\cdot\vec{v})
 =2\,\vec{v}\cdot d\vec{v}
@@ -817,9 +823,13 @@ K_B + U_B = K_A + U_A.
 \]
 
 Definendo l'\textbf{energia meccanica} come:
-\[
+\begin{equation}
+\boxed{
 E = K + U,
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Energia meccanica}
+
 si ottiene la \textbf{legge di conservazione dell'energia meccanica}:
 \[
 E_B = E_A,
@@ -828,20 +838,39 @@ ovvero l'energia meccanica di un sistema soggetto a sole forze conservative rima
 
 \subsection{Energia potenziale della forza peso}
 
-In prossimità della superficie terrestre, la forza peso è una forza conservativa. Il lavoro della forza peso nello spostamento verticale da una quota $y_A$ a una quota $y_B$ vale:
+In prossimità della superficie terrestre, la forza peso può essere considerata costante in modulo e direzione ed è una forza conservativa. Scegliendo un asse verticale $y$ orientato verso l’alto, la forza peso agisce lungo la direzione negativa dell’asse e vale
 \[
-L_{\text{peso}} = mg(y_A - y_B).
+\vec{F}_{\text{peso}} = -mg\,\hat{y}.
 \]
 
-Per definizione di energia potenziale:
+Il lavoro compiuto dalla forza peso nello spostamento verticale di un corpo dalla quota $y_A$ alla quota $y_B$ è dato da
 \[
-L_{\text{peso}} = U_A - U_B.
+L_{\text{peso}} = \int_{y_A}^{y_B} \vec{F}_{\text{peso}} \cdot d\vec{r}
+= \int_{y_A}^{y_B} (-mg)\,dy
+= mg(y_A - y_B).
 \]
-Ne segue che l'energia potenziale associata alla forza peso può essere scritta come:
+
+Poiché la forza peso è una forza conservativa, il lavoro che essa compie nello spostamento di un corpo tra due posizioni dipende esclusivamente dalle posizioni iniziale e finale. È quindi possibile introdurre una funzione scalare $U(y)$, detta energia potenziale, tale che il lavoro della forza peso nello spostamento dalla quota $y_A$ alla quota $y_B$ sia uguale all’opposto della variazione di energia potenziale:
+\[
+L_{\text{peso}} = -\Delta U = U(y_A) - U(y_B).
+\]
+
+D’altra parte, calcolando esplicitamente il lavoro della forza peso in un campo gravitazionale uniforme, si ottiene
+\[
+L_{\text{peso}} = mg\,(y_A - y_B).
+\]
+
+Confrontando le due espressioni del lavoro, segue che la funzione energia potenziale deve soddisfare la relazione
+\[
+U(y_A) - U(y_B) = mg\,(y_A - y_B),
+\]
+valida per qualunque scelta delle quote $y_A$ e $y_B$. Ciò implica che la variazione di $U$ è proporzionale alla variazione della coordinata verticale $y$, e quindi che $U(y)$ deve essere una funzione lineare di $y$. Ne segue che l’energia potenziale associata alla forza peso può essere scritta nella forma
 \[
 U(y) = mgy + C,
 \]
-dove $C$ è una costante arbitraria. Ponendo come riferimento $U(0)=0$, si ottiene:
+dove $C$ è una costante additiva arbitraria.
+
+La presenza della costante riflette il fatto che il valore assoluto dell’energia potenziale non è fisicamente osservabile: solo le differenze di energia potenziale hanno significato fisico. La scelta di $C$ equivale pertanto a fissare il livello di riferimento per l’energia potenziale. Adottando convenzionalmente come riferimento la quota $y=0$ e imponendo la condizione $U(0)=0$, si ottiene infine
 \[
 U(y) = mgy.
 \]
@@ -879,7 +908,7 @@ E_i = E_f
 \quad\Longrightarrow\quad
 K_i + U_i = K_f + U_f.
 \]
-Poiché nel punto più alto la velocità è nulla:
+Poiché nel punto più alto la velocità è nulla, possiamo riscriverre la relazione come:
 \[
 \frac{1}{2}mv_0^2 = mgh,
 \]
@@ -940,9 +969,12 @@ Dalla conservazione dell'energia:
 m g \ell (1-\cos\theta_0) = \frac{1}{2} m v^2,
 \]
 da cui:
-\[
+\begin{equation}
+\boxed{
 v = \sqrt{2g\ell(1-\cos\theta_0)}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Velocità del pendolo con Energia meccanica}
 
 Questo risultato è valido per qualunque valore dell'angolo iniziale $\theta_0$ e mostra che, durante il moto, l'energia cinetica viene continuamente convertita in energia potenziale e viceversa, in modo tale che la loro somma rimanga costante.
 
@@ -951,9 +983,12 @@ Questo risultato è valido per qualunque valore dell'angolo iniziale $\theta_0$ 
 \subsection{Quantità di moto}
 
 Si definisce \textbf{quantità di moto} di un punto materiale la grandezza vettoriale:
-\[
+\begin{equation}
+\boxed{
 \vec{p} = m \vec{v}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Quantità di moto}
 
 La quantità di moto è direttamente proporzionale alla massa del corpo e alla sua velocità e rappresenta una misura dello stato di moto del punto materiale.
 
@@ -976,9 +1011,12 @@ Integrando tra un istante iniziale $t_i$ e un istante finale $t_f$:
 \]
 
 Si definisce \textbf{impulso della forza} la grandezza:
-\[
+\begin{equation}
+\boxed{
 \vec{I} = \int_{t_i}^{t_f} \vec{F}\,dt.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Impulso della forza}
 
 Pertanto si ottiene:
 \[
@@ -1132,9 +1170,12 @@ Definendo la forza media lungo $x$ come:
 \langle F_x \rangle = \frac{1}{\tau} \int_0^{\tau} F_x\,dt,
 \]
 si ottiene:
-\[
+\begin{equation}
+\boxed{
 \langle F_x \rangle = \frac{2m v \cos\theta_i}{\tau}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Forza media esercitata dalla parete sulla biglia}
 
 La forza media esercitata dalla parete sulla biglia è quindi diretta perpendicolarmente alla parete.
 
@@ -1237,18 +1278,23 @@ V_2 = \frac{2m_1}{m_1+m_2} v_1.
 
 Sostituendo in $V_1$:
 \[
-V_1 = v_1 - \frac{m_2}{m_1} V_2
+V_1 = v_1 - \frac{m_2}{m_1} V_2 
+= v_1 - \frac{m_2}{m_1} \cdot \frac{2m_1}{m_1+m_2} v_1 
+= v_1 - \frac{2m_2}{m_1+m_2} v_1
 = \frac{m_1 - m_2}{m_1 + m_2} v_1.
 \]
 
 \paragraph{Risultati finali.}
 
 Le velocità finali delle due particelle dopo l’urto elastico sono quindi:
-\[
+\begin{equation}
+\boxed{
 V_1 = \frac{m_1 - m_2}{m_1 + m_2} v_1,
 \qquad
 V_2 = \frac{2m_1}{m_1 + m_2} v_1.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Velocità finali dopo urto elastico tra due particelle}
 
 \paragraph{Casi limite.}
 
@@ -1290,14 +1336,16 @@ La particella 1 trasferisce parte del moto alla particella 2, che viene ``lancia
 Nel caso generale in cui entrambe le particelle siano inizialmente in movimento con velocità $v_1$ e $v_2$, è conveniente considerare un sistema di riferimento solidale con la particella 2. In tale sistema, la velocità iniziale della particella 2 è nulla.
 
 Applicando le formule precedenti e tornando poi al sistema di riferimento dell’osservatore, si ottengono le velocità finali:
-\[
+\begin{equation}
+\boxed{
 V_1 = \frac{m_1 - m_2}{m_1 + m_2} v_1
-+ \frac{2m_2}{m_1 + m_2} v_2,
-\]
-\[
++ \frac{2m_2}{m_1 + m_2} v_2, 
+\qquad
 V_2 = \frac{2m_1}{m_1 + m_2} v_1
 + \frac{m_2 - m_1}{m_1 + m_2} v_2.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Velocità finali dopo urto elastico tra due particelle in movimento}
 
 Queste espressioni descrivono completamente l’urto elastico unidimensionale tra due particelle.
 
@@ -1325,12 +1373,15 @@ m_1 v_1 + m_2 v_2 = m_1 V + m_2 V.
 \]
 
 Dato che $v_2 = 0$:
-\[
+\begin{equation}
 m_1 v_1 = (m_1 + m_2) V
 \quad \Longrightarrow \quad
+\boxed{
 V = \frac{m_1}{m_1 + m_2} v_1.
-\]
-
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Velocità finale dopo urto
+perfettamente anelastico}
 \paragraph{Osservazioni.}
 
 \begin{itemize}
@@ -1345,9 +1396,12 @@ Questo tipo di urto rappresenta il caso di massima perdita di energia cinetica c
 La \textbf{legge della gravitazione universale} descrive l’interazione attrattiva tra due masse puntiformi. Essa afferma che due corpi di masse $m_1$ e $m_2$ si attraggono con una forza diretta lungo la congiungente\footnote{La congiungente è la linea immaginaria che unisce i centri di massa dei due corpi} dei due corpi e di modulo inversamente proporzionale al quadrato della loro distanza.
 
 Indicando con $\vec{r}_{12}$ il vettore posizione che va dal corpo 2 al corpo 1, con modulo $r_{12}=|\vec{r}_{12}|$ e versore $\hat{r}$, la forza esercitata da $m_2$ su $m_1$ è:
-\[
+\begin{equation}
+\boxed{
 \vec{F}_{12} = -G \frac{m_1 m_2}{r_{12}^2}\,\hat{r}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Forza di gravitazione universale}
 
 \begin{figure}[htbp]
     \centering
@@ -1448,9 +1502,12 @@ Il lavoro dipende esclusivamente dalle posizioni iniziale e finale e non dal per
 \subsection{Energia potenziale gravitazionale}
 
 Poiché la forza di gravitazione universale è conservativa, è possibile associare ad essa un’energia potenziale $U(r)$. Per una forza centrale di tipo gravitazionale si ha:
-\[
+\begin{equation}
+\boxed{
 U(r) = -G \frac{m_1 m_2}{r}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Energia potenziale gravitazionale}
 
 L’energia potenziale gravitazionale è definita a meno di una costante additiva; convenzionalmente si sceglie:
 \[
@@ -1502,8 +1559,11 @@ si ottiene:
 \]
 
 Da cui:
-\[
+\begin{equation}
+\boxed{
 v_0 = \sqrt{\frac{2GM}{R}}.
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Velocità di fuga}
 
 Questa è l’espressione della velocità di fuga, che dipende solo dalla massa e dal raggio del corpo celeste e non dalla massa del corpo lanciato.

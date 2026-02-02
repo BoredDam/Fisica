@@ -30,3 +30,107 @@ La fisica classica tentò di spiegare questo fenomeno modellando la radiazione e
 
 \paragraph{Un esempio di corpo nero: il Sole.}
 Il sole è un esempio naturale di corpo nero approssimato. La sua superficie assorbe quasi completamente la radiazione elettromagnetica di qualsiasi lunghezza d'onda incidente su di esso a qualsiasi angolo, e la radiazione emessa dipende principalmente dalla sua temperatura superficiale, che è di circa 5778 K. Lo spettro di emissione del sole segue approssimativamente la legge di Planck per un corpo nero, con un picco di emissione nella regione visibile dello spettro elettromagnetico, il che spiega perché il sole appare luminoso per l'occhio umano.
+
+\subsection{Spettro di corpo nero secondo la fisica classica}
+
+Introduciamo la quantità spettrale
+\begin{equation}
+\boxed{
+\varepsilon(\nu) \equiv \frac{dE}{dt\, dA\, d\nu},
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Spettro di corpo nero secondo la fisica classica}
+dove $dE$ è l'energia emessa dal corpo nero tramite radiazione elettromagnetica
+nell'intervallo di frequenze $[\nu,\nu+d\nu]$, per unità di tempo $dt$ e per unità
+di area emissiva $dA$.
+In altre parole, $\varepsilon(\nu)$ rappresenta l'energia emessa \emph{per unità di tempo,
+unità di area e unità di frequenza} (notazione delle slide).
+
+L'idea classica consiste nel modellare la radiazione elettromagnetica all'interno di una cavità
+(che realizza un corpo nero) come un insieme di \emph{onde stazionarie}.
+Le onde stazionarie ammissibili sono quantizzate solo \emph{geometricamente} (condizioni al contorno),
+e per ciascun intervallo di frequenze $[\nu,\nu+d\nu]$ esiste un numero di modi proporzionale a $\nu^2$.
+Questo porta a scrivere la densità spettrale emessa come
+\[
+\varepsilon(\nu)\, d\nu = \frac{8\pi \nu^2}{c^3}\,\langle E\rangle\, d\nu,
+\]
+dove:
+\begin{itemize}
+    \item $\frac{8\pi \nu^2}{c^3}\,d\nu$ è il contributo dovuto al \emph{numero di modi}
+    (onde stazionarie) del campo elettromagnetico nell'intervallo $[\nu,\nu+d\nu]$;
+    \item $\langle E\rangle$ è l'energia media associata a ciascun modo a temperatura $T$.
+\end{itemize}
+
+Per determinare $\langle E\rangle$, la fisica classica applica il principio di equipartizione
+dell'energia.
+Ogni modo del campo elettromagnetico possiede due gradi di libertà (due polarizzazioni),
+e quindi l'energia media per modo risulta
+\[
+\langle E\rangle
+= 2\times \frac{1}{2}\, k_B T
+= k_B T.
+\]
+Sostituendo nella relazione precedente si ottiene la legge di Rayleigh--Jeans:
+\begin{equation}
+\boxed{
+\varepsilon(\nu)\, d\nu
+= \frac{8\pi \nu^2}{c^3}\, k_B T\, d\nu,
+}
+\qquad \text{(Rayleigh--Jeans, 1900--1905).}
+\end{equation}
+\addcontentsline{equ}{myequations}{Legge di Rayleigh--Jeans per lo spettro di corpo nero}
+
+
+Questa previsione classica descrive correttamente il comportamento a basse frequenze,
+ma cresce come $\nu^2$ per $\nu \to \infty$ e quindi porta a un'energia emessa divergente
+alle alte frequenze (catastrofe ultravioletta), in disaccordo con i dati sperimentali
+misurati (ad es.\ Lummer e Pringsheim, 1899).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/confronto_spettri_corpo_nero.png}
+    \caption{Confronto tra lo spettro di emissione del corpo nero misurato sperimentalmente (Lummer e Pringsheim, 1899) e la previsione della fisica classica. Le curve nere rappresentano l’andamento sperimentale dell’emissione per diverse temperature, mentre la curva arancione indica la legge di Rayleigh--Jeans. Quest’ultima descrive correttamente il comportamento alle grandi lunghezze d’onda, ma diverge alle piccole lunghezze d’onda, evidenziando il fallimento della descrizione classica noto come catastrofe ultravioletta.}
+    \label{fig:confronto_spettri_corpo_nero}
+\end{figure}
+
+
+\subsection{Spettro di Planck e superamento della descrizione classica}
+
+Nella descrizione classica dello spettro di corpo nero, la densità spettrale di energia è scritta nella forma
+\[
+\varepsilon(\nu)\, d\nu = \frac{8\pi \nu^2}{c^3}\,\langle E\rangle\, d\nu,
+\]
+dove il fattore $\frac{8\pi \nu^2}{c^3}$ rappresenta il numero di modi (onde stazionarie) del campo elettromagnetico nell’intervallo di frequenze $[\nu,\nu+d\nu]$, mentre $\langle E\rangle$ è l’energia media associata a ciascun modo.
+
+Il fallimento della fisica classica non risiede dunque nel conteggio dei modi del campo elettromagnetico, che rimane invariato, bensì nell’espressione dell’energia media $\langle E\rangle$. In ambito classico, applicando il principio di equipartizione dell’energia, si ottiene $\langle E\rangle = k_B T$, il che conduce alla legge di Rayleigh--Jeans e alla divergenza dello spettro alle alte frequenze (catastrofe ultravioletta).
+
+La svolta introdotta da Planck consiste in una modifica radicale dell’ipotesi sull’energia dei modi del campo elettromagnetico. In particolare, Planck postulò che l’energia di ciascun modo di frequenza $\nu$ non potesse variare in modo continuo, ma fosse quantizzata secondo la relazione
+\[
+E_n = n\, h \nu, \qquad n = 0,1,2,\dots
+\]
+dove $h = 6.626 \times 10^{-34} \, \text{J s}$, oppure in forma ridotta,$ \hbar = \frac{h}{2\pi}$, è la costante di Planck.
+
+Come conseguenza di questa ipotesi, il valore medio dell’energia di un singolo modo del campo elettromagnetico in equilibrio termico alla temperatura $T$ risulta
+\[
+\langle E\rangle = \frac{h\nu}{e^{h\nu / k_B T} - 1},
+\]
+in disaccordo con il principio di equipartizione dell’energia della fisica classica.
+
+Sostituendo questa espressione di $\langle E\rangle$ nella formula generale per la densità spettrale, si ottiene lo \emph{spettro di Planck}:
+\begin{equation}
+\boxed{
+\varepsilon(\nu)\, d\nu
+= \frac{8\pi \nu^2}{c^3}\,
+\frac{h\nu}{e^{h\nu / k_B T} - 1}\, d\nu.
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Spettro di Planck per il corpo nero}
+
+Lo spettro di Planck descrive correttamente l’andamento sperimentale dell’emissione di un corpo nero a tutte le frequenze: esso coincide con la legge classica di Rayleigh--Jeans nel limite delle basse frequenze, mentre alle alte frequenze presenta un decadimento esponenziale che elimina la divergenza ultravioletta.
+
+Nel limite formale $h \to 0$, oppure per $h\nu \ll k_B T$, l’energia media tende al valore classico,
+\[
+\langle E\rangle \to k_B T,
+\]
+e la descrizione di Planck si riduce a quella prevista dalla fisica classica. Questo mostra come la meccanica quantistica generalizzi la teoria classica, recuperandone i risultati nel limite opportuno.
+
