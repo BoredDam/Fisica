@@ -38,9 +38,12 @@ Un modo di fare questo è utilizzare il \textbf{mercurio}: un liquido che si esp
 
 Uno dei problemi che rimane da risolvere è \textbf{definire} la scala termometrica da adottare. Nel sistema internazionale, la scala utilizzata si basa su un unico \textbf{punto fisso}: la temperatura dell’acqua nel suo stato termodinamico di \textbf{punto triplo} (ovvero lo stato dove coesistono tutti e 3 gli stati della materia) per un punto generico termometro caratterizzato dalla variabile termometrica $X$, la sua temperatura empirica è definita dalla relazione:
 
-\[
-\theta(X) = \theta_0 \frac{X}{X_0}
-\]
+\begin{equation}
+\boxed{
+\theta(X) \equiv \theta_0 \frac{X}{X_0}
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Temperatura empirica in funzione della variabile termometrica}
 
 Dove $X_0$ è il valore della variabile termometrica nello stato di riferimento del termometro in cui esso è a contatto termico con l’acqua al punto triplo. A tale stato è assegnato convenzionalmente il valore di temperatura $\theta_0$ (ovviamente, arbitrario). Il valore convenzionalmente scelto è $\theta_0 = 273.16$ da cui l’unità di misura della temperatura è il \textbf{Kelvin}.
 
@@ -70,9 +73,12 @@ Un gas reale, approssima tanto la sua condizione di gas ideale quando la sua den
 
 Grazie all’esperimento su un termometro a gas schematizzato, si conosce il valore empirico della pressione:
 
-\[
+\begin{equation}
+\boxed{
 \theta(p) \equiv \theta_0 \frac{p}{p_{tr}}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Temperatura empirica in funzione della pressione}
 
 Dove $p_{tr}$ è la quantità di gas originariamente inserito nell’ampolla. Su diverse misure, si ottiene una relazione quasi lineare tra temperatura e il valore di $p_{tr}$.
 
@@ -95,6 +101,8 @@ Il calore scambiato può essere misurato con un calorimetro a ghiaccio: ipotizzi
 Da qui si definisce la \textbf{caloria}: il calore che va fornito ad un grammo di acqua per aumentare la sua temperatura da 14.5 a 15.5 gradi Celsius, con segno positivo se questo è assorbito da un sistema, negativo altrimenti.
 
 Se due corpi hanno temperature diverse, l’energia passa spontaneamente da quello a temperatura maggiore a quello a temperatura minore finché si raggiunge l’equilibrio termico.
+
+Il calore viene indicato con $Q$ e, se è positivo, indica che il sistema assorbe calore, se è negativo, indica che il sistema cede calore. Si può inoltre introdurre il \emph{calore elementare} $\delta Q$ che rappresenta il calore scambiato in un intervallo di tempo infinitesimo.
 
 \begin{figure}[htbp]
 	\centering
@@ -187,9 +195,12 @@ Un gas ideale può essere osservato tramite gas rarefatti (come detto prima), po
 
 Una trasformazione a temperatura costante, ossia \textbf{isoterma}, si può definire secondo la legge
 
-\[
+\begin{equation}
+\boxed{
 pV = p_0V_0
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Legge della trasformazione isoterma}
 
 ovvero, la pressione del gas è inversamente proporzionale al volume da esso occupato
 
@@ -203,9 +214,12 @@ essendo rispettivamente $p_0, V_0$ la pressione e il volume del gas nello stato 
 
 Una trasformazione a pressione costante, ossia \textbf{isobara}, si può definire secondo la legge
 
-\[
+\begin{equation}
+\boxed{
 V(t) = V_0(1 + \alpha t)
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Legge della trasformazione isobara}
 
 dove $V_0$ è il volume del gas alla temperatura di fusione dell’acqua, $\alpha$ è una costante detta “Coefficiente di dilatazione termica” che vale $1/273.15 \ \text{C}^\circ$.
 
@@ -240,9 +254,12 @@ T &= \frac{V_0}{T_0}T
 
 Una trasformazione a volume costante, ovvero \textbf{isocora}, si può definire tramite la legge:
 
-\[
+\begin{equation}
+\boxed{
 p(t) = p_0(1 + \beta t)
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Legge della trasformazione isocora}
 
 dove $p_0$ è la pressione del gas alla temperatura di riferimento $t_0$. La pressione cresce quindi linearmente con la temperatura e risulta, sperimentalmente, che il coefficiente di variazione della pressione $\beta$ è uguale al coefficiente di dilatazione termica
 
@@ -297,9 +314,12 @@ pV = RT
 
 Per un gas contenente un generico numero $n$ di moli, il volume occupato dal gas, nelle stesse condizioni di temperatura e pressione, è ovviamente $n$ volte il numero molare, ossia
 
-\[
+\begin{equation}
+\boxed{
 pV = nRT
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Equazione di stato per n moli di gas ideale}
 
 Questa relazione esprime \textbf{l’equazione di stato per $n$ moli di un gas ideale}.
 
@@ -356,14 +376,18 @@ k_B = \frac{R}{N_A} \approx 1.38
 
 Utilizzando questa definizione, la relazione precedente può essere riscritta come
 
-\[
-\left< K \right > = \frac{3}{2} k_BT \Rightarrow
+\begin{equation}
+\boxed{
+\left< K \right> = \frac{3}{2} k_BT \Rightarrow
 T = \frac{2}{3k_B} \left< K \right>
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Temperatura in funzione dell'energia cinetica media}
 
 Questa relazione mostra che \textbf{la temperatura di un gas è una misura diretta dell’energia cinetica media delle particelle che lo compongono}.
 
 \subsection{Da forma differenziale a forma finita}
+Si possono introdurre due nuove grandezze, la \textbf{capacità termica specifica} $c$ e la \textbf{capacità termica molare} $C$, che rappresentano rispettivamente il calore necessario per aumentare di un grado Celsius la temperatura di un grammo di sostanza o di una mole di sostanza. Queste grandezze sono legate al calore scambiato da un sistema tramite le relazioni
 
 Se $c$ o $C$ possono essere considerate costanti, integrando tra una temperatura iniziale $T_1$ e una finale $T_2$ si ottiene
 
@@ -392,9 +416,12 @@ Q_2 = m_2c_2(T_{eq}-T_2)
 
 e, imponendo la conservazione dell’energia, si ottiene la temperatura di equilibrio
 
-\[
+\begin{equation}
+\boxed{
 T_{eq} = \frac{m_1c_1T_1 + m_2c_2T_2}{m_1c_1+m_2c_2}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Temperatura di equilibrio tra due solidi}
 
 che equivale a una \textbf{media pesata}.
 
@@ -626,43 +653,70 @@ Allora:
 
 \section{Lavoro in una trasformazione termodinamica}
 
-In una trasformazione \textbf{quasi-statica}, il sistema è sempre in equilibrio meccanico. Se il volume cambia di una quantità infinitesima $dV$, il lavoro elementare di espansione è:
+In una trasformazione \textbf{quasi-statica}, il sistema è sempre in equilibrio meccanico. Se il volume del sistema varia di una quantità infinitesima $dV$, il lavoro elementare di espansione è definito come
+
+\begin{equation}
+\boxed{
+\delta L = P\,dV
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Lavoro elementare di espansione}
+
+ed è positivo se il sistema compie lavoro sull’ambiente (espansione, $dV>0$) e negativo se il lavoro è compiuto dall’ambiente sul sistema (compressione, $dV<0$).
+
+\paragraph{Derivazione della formula $\delta L = P\,dV$.}
+
+Consideriamo un gas contenuto in un cilindro dotato di un pistone mobile di area $S$. Se il pistone si sposta di una quantità infinitesima $dh$, il gas esercita su di esso una forza
 
 \[
-\delta L = PdV
+F = P\,S
 \]
 
-E si definisce di segno positivo se al lavoro compiuto dal sistema c’è un aumento di volume, negativo altrimenti (convenzione).
+dove $P$ è la pressione del gas.
 
-In generale, il lavoro fatto (o subito) dal sistema è la somma dei lavori infinitesimi dovuti agli spostamenti di tutte le superfici infinitesime che compongono la superficie $S$ che delimita il volume del sistema, e, per un dato elemento infinitesimo di superficie, di tutti gli spostamenti infinitesimi dell’elemento considerato.
-
-Si può quindi definire formalmente il lavoro in una trasformazione termodinamica finita (che ha uno stato iniziale e uno finale) come
+Il lavoro elementare compiuto dal gas durante questo spostamento è
 
 \[
-L = \int_{V_i}^{V_f} p_edV
+\delta L = F\,dh = P\,S\,dh.
 \]
 
-Sappiamo anche che il lavoro può essere espresso come
+Lo spostamento del pistone comporta una variazione infinitesima di volume pari a
 
 \[
-\delta L = F dh = (PS) dh
+dV = S\,dh.
 \]
 
-ovvero il lavoro è uguale alla pressione per la superficie per lo spostamento infinitesimale.
-
-Lo spostamento infinitesimo $dh$ della superficie mobile comporta una variazione infinitesima di volume pari a
+Sostituendo, si ottiene
 
 \[
-dV = Sdh
+\delta L = P\,dV.
 \]
 
-Sostituendo questa relazione nell’espressione del lavoro elementare, si ottiene
+\paragraph{Forma generale.}
+
+In forma più generale, il lavoro elementare può essere scritto come
 
 \[
-\delta L = \int_S PdSdh = P \int_S dSdsh = PdV
+\delta L = \int_S p_{\text{ext}}\, dS \, dh,
 \]
 
-Questa formula vale per una trasformazione quasi statica che comporti una variazione di volume e viene chiamato \textbf{lavoro di espansione}.
+dove $p_{\text{ext}}$ è la pressione esterna agente su un elemento di superficie $dS$ che si sposta di $dh$ lungo la direzione normale.
+
+Nel caso di una trasformazione quasi-statica:
+\begin{itemize}
+	\item la pressione esterna è uniforme sulla superficie mobile,
+	\item solo la superficie del pistone contribuisce al lavoro,
+	\item lo spostamento $dh$ è lo stesso per ogni punto della superficie.
+\end{itemize}
+
+Pertanto:
+
+\[
+\delta L = \int_S P\, dS\, dh
+= P\,dh \int_S dS
+= P\,S\,dh
+= P\,dV.
+\]
 
 \subsection{Lavoro elementare vs finito}
 
@@ -674,9 +728,12 @@ Esiste una distinzione tra il lavoro elementare, ovvero infinitesimo
 
 e quello finito tra due punti $A, B$
 
-\[
+\begin{equation}
+\boxed{
 L_{AB} = \int_A^B PdV
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Lavoro finito tra due stati}
 
 \subsection{Lavoro dipendente dal percorso}
 
@@ -710,157 +767,128 @@ Nel grafico si vede subito, perché l’aria sottesa alle curve degli spostament
 
 \section{Primo principio della Termodinamica}
 
-Il primo principio della termodinamica è il \textbf{principio di conservazione dell’energia} applicato ai sistemi termodinamici.
+\subsection{Energia interna}
 
-\begin{quote}
-La \textbf{variazione} di \textbf{energia interna} di un sistema è \textbf{uguale} al \textbf{calore scambiato} con l’esterno meno il lavoro compiuto dal sistema sull’esterno.
+Nei sistemi termodinamici, l’energia non è associata soltanto al moto macroscopico o alla posizione del sistema nel suo insieme, ma anche ai moti e alle interazioni \textbf{microscopiche} delle particelle che lo costituiscono.
 
-\[
-dU = \delta Q-\delta L
-\]
-\end{quote}
-
-\subsection{Esperienza di Joule (1849)}
-
-L’esperienza di Joule è un esperimento storico che mostra in modo quantitativo che il \textbf{lavoro meccanico} e il \textbf{calore} sono due modi diversi di trasferire energia, ma sono \textbf{convertibili} e possono quindi essere misurati nelle \textbf{stesse unità}.
-
-\subsubsection*{Apparato sperimentale}
-
-Joule utilizza un \textbf{calorimetro} (un recipiente isolato termicamente, riempito d’acqua) all’interno del quale è immerso un sistema di \textbf{palette} (o un agitatore). Le palette vengono messe in rotazione da un meccanismo collegato a un \textbf{peso} che cade:
-
+Si introduce quindi una grandezza di stato detta \textbf{energia interna}, indicata con $U$, che rappresenta l’energia totale associata allo stato microscopico del sistema. Essa include, ad esempio:
 \begin{itemize}
-	\item il peso, scendendo, perde energia potenziale gravitazionale;
-	\item questa energia viene trasformata in \textbf{lavoro meccanico} che fa ruotare le palette;
-	\item la rotazione genera attrito viscoso nel fluido (acqua), che si traduce in un aumento di temperatura.
+	\item l’energia cinetica di agitazione termica delle particelle;
+	\item l’energia potenziale dovuta alle interazioni microscopiche tra le particelle.
 \end{itemize}
 
-Poiché il calorimetro è (idealmente) isolato, l’aumento di temperatura dell’acqua è attribuibile all’energia fornita tramite il lavoro meccanico.
+L’energia interna è una \textbf{funzione di stato}: il suo valore dipende unicamente dallo stato termodinamico del sistema (cioè dai parametri di stato come $P, V, T, \dots$) e non dal percorso seguito per raggiungerlo.
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.7\textwidth]{images/immagine.png}
-\end{figure}
+\subsubsection*{Motivazione sperimentale}
 
-\subsubsection*{Osservazione fondamentale: lavoro $\leftrightarrow$ calore}
-
-Misurando:
-
-\begin{itemize}
-	\item il \textbf{lavoro totale} compiuto dal peso,
-	\item l’aumento di temperatura dell’acqua e quindi il \textbf{calore assorbito} dal calorimetro,
-\end{itemize}
-
-Joule trova una proporzionalità costante tra lavoro e calore.
-
-Storicamente, il risultato è espresso introducendo l’\textbf{equivalente meccanico della caloria}:
-
-\[
-\frac{L}{Q} = J \simeq 4.186 \ \text{J/cal}
-\]
-
-cioè:
-
-\[
-Q\ (\text{cal}) \;\longrightarrow\; JQ\ (\text{J})
-\]
-
-Questo significa che \textbf{una stessa quantità di energia} può essere contabilizzata come calore o come lavoro, a seconda del processo con cui viene trasferita.
-
-\subsubsection*{Trasformazione ciclica}
-
-L’esperimento viene discusso considerando una \textbf{trasformazione ciclica}, cioè un processo in cui il sistema torna allo stato iniziale.
-
-In una trasformazione ciclica:
-
-\begin{itemize}
-	\item lo stato finale coincide con quello iniziale;
-	\item la variazione di ogni funzione di stato è nulla.
-\end{itemize}
-
-Esprimendo il calore in joule, per ogni trasformazione ciclica vale:
-
-\[
-Q - L = 0
-\]
-
-ovvero:
-
-\[
-\frac{L}{Q} = 1.
-\]
-
-\textbf{In un ciclo, quindi, il lavoro compiuto dal sistema e il calore scambiato si compensano esattamente.}
-
-\section{Energia interna}
-
-\subsection{Introduzione dell’energia interna}
-
-Consideriamo ora due trasformazioni diverse $a$ e $b$ che portano il sistema dallo stesso stato iniziale $A$ allo stesso stato finale $B$.
+Consideriamo due trasformazioni diverse $a$ e $b$ che portano un sistema dallo stesso stato iniziale $A$ allo stesso stato finale $B$.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.7\textwidth]{images/immagine 1.png}
 \end{figure}
 
-Percorrendo la trasformazione $a$ da $A$ a $B$ e tornando indietro con la trasformazione $b$ da $B$ ad $A$, si ottiene una trasformazione ciclica. Per il ciclo vale:
+Percorrendo la trasformazione $a$ da $A$ a $B$ e tornando indietro lungo la trasformazione inversa di $b$, si ottiene una trasformazione ciclica. Per qualunque trasformazione ciclica, il bilancio energetico complessivo deve annullarsi.
 
-\[
-(Q - L)_{\text{ciclo}} = 0.
-\]
-
-Il contributo totale sul ciclo può essere scritto come:
-
-\[
-(Q - L)_a + (Q - L)_{-b} = 0.
-\]
-
-Poiché percorrere una trasformazione al contrario cambia segno a calore e lavoro, si ottiene:
-
+Indicando con $Q$ il calore scambiato e con $L$ il lavoro compiuto dal sistema, per il ciclo vale:
 \[
 (Q - L)_a - (Q - L)_b = 0,
 \]
-
 da cui segue:
-
 \[
 (Q - L)_a = (Q - L)_b.
 \]
 
-Questo risultato mostra che la quantità $Q - L$ \textbf{non dipende dalla trasformazione seguita}, ma solo dagli stati iniziali e finali.
+Questo risultato mostra che la quantità $Q - L$ \textbf{dipende solo dagli stati iniziale e finale}, e non dalla trasformazione seguita. Ciò giustifica l’introduzione di una funzione di stato $U$, tale che:
+\begin{equation}
+\boxed{
+U(B) - U(A) = Q - L.
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Definizione di energia interna}
 
-\subsection{Definizione di energia interna}
+\subsection{Enunciato del primo principio della Termodinamica}
 
-Si introduce quindi una grandezza di stato $U$, detta \textbf{energia interna}, tale che:
+Il \textbf{primo principio della termodinamica} è l’estensione del \textbf{principio di conservazione dell’energia} ai sistemi termodinamici, cioè a sistemi che possono scambiare energia con l’ambiente sotto forma di lavoro e di calore.
 
-\[
-\Delta U = U(B) - U(A) = Q - L.
-\]
+\begin{quote}
+La variazione di energia interna di un sistema è uguale al calore scambiato con l’esterno meno il lavoro compiuto dal sistema sull’esterno:
+\begin{equation}
+\boxed{
+\Delta U = Q - L.
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Primo principio della Termodinamica}
+\end{quote}
 
-In forma differenziale:
-
+In forma differenziale, il primo principio si scrive:
 \[
 dU = \delta Q - \delta L.
 \]
 
-Questa relazione costituisce il \textbf{Primo Principio della Termodinamica}.
+Questa relazione è valida per qualunque trasformazione, sia reversibile sia irreversibile, e indipendentemente dal fatto che essa sia quasi-statica.
 
-Il primo principio della termodinamica estende il \textbf{principio di conservazione dell’energia}, da un sistema meccanico (sottoposto a forze conservative) ad uno termodinamico che viene descritto in uno spazio di parametri termodinamici e che può scambiare anche calore con l’ambiente esterno.
+\subsection{Esperienza di Joule (1849)}
 
-Questo principio, inoltre, dipende unicamente dagli stati iniziali e finali, non dal percorso della trasformazione, e vale anche se \textbf{la trasformazione non è quasi statica né irreversibile}. Nel caso di una trasformazione non quasi-statica, o irreversibile, per calcolare $\Delta U$ in una trasformazione da $A$ a $B$ è sufficiente considerare una qualunque trasformazione reversibile da $A$ a $B$.
+L’esperienza di Joule fornisce una dimostrazione sperimentale fondamentale del primo principio, mostrando che \textbf{lavoro meccanico} e \textbf{calore} sono due modi diversi di trasferire la stessa grandezza fisica: l’energia.
 
-Un’analogia con la meccanica è l’\emph{energia potenziale}: in meccanica, per una forza conservativa (come la gravità), il lavoro dipende solo dagli estremi:
+\subsubsection*{Apparato sperimentale}
 
-\[
-W_{A \rightarrow B} = - \Delta U_{\text{pot}}
-\]
-
-Si può vedere questa cosa come un \textbf{parallelismo} tra meccanica e termodinamica
+Joule utilizza un \textbf{calorimetro} (un recipiente termicamente isolato, riempito d’acqua) all’interno del quale è immerso un sistema di \textbf{palette}. Le palette sono messe in rotazione da un meccanismo collegato a un \textbf{peso} che cade:
 
 \begin{itemize}
-	\item $U$ in termodinamica è come $U_{pot}$ in meccanica: dipende dallo stato e non dal percorso.
-	\item $Q, L$ sono invece il “modo” in cui l’energia viene trasferita lungo il percorso: possono cambiare, ma la variazione della funzione di stato resta la stessa.
+	\item il peso perde energia potenziale gravitazionale;
+	\item tale energia viene trasformata in lavoro meccanico che fa ruotare le palette;
+	\item la rotazione genera attrito viscoso nel fluido, causando un aumento della temperatura dell’acqua.
 \end{itemize}
 
+Poiché il calorimetro è idealmente isolato, l’aumento di temperatura dell’acqua è dovuto esclusivamente al lavoro meccanico compiuto sul sistema.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/immagine.png}
+\end{figure}
+
+\subsubsection*{Equivalenza tra lavoro e calore}
+
+Misurando:
+\begin{itemize}
+	\item il lavoro totale compiuto dal peso;
+	\item il calore assorbito dall’acqua tramite l’aumento di temperatura;
+\end{itemize}
+Joule osserva una proporzionalità costante tra lavoro e calore.
+
+Storicamente, questo risultato è espresso tramite l’\textbf{equivalente meccanico della caloria}:
+\[
+\frac{L}{Q} = J \simeq 4.186 \ \text{J/cal}.
+\]
+
+Questo mostra che lavoro e calore non sono forme diverse di energia, ma \textbf{diversi modi di trasferire energia}.
+
+\subsubsection*{Trasformazioni cicliche}
+
+L’esperimento può essere interpretato come una trasformazione ciclica, nella quale lo stato finale coincide con quello iniziale. In una trasformazione ciclica vale:
+\[
+\Delta U = 0.
+\]
+
+Dal primo principio segue quindi:
+\[
+Q - L = 0,
+\]
+ossia il lavoro totale compiuto dal sistema e il calore totale scambiato si compensano esattamente.
+
+\subsection{Significato fisico}
+
+Il primo principio chiarisce che:
+\begin{itemize}
+	\item l’energia interna è una funzione di stato;
+	\item il calore e il lavoro non sono funzioni di stato, ma dipendono dal percorso;
+	\item ogni variazione di energia interna può essere attribuita a uno scambio di calore, a un lavoro, o a entrambi.
+\end{itemize}
+
+Esiste un chiaro parallelismo con la meccanica: così come l’energia potenziale dipende solo dalla posizione, l’energia interna dipende solo dallo stato termodinamico del sistema, mentre lavoro e calore descrivono il \emph{modo} in cui l’energia viene trasferita durante una trasformazione.
+ 
 \subsection{Casi studio}
 
 Dall’equazione del primo principio della termodinamica
@@ -875,9 +903,12 @@ si possono analizzare alcuni casi limite di particolare interesse.
 
 Se non c’è scambio di calore con l’ambiente $Q = 0$, il primo principio diventa
 
-\[
+\begin{equation}
+\boxed{
 U(B) - U(A) = -L
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Primo principio in trasformazione adiabatica}
 
 In questo caso, la variazione di energia interna è dovuta \textbf{solo al lavoro}:
 
@@ -900,9 +931,12 @@ Si può fare un esempio con una trasformazione
 
 Se il sistema non compie nè subisce lavoro, $L = 0$, il primo principio si riduce a:
 
-\[
+\begin{equation}
+\boxed{
 U(B) - U(A) = Q
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Primo principio in trasformazione senza lavoro}
 
 in questo caso, la variazione di energia interna è dovuta \textbf{solo al calore scambiato}:
 
@@ -955,9 +989,12 @@ si può riscrivere come
 
 Essendo $n, R, V$ costanti, segue che
 
-\[
+\begin{equation}
+\boxed{
 \frac{P}{T} = \text{costante}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Relazione tra pressione e temperatura in trasformazione isocora}
 
 E da questo segue che, in una trasformazione isocora, \textbf{pressione e temperatura sono direttamente proporzionali}.
 
@@ -977,9 +1014,12 @@ PV = nRT
 
 Poiché $T$ è costante, durante la trasformazione si ha
 
-\[
+\begin{equation}
+\boxed{
 P(V) = \frac{nRT}{V}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Relazione tra pressione e volume in trasformazione isoterma}
 
 Per cui la pressione non è costante, ma inversamente proporzionale al volume.
 
@@ -1036,9 +1076,12 @@ Q = L
 
 Pertanto, il calore scambiato in una trasformazione isoterma è
 
-\[
+\begin{equation}
+\boxed{
 Q = nRT \ln \left( \frac{V_{fin}}{V_{in}} \right)
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Calore scambiato in trasformazione isoterma}
 
 \subsection{Energia interna di un corpo solido}
 
@@ -1083,9 +1126,12 @@ dU = mc(T)dT
 
 Integrando tra uno stato iniziale $A$ a una temperatura $T_A$ e uno stato finale $B$ a temperatura $T_B$:
 
-\[
-T(T_B) - U(T_A) = m \int_{T_A}^{T_B} c(T)dT
-\]
+\begin{equation}
+\boxed{
+\Delta U = U(T_B) - U(T_A) = m \int_{T_A}^{T_B} c(T)dT
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Variazione di energia interna di un corpo solido}
 
 Questa è l’espressione \textbf{generale} della variazione di energia interna di un corpo solido.
 
@@ -1129,9 +1175,12 @@ Non c’è nessuno scambio di calore con l’esterno, quindi è una trasformazio
 
 da qui
 
-\[
+\begin{equation}
+\boxed{	
 U_{fin} = U_{in}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Energia interna in espansione libera}
 
 Da questo notiamo che \textbf{l’energia interna del gas non cambia durante l’espansione libera}.
 
