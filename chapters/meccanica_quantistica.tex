@@ -76,7 +76,6 @@ Sostituendo nella relazione precedente si ottiene la legge di Rayleigh--Jeans:
 \varepsilon(\nu)\, d\nu
 = \frac{8\pi \nu^2}{c^3}\, k_B T\, d\nu,
 }
-\qquad \text{(Rayleigh--Jeans, 1900--1905).}
 \end{equation}
 \addcontentsline{equ}{myequations}{Legge di Rayleigh--Jeans per lo spettro di corpo nero}
 
@@ -93,44 +92,573 @@ misurati (ad es.\ Lummer e Pringsheim, 1899).
     \label{fig:confronto_spettri_corpo_nero}
 \end{figure}
 
+\subsection{Catastrofe ultravioletta}
 
-\subsection{Spettro di Planck e superamento della descrizione classica}
+La legge di Rayleigh--Jeans fornisce una buona descrizione dell’emissione alle basse frequenze. Tuttavia, essa prevede che la densità spettrale di energia cresca come $\nu^2$ all’aumentare della frequenza.
 
-Nella descrizione classica dello spettro di corpo nero, la densità spettrale di energia è scritta nella forma
+Di conseguenza, integrando lo spettro su tutte le frequenze, la teoria classica porta a una previsione paradossale: l’energia totale emessa da un corpo nero risulta infinita. In particolare, la divergenza dello spettro alle alte frequenze (o, equivalentemente, alle piccole lunghezze d’onda, nella regione ultravioletta) è in netto contrasto con i risultati sperimentali, che mostrano invece un’emissione finita e un rapido decadimento dell’intensità.
+
+Questo fallimento della fisica classica è noto come \emph{catastrofe ultravioletta}. Esso non rappresenta un semplice disaccordo quantitativo, ma segnala un \textbf{limite concettuale} della descrizione classica, indicando l’inadeguatezza dell’ipotesi di equipartizione dell’energia per i modi del campo elettromagnetico ad alte frequenze.
+
+\section{Lo spettro di Planck}
+
+\subsection{Ipotesi di Planck}
+
+Il fallimento della legge di Rayleigh--Jeans e la conseguente catastrofe ultravioletta indicarono la necessità di rivedere le ipotesi fondamentali della fisica classica. La svolta fu introdotta da Max Planck nel 1900 attraverso un’ipotesi radicalmente nuova sullo scambio di energia tra materia e radiazione elettromagnetica.
+
+Planck postulò che l’energia associata a ciascun modo stazionario del campo elettromagnetico non potesse assumere valori continui, ma solo multipli interi di una quantità elementare proporzionale alla frequenza del modo stesso. In particolare, l’energia di un modo di frequenza $\nu$ può assumere solo i valori
 \[
-\varepsilon(\nu)\, d\nu = \frac{8\pi \nu^2}{c^3}\,\langle E\rangle\, d\nu,
+E_n = n\,h\nu, \qquad n = 0,1,2,\dots
 \]
-dove il fattore $\frac{8\pi \nu^2}{c^3}$ rappresenta il numero di modi (onde stazionarie) del campo elettromagnetico nell’intervallo di frequenze $[\nu,\nu+d\nu]$, mentre $\langle E\rangle$ è l’energia media associata a ciascun modo.
+dove $h$ è la costante di Planck. Questa ipotesi introduce per la prima volta il concetto di quantizzazione dell’energia e segna una rottura netta con la descrizione classica.
 
-Il fallimento della fisica classica non risiede dunque nel conteggio dei modi del campo elettromagnetico, che rimane invariato, bensì nell’espressione dell’energia media $\langle E\rangle$. In ambito classico, applicando il principio di equipartizione dell’energia, si ottiene $\langle E\rangle = k_B T$, il che conduce alla legge di Rayleigh--Jeans e alla divergenza dello spettro alle alte frequenze (catastrofe ultravioletta).
+\subsection{Energia media dei modi del campo elettromagnetico}
 
-La svolta introdotta da Planck consiste in una modifica radicale dell’ipotesi sull’energia dei modi del campo elettromagnetico. In particolare, Planck postulò che l’energia di ciascun modo di frequenza $\nu$ non potesse variare in modo continuo, ma fosse quantizzata secondo la relazione
+A partire dall’ipotesi di quantizzazione dell’energia, il valore medio dell’energia associata a un singolo modo del campo elettromagnetico in equilibrio termico alla temperatura $T$ non è più dato dal principio di equipartizione\footnote{Il principio di equipartizione dell’energia, valido nella fisica classica, assegna a ogni grado di libertà un’energia media pari a $k_B T/2$. Tuttavia, questa ipotesi non tiene conto della quantizzazione dell’energia introdotta da Planck.}. Il risultato ottenuto da Planck è
 \[
-E_n = n\, h \nu, \qquad n = 0,1,2,\dots
+\langle E\rangle = \frac{h\nu}{e^{h\nu/k_B T}-1}.
 \]
-dove $h = 6.626 \times 10^{-34} \, \text{J s}$, oppure in forma ridotta,$ \hbar = \frac{h}{2\pi}$, è la costante di Planck.
 
-Come conseguenza di questa ipotesi, il valore medio dell’energia di un singolo modo del campo elettromagnetico in equilibrio termico alla temperatura $T$ risulta
+Questa espressione mostra che l’energia media di un modo dipende esplicitamente dalla frequenza: i modi ad alta frequenza richiedono una quantità di energia sempre maggiore per essere eccitati e risultano quindi progressivamente meno popolati. È proprio questo meccanismo che elimina la divergenza alle alte frequenze prevista dalla fisica classica.
+
+Nel limite delle basse frequenze, ovvero per $h\nu \ll k_B T$, l’energia media tende al valore classico $\langle E\rangle \to k_B T$, garantendo il recupero del risultato previsto dall’equipartizione dell’energia.
+
+\subsection{Legge di Planck per lo spettro di corpo nero}
+
+La densità spettrale di energia emessa da un corpo nero può essere scritta in forma generale come
 \[
-\langle E\rangle = \frac{h\nu}{e^{h\nu / k_B T} - 1},
+\varepsilon(\nu)\,d\nu = \frac{8\pi \nu^2}{c^3}\,\langle E\rangle\,d\nu,
 \]
-in disaccordo con il principio di equipartizione dell’energia della fisica classica.
+dove il fattore $\frac{8\pi \nu^2}{c^3}$ rappresenta il numero di modi del campo elettromagnetico nell’intervallo di frequenze $[\nu,\nu+d\nu]$.
 
-Sostituendo questa espressione di $\langle E\rangle$ nella formula generale per la densità spettrale, si ottiene lo \emph{spettro di Planck}:
-\begin{equation}
-\boxed{
+Sostituendo l’espressione quantistica dell’energia media, si ottiene la legge di Planck per lo spettro di emissione del corpo nero:
+\[
 \varepsilon(\nu)\, d\nu
 = \frac{8\pi \nu^2}{c^3}\,
-\frac{h\nu}{e^{h\nu / k_B T} - 1}\, d\nu.
+\frac{h\nu}{e^{h\nu/k_B T}-1}\, d\nu.
+\]
+
+Questa legge riproduce correttamente l’andamento sperimentale dello spettro di emissione a tutte le frequenze, mostrando un massimo a una frequenza caratteristica che dipende dalla temperatura e un rapido decadimento alle alte frequenze.
+
+\subsection{Limite classico dello spettro di Planck}
+
+Nel limite formale $h\nu \ll k_B T$, l’espressione dell’energia media può essere approssimata al primo ordine, ottenendo
+\[
+\langle E\rangle \simeq k_B T.
+\]
+In questo regime, la legge di Planck si approssima alla legge di Rayleigh--Jeans, mostrando come la descrizione classica venga recuperata come limite della teoria quantistica.
+
+Questo risultato evidenzia un principio fondamentale della fisica moderna: una nuova teoria non sostituisce completamente quella precedente, ma ne generalizza i risultati, rendendoli validi in un dominio più ampio.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/confronto_spettri_corpo_nero_completo.png}
+    \caption{Confronto tra le principali leggi per lo spettro di emissione del corpo nero. 
+    La legge di Rayleigh--Jeans (linea tratteggiata) descrive correttamente il comportamento a basse frequenze ma diverge alle alte frequenze; 
+    la legge di Wien (linea puntinata) approssima correttamente il comportamento alle alte frequenze; 
+    la legge di Planck (linea continua) fornisce una descrizione completa e in accordo con i dati sperimentali per tutte le frequenze, come mostrato dalle misure di Lummer e Pringsheim (1899).}
+    \label{fig:confronto_planck_wien_rayleigh}
+\end{figure}
+
+\section{Irraggiamento e leggi fondamentali del corpo nero}
+
+L’\emph{irraggiamento} è il processo mediante il quale un corpo emette energia sotto forma di radiazione elettromagnetica. Ogni corpo a temperatura diversa dallo zero assoluto irradia energia, e l’energia emessa dipende dallo stato termico del sistema e dalle proprietà della radiazione elettromagnetica.
+
+Nel caso ideale di un corpo nero, l’irraggiamento è completamente determinato dalla temperatura: lo spettro di Planck descrive infatti come l’energia irradiata sia distribuita tra le diverse frequenze o lunghezze d’onda. A partire da questa descrizione spettrale è possibile ricavare alcune leggi fondamentali dell’irraggiamento termico, che mettono in relazione l’emissione complessiva e le caratteristiche dello spettro con la temperatura del corpo.
+
+\subsection{Potere emissivo del corpo nero}
+
+Si definisce \emph{potere emissivo spettrale} del corpo nero la quantità di energia elettromagnetica emessa per unità di tempo, per unità di area e per unità di lunghezza d’onda:
+\[
+\varepsilon(\lambda) = \frac{dE}{dt\, dA\, d\lambda}.
+\]
+Questa funzione descrive come l’energia irradiata sia distribuita in funzione della lunghezza d’onda.
+
+Il potere emissivo spettrale è dato dalla legge di Planck, che mostra come l’emissione dipenda fortemente dalla temperatura: all’aumentare di $T$, l’intensità dell’emissione cresce e il massimo dello spettro si sposta verso lunghezze d’onda più piccole. La distribuzione spettrale è universale e non dipende dalla natura del materiale, ma solo dalla temperatura del corpo nero.
+
+\vspace{0.5em}
+\noindent
+Il \emph{potere emissivo totale} si ottiene integrando il potere emissivo spettrale su tutte le lunghezze d’onda:
+\[
+\varepsilon = \int_0^{\infty} \varepsilon(\lambda)\, d\lambda.
+\]
+
+\subsection{Legge di Wien}
+
+Una delle conseguenze della legge di Planck riguarda la posizione del massimo dello spettro di emissione. La \emph{legge di spostamento di Wien} afferma che la lunghezza d’onda $\lambda_{\max}$ alla quale l’emissione è massima è inversamente proporzionale alla temperatura assoluta del corpo:
+\[
+\lambda_{\max} = \frac{\alpha}{T},
+\qquad
+\alpha \simeq 2.9 \times 10^{-3}\,\text{m\,K}.
+\]
+
+Questa legge mostra che, aumentando la temperatura, il massimo dello spettro si sposta verso lunghezze d’onda sempre più piccole. Per questo motivo, corpi relativamente freddi emettono prevalentemente nell’infrarosso, mentre corpi molto caldi possono emettere in modo significativo nella regione visibile o ultravioletta.
+
+\subsection{Legge di Stefan--Boltzmann}
+
+Integrando la legge di Planck su tutte le lunghezze d’onda, si ottiene una relazione semplice per il potere emissivo totale di un corpo nero. La \emph{legge di Stefan--Boltzmann} afferma che l’energia emessa per unità di tempo e di area è proporzionale alla quarta potenza della temperatura assoluta:
+\[
+\varepsilon = \sigma T^4,
+\]
+dove $\sigma$ è la costante di Stefan--Boltzmann,
+\[
+\sigma = 5.67 \times 10^{-8}\,\text{W m}^{-2}\text{K}^{-4}.
+\]
+
+Questa legge evidenzia la forte dipendenza dell’irraggiamento dalla temperatura: anche piccoli aumenti di $T$ producono un incremento significativo dell’energia totale emessa. Essa trova applicazione in numerosi ambiti, dall’astrofisica allo studio della radiazione termica dei corpi macroscopici.
+
+\section{La crisi del modello atomico classico}
+Il modello atomico classico, sviluppato alla fine del XIX secolo da Thomson, si basava sull’idea che gli atomi fossero costituiti da particelle cariche (elettroni e nuclei) che interagivano tramite forze elettromagnetiche. Tuttavia, numerosi esperimenti condotti all’inizio del XX secolo misero in luce delle discrepanze tra le previsioni del modello classico e i dati sperimentali, indicando la necessità di una revisione della teoria atomica.
+
+\subsection{Modello atomico di Rutherford}
+
+L’interpretazione degli esperimenti di diffusione di particelle $\alpha$ su sottili lamine metalliche portò Rutherford a proporre un modello atomico profondamente diverso da quello di Thomson. La presenza di rare ma significative grandi deviazioni delle particelle incidenti suggerisce infatti che la carica positiva (e quasi tutta la massa) dell’atomo non sia distribuita uniformemente, ma concentrata in una regione molto piccola.
+
+Nel \emph{modello di Rutherford} l’atomo è costituito da:
+\begin{itemize}
+    \item un \emph{nucleo} centrale, molto piccolo e massiccio, che contiene la carica positiva;
+    \item elettroni di carica negativa che si muovono attorno al nucleo.
+\end{itemize}
+Le dimensioni tipiche delle orbite elettroniche risultano molto maggiori di quelle del nucleo: l’atomo è quindi in gran parte spazio vuoto, mentre la regione nucleare occupa una frazione estremamente ridotta del volume totale.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/rutherford_scattering.png}
+    \caption{Esperimento di Rutherford (a sinistra) e confronto tra il modello di Thomson e il modello nucleare (a destra): la presenza di grandi deviazioni nella diffusione di particelle $\alpha$ è spiegata dalla concentrazione della carica positiva in un piccolo nucleo centrale.}
+    \label{fig:rutherford_scattering}
+\end{figure}
+
+\subsection{Instabilità dell’atomo classico}
+
+Nonostante il successo nel descrivere la struttura ``nucleare'' dell’atomo, il modello di Rutherford presenta una difficoltà concettuale decisiva se interpretato con la fisica classica. Un elettrone che orbita attorno al nucleo è infatti una carica accelerata; secondo l’elettromagnetismo classico, una carica accelerata emette radiazione elettromagnetica e quindi perde energia.
+
+Di conseguenza, un elettrone in orbita dovrebbe irradiare continuamente energia, rallentare e spiraleggiare verso il nucleo, collassando in tempi estremamente brevi. Questo comportamento è in palese contraddizione con l’evidenza sperimentale: gli atomi osservati in natura sono stabili. La stabilità dell’atomo non è dunque spiegabile all’interno del quadro classico.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/rutherford_instability.png}
+    \caption{Difficoltà del modello classico: un elettrone in orbita è una carica accelerata e dovrebbe emettere radiazione elettromagnetica, perdendo energia e rendendo l’atomo instabile, in contrasto con l’osservazione.}
+    \label{fig:rutherford_instability}
+\end{figure}
+
+\subsection{Spettri di emissione e assorbimento}
+
+Un’ulteriore evidenza contro una descrizione puramente classica dell’atomo è fornita dagli \emph{spettri di emissione e assorbimento}. Se l’energia dell’elettrone potesse variare in modo continuo, ci si aspetterebbe un’emissione continua di radiazione. Al contrario, gli atomi (in particolare l’idrogeno) mostrano spettri composti da \emph{righe discrete}, corrispondenti a frequenze ben determinate.
+
+Questa discrepanza indica che i processi di emissione e assorbimento non avvengono in modo continuo, ma coinvolgono variazioni di energia ben definite. La presenza di righe spettrali discrete suggerisce quindi che l’energia del sistema atomico assuma soltanto determinati valori, anticipando l’idea di \emph{livelli energetici quantizzati}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/spettri_idrogeno.png}
+    \caption{Spettri di emissione e assorbimento dell’idrogeno: l’energia scambiata con la radiazione elettromagnetica non è continua, ma concentrata in righe a lunghezze d’onda ben definite.}
+    \label{fig:spettri_idrogeno}
+\end{figure}
+
+
+\section{Il modello atomico di Bohr}
+
+\subsection{Postulati del modello di Bohr}
+
+Per risolvere le difficoltà del modello di Rutherford, Bohr introdusse un modello in cui alcune ipotesi classiche vengono abbandonate e sostituite da postulati di natura quantistica. L’idea centrale è che non tutte le orbite elettroniche siano fisicamente ammissibili: l’elettrone può trovarsi solo in determinati \emph{stati stazionari}.
+
+In particolare, il modello si fonda su due affermazioni chiave:
+\begin{itemize}
+    \item esistono orbite (stati) stazionarie in cui l’elettrone può muoversi attorno al nucleo senza irradiare energia;
+    \item l’emissione o l’assorbimento di radiazione avviene solo quando l’elettrone passa da uno stato stazionario a un altro.
+\end{itemize}
+
+\subsection{Quantizzazione dei livelli energetici}
+
+Nel modello di Bohr, gli stati stazionari sono caratterizzati da energie discrete. Per l’atomo di idrogeno si ottiene una sequenza di livelli energetici indicizzati da un numero quantico principale $n=1,2,3,\dots$, con energia
+\[
+E_n = -\frac{E_H}{2}\,\frac{1}{n^2},
+\]
+dove $E_H$ è una costante caratteristica dell’idrogeno (nelle slide indicata come $E_H \simeq 27.2\ \text{eV}$).
+
+Le transizioni tra livelli energetici spiegano naturalmente la presenza di righe discrete negli spettri: quando l’elettrone passa da uno stato iniziale $i$ a uno stato finale $j$, l’energia scambiata con la radiazione elettromagnetica è
+\[
+h f = E_i - E_j,
+\]
+dove $f$ è la frequenza del fotone emesso (o assorbito).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/bohr_levels.png}
+    \caption{Modello di Bohr: l’elettrone può occupare solo livelli energetici discreti indicizzati da $n$. Le righe spettrali corrispondono a transizioni tra livelli, con energia del fotone $h f = E_i - E_j$.}
+    \label{fig:bohr_levels}
+\end{figure}
+
+\subsection{Stabilità dell’atomo di idrogeno}
+
+Il modello di Bohr fornisce una spiegazione qualitativa della stabilità dell’atomo: lo stato fondamentale ($n=1$) è lo stato a energia più bassa e l’elettrone non può perdere energia in modo continuo, perché non esistono stati consentiti a energia inferiore. In questo modo viene evitato il collasso previsto dalla fisica classica.
+
+Inoltre, il modello collega direttamente la struttura discreta dei livelli energetici con gli spettri atomici: l’emissione e l’assorbimento avvengono solo tramite transizioni tra stati consentiti, producendo righe a frequenze ben definite, in accordo con l’osservazione sperimentale.
+
+\section{Dualità onda-particella}
+
+Una delle teorie che ha portato alla nascita della meccanica quantistica è la teoria della dualità onda-particella, che descrive come le particelle microscopiche possano manifestare sia proprietà di particelle che di onde, a seconda del contesto sperimentale.
+
+\subsection{Ipotesi di de Broglie}
+Louis de Broglie propose che ogni particella materiale, come un elettrone, possiede una natura ondulatoria associata. Secondo de Broglie, la lunghezza d'onda $\lambda$ associata a una particella di massa $m$ e velocità $v$ è data dalla relazione:
+\[
+\lambda = \frac{h}{mv},
+\]
+dove $h$ è la costante di Planck. Questa ipotesi suggerisce che le particelle materiali possano comportarsi come onde, con una lunghezza d'onda inversamente proporzionale alla loro quantità di moto.
+
+\subsection{Interpretazione ondulatoria e funzione d’onda}
+
+L’ipotesi di de Broglie fornisce una chiave di lettura profonda della quantizzazione introdotta dal modello di Bohr. Le orbite permesse dell’elettrone possono essere interpretate come quelle per cui l’onda di de Broglie associata alla particella forma un’onda stazionaria lungo la circonferenza dell’orbita. In questo modo, la quantizzazione non è più imposta artificialmente, ma emerge come conseguenza di una condizione di interferenza costruttiva.
+
+\paragraph{Condizione di quantizzazione delle orbite.}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/de_broglie_orbita.png}
+    \caption{Interpretazione ondulatoria delle orbite di Bohr in termini di onde stazionarie di de Broglie. Nel caso (a) la lunghezza $L$ della circonferenza dell’orbita non è un multiplo intero della lunghezza d’onda $\lambda_a$ associata all’elettrone: l’onda non si richiude su sé stessa e non può formare un’onda stazionaria. Nel caso (b), invece, $L = n\lambda_b$ e l’onda si richiude su sé stessa, dando luogo a un’onda stazionaria. Solo in questa condizione sono permesse orbite stabili, in accordo con la quantizzazione introdotta dal modello di Bohr.}
+    \label{fig:de_broglie_orbita}
+\end{figure}
+
+Perché l’onda di de Broglie formi un’onda stazionaria lungo un’orbita circolare di raggio $r$, è necessario che la circonferenza sia un multiplo intero della lunghezza d’onda:
+\[2\pi r = n \lambda, \qquad n = 1,2,3,\dots\]
+Sostituendo la relazione di de Broglie, si ottiene:
+\[2\pi r = n \frac{h}{mv} \implies mvr = n \frac{h}{2\pi} = n\hbar,\]
+che coincide con la condizione di quantizzazione del momento angolare proposta da Bohr.
+
+\subsection{Interpretazione probabilistica della funzione d’onda}
+
+Nel quadro moderno della meccanica quantistica, tuttavia, l’onda di de Broglie non viene interpretata come un’onda materiale, bensì come un’onda di probabilità. Le proprietà ondulatorie delle particelle si manifestano nei risultati delle misure, attraverso fenomeni come interferenza e diffrazione.
+
+Questa interpretazione conduce all’introduzione della funzione d’onda $\psi(x,t)$, che sostituisce il concetto classico di traiettoria. Il significato fisico della funzione d’onda è fornito dalla relazione
+\[
+P(x,t) = |\psi(x,t)|^2,
+\]
+che rappresenta la densità di probabilità di trovare la particella nella posizione $x$ al tempo $t$.
+
+La descrizione della dinamica quantistica di un sistema è quindi ricondotta allo studio dell’evoluzione temporale della funzione d’onda, che sarà governata dall’equazione di Schrödinger.
+
+\subsection{Esperimento della doppia fenditura}
+
+L’esperimento della doppia fenditura è uno dei risultati più importanti della fisica moderna perché mostra in modo diretto la natura \emph{ondulatoria} della radiazione (e, nel caso quantistico, anche della materia). L’apparato sperimentale è concettualmente semplice: una sorgente invia particelle (o luce) verso una barriera con due fenditure, indicate con $F_1$ e $F_2$, e un rivelatore (schermo) registra gli arrivi in funzione della coordinata trasversale $x$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/doppia_fenditura_setup_raggi.png}
+    \caption{Schema dell’esperimento della doppia fenditura: una sorgente invia particelle/radiazione verso due fenditure $F_1$ e $F_2$; sullo schermo si registra la distribuzione degli impatti in funzione della coordinata trasversale $x$.}
+    \label{fig:doppia_fenditura_setup}
+\end{figure}
+
+\paragraph{Una sola fenditura aperta.}
+Se si lascia aperta soltanto la fenditura $F_1$ (e si chiude $F_2$), sullo schermo si osserva una distribuzione di arrivi $P_1(x)$ (o intensità $I_1(x)$ nel caso della luce). Analogamente, aprendo soltanto $F_2$ si ottiene una distribuzione $P_2(x)$.
+In entrambi i casi il segnale è concentrato in una regione limitata dello schermo: la fenditura impone una \emph{diffrazione}, e quindi la distribuzione non è un singolo punto ma una curva allargata.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.82\textwidth]{images/doppia_fenditura_singole.png}
+    \caption{Distribuzioni sullo schermo quando è aperta una sola fenditura: con sola $F_1$ aperta si ottiene $P_1(x)$ (o $I_1(x)$), con sola $F_2$ aperta si ottiene $P_2(x)$ (o $I_2(x)$).}
+    \label{fig:doppia_fenditura_singole}
+\end{figure}
+
+\paragraph{Entrambe le fenditure aperte: interferenza.}
+Quando si aprono contemporaneamente $F_1$ e $F_2$, la previsione \emph{classica particellare} ingenua suggerirebbe di ottenere semplicemente la somma delle due distribuzioni:
+\[
+P_{12}(x)\stackrel{?}{=}P_1(x)+P_2(x).
+\]
+In realtà, nel caso ondulatorio (luce) e nel caso quantistico (elettroni, fotoni, \dots) si osserva una distribuzione sullo schermo caratterizzata da massimi e minimi alternati: un \emph{pattern di interferenza}. L’idea fisica è che al punto $x$ sullo schermo contribuiscono \emph{due ampiezze} associate ai due cammini (attraverso $F_1$ e attraverso $F_2$), e sono le ampiezze che si sommano; la probabilità (o intensità) è poi legata al modulo quadro della somma.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.78\textwidth]{images/doppia_fenditura_interferenza_schema.png}
+    \caption{Schema ondulatorio della doppia fenditura: le onde emergenti da $F_1$ e $F_2$ si sovrappongono e producono sullo schermo massimi e minimi di interferenza, cioè una distribuzione $I_{12}(x)$ (o $P_{12}(x)$) non ottenibile come semplice somma dei contributi separati.}
+    \label{fig:doppia_fenditura_interferenza}
+\end{figure}
+
+Per rendere esplicito questo punto, introduciamo due ampiezze complesse $\psi_1(x)$ e $\psi_2(x)$ associate ai due cammini. Con entrambe le fenditure aperte:
+\[
+\psi_{12}(x)=\psi_1(x)+\psi_2(x),
+\qquad
+P_{12}(x)=|\psi_{12}(x)|^2.
+\]
+Sviluppando si ottiene
+\[
+P_{12}(x)=|\psi_1(x)|^2+|\psi_2(x)|^2+2\,\Re\!\big(\psi_1(x)\psi_2^*(x)\big),
+\]
+dove l’ultimo termine è il \emph{termine di interferenza}, responsabile dei massimi e minimi osservati sullo schermo.
+
+\paragraph{Dualità onda-particella.}
+L’aspetto più sorprendente emerge quando la sorgente emette particelle una alla volta: gli impatti arrivano puntiformi (comportamento da \emph{particella}), ma l’insieme degli eventi, accumulandosi, ricostruisce gradualmente la figura di interferenza (comportamento da \emph{onda}). Questo è uno dei modi più chiari per visualizzare la dualità onda-particella e anticipare l’interpretazione probabilistica della funzione d’onda.
+
+\section{Quantoni e cambio di paradigma}
+Nell'esperimento della doppia fenditura la luce e le particelle mostrano un comportamento duale, manifestando sia proprietà di onde che di particelle. Questo suggerisce che si possa parlare, come visto prima, di \textbf{dualismo onda-particella}.
+
+Al giorno d'oggi questo concetto è più che altro un retaggio storico. Infatti i termini ''particella'' e ''onda'' sono mutuati dalla nostra esperienza quotidiana con il mondo macroscopico, ma non è detto che questi abbiano rilevanza nel mondo microscopico.
+
+Sarebbe più opportuno affermare che le particelle elementari si comportano come \textbf{quantoni}, ovvero entità che non sono né onde né particelle ma possiedono proprietà di entrambi i tipi a seconda del contesto sperimentale, che evolvono in accordo alle leggi della meccanica quantistica.
+
+\paragraph{Cambio di paradigma.} 
+La meccanica quantistica rappresenta un cambiamento nel modo in cui comprendiamo la natura della materia e dell'energia. Non si tratta più di descrivere le particelle come oggetti puntiformi che seguono traiettorie definite, né come onde continue che si propagano nello spazio.
+
+Infatti, quando si scrive la funzione d'onda di un sistema quantistico, non si fanno ipotesi sulla natura corpuscolare e ondulatoria del sistema stessa. Ci si limita a definire una funzione $y$, la quale ci dà la probabilità che il sistema si trovi in una certa posizione ad un certo tempo.
+
+\section{Equazione di Schrödinger}
+
+\subsection{Meccanica ondulatoria}
+Con la formulazione di Schrödinger nasce la \emph{meccanica ondulatoria}, un approccio alla meccanica quantistica in cui lo stato fisico di un sistema non è descritto da traiettorie ben definite, ma da una funzione d’onda.  
+L’idea centrale è che il comportamento ondulatorio introdotto da de Broglie non sia solo un artificio interpretativo, ma costituisca il fondamento dinamico dei sistemi microscopici. Tutte le informazioni osservabili sul sistema sono codificate nella funzione d’onda, la cui evoluzione è governata da un’equazione differenziale fondamentale: l’equazione di Schrödinger.
+
+\subsection{Equazione di Schrödinger dipendente dal tempo}
+La dinamica di un sistema quantistico è descritta dall’equazione di Schrödinger dipendente dal tempo. Tutte le informazioni sullo stato del sistema sono contenute nella funzione d’onda $\psi(x,t)$, la cui evoluzione temporale è governata dall’equazione di Schrödinger:
+\begin{equation}
+\boxed{
+i \hbar \frac{\partial \psi(x,t)}{\partial t}
+= \hat{H} \psi(x,t)
+=
+- \frac{\hbar^2}{2m} \Delta \psi(x,t) + V(x) \psi(x,t).
 }
 \end{equation}
-\addcontentsline{equ}{myequations}{Spettro di Planck per il corpo nero}
+\addcontentsline{equ}{myequations}{Equazione di Schrödinger}
 
-Lo spettro di Planck descrive correttamente l’andamento sperimentale dell’emissione di un corpo nero a tutte le frequenze: esso coincide con la legge classica di Rayleigh--Jeans nel limite delle basse frequenze, mentre alle alte frequenze presenta un decadimento esponenziale che elimina la divergenza ultravioletta.
+dove $\hat{H}$ è l’\emph{operatore hamiltoniano}, che rappresenta l’energia totale del sistema, composta dalla parte cinetica (primo termine a destra) e dalla parte potenziale (secondo termine a destra).
 
-Nel limite formale $h \to 0$, oppure per $h\nu \ll k_B T$, l’energia media tende al valore classico,
+L’equazione di Schrödinger descrive quindi l’evoluzione temporale dello stato quantistico del sistema. \emph{Mutatis mutandis}, essa può essere vista come l’analogo quantistico della seconda legge della dinamica nella meccanica classica: una volta assegnate le condizioni iniziali, l’equazione determina completamente l’evoluzione del sistema nel tempo.
+
+\subsection{Equazione di Schrödinger stazionaria}
+Nel caso di potenziali indipendenti dal tempo, il problema può essere semplificato cercando soluzioni in cui la dipendenza temporale e spaziale si separano. In questo contesto si introduce l’equazione di Schrödinger stazionaria, che nel lavoro originale di Schrödinger assume la forma:
 \[
-\langle E\rangle \to k_B T,
+\nabla^2 \psi + \frac{8\pi^2 m}{h^2}(E - V)\psi = 0.
 \]
-e la descrizione di Planck si riduce a quella prevista dalla fisica classica. Questo mostra come la meccanica quantistica generalizzi la teoria classica, recuperandone i risultati nel limite opportuno.
+Questa equazione consente di studiare i cosiddetti \emph{stati stazionari}, per i quali le grandezze osservabili non dipendono esplicitamente dal tempo. È in questa formulazione che emerge in modo naturale la quantizzazione dell’energia.
 
+\subsection{Autovalori energetici}
+La risoluzione dell’equazione di Schrödinger stazionaria porta a un problema agli autovalori: solo per determinati valori dell’energia $E$ esistono soluzioni fisicamente accettabili della funzione d’onda.  
+Nel caso dell’atomo di idrogeno, assumendo il potenziale coulombiano
+\[
+V(r) = -\frac{e^2}{r},
+\]
+si ottiene uno spettro discreto di autovalori energetici:
+\[
+E_n = -\frac{2\pi^2 m e^4}{h^2 n^2}, \qquad n=1,2,3,\dots
+\]
+in accordo con i risultati del modello di Bohr.  
+In questo modo, Schrödinger riformula il problema dello spettro atomico come un problema matematico di autovalori per operatori differenziali, fornendo una descrizione coerente e generale della struttura energetica degli atomi.
+
+\subsection{Funzione d’onda della particella libera}
+
+Consideriamo il caso di una \emph{particella libera}, ovvero un sistema quantistico soggetto a potenziale nullo, $V(x)=0$. In questo caso l’equazione di Schrödinger dipendente dal tempo si semplifica e ammette soluzioni di tipo ondulatorio.
+
+Le soluzioni elementari sono onde piane, caratterizzate da una ben definita lunghezza d’onda $\lambda$ e frequenza $f$, legate ai parametri ondulatori
+\[
+\lambda = \frac{2\pi}{k}, 
+\qquad 
+f = \frac{\omega}{2\pi},
+\]
+e associate a una quantità di moto e a un’energia ben definite. Tuttavia, una singola onda piana si estende su tutto lo spazio e \emph{non descrive una particella localizzata}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/sovrapposizione_onde_piane.png}
+    \caption{Sovrapposizione di onde piane $\psi_i(x,t)$ con diversi numeri d’onda $k_i$ e frequenze $\omega_i$. 
+    La funzione d’onda totale $\psi(x,t)$ è ottenuta come somma delle singole componenti ondulatorie.}
+    \label{fig:sovrapposizione-onde}
+\end{figure}
+
+Per rappresentare una particella libera con una posizione approssimativamente definita, si introduce una \emph{sovrapposizione di onde piane} con diversi numeri d’onda $k_i$ e frequenze $\omega_i$. La funzione d’onda può quindi essere scritta come
+\[
+\psi(x,t) = \sum_i A_i \cos\!\left(k_i x + \omega_i t\right),
+\]
+dove i coefficienti $A_i$ determinano il contributo delle singole componenti.
+
+
+Questa sovrapposizione dà origine a un \emph{pacchetto d’onda}, cioè a una funzione d’onda localizzata nello spazio. La funzione $\psi(x,t)$ oscilla rapidamente, ma il suo modulo quadro
+\[
+P(x,t) = |\psi(x,t)|^2
+\]
+definisce una distribuzione di probabilità concentrata attorno a una certa posizione $x_0$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/pacchetto_onda.png}
+    \caption{Pacchetto d’onda associato a una particella libera. 
+    In (a) sono mostrate la parte reale e immaginaria della funzione d’onda $\psi(x,t^\ast)$; 
+    in (b) il modulo quadro $P(x,t^\ast)=|\psi(x,t^\ast)|^2$, che rappresenta la densità di probabilità di trovare la particella in posizione $x$.}
+    \label{fig:pacchetto-onda}
+\end{figure}
+
+Nel tempo, il pacchetto d’onda evolve: il massimo della probabilità si sposta, seguendo il moto medio della particella, mentre il pacchetto tende ad allargarsi. Questo comportamento riflette il carattere intrinsecamente ondulatorio e non deterministico della descrizione quantistica, anche nel caso più semplice di una particella libera.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/evoluzione_pacchetto.png}
+    \caption{Evoluzione temporale della densità di probabilità $P(x,t)$ per una particella libera. 
+    Il massimo della distribuzione si sposta nel tempo, mentre il pacchetto tende ad allargarsi, riflettendo la dispersione del pacchetto d’onda.}
+    \label{fig:evoluzione-pacchetto}
+\end{figure}
+
+\section{Relazione di indeterminazione di Heisenberg}
+
+\subsection{Principio di indeterminazione}
+Uno dei risultati più profondi e sorprendenti della meccanica quantistica è il \emph{principio di indeterminazione di Heisenberg}, che stabilisce limiti fondamentali alla precisione con cui alcune coppie di grandezze fisiche possono essere misurate simultaneamente.
+
+\textit{NB: Il termine ``principio'' ha valenza puramente storica: le relazioni di indeterminazione possono essere dedotte rigorosamente dai postulati della Meccanica Quantistica.}
+
+\paragraph{Principio di Heisenberg in forma forte.}
+
+\begin{quote}
+Un sistema quantistico \textbf{non possiede} posizione e impulso
+($p = mv$) definiti con infinita precisione.
+Le incertezze associate alla misura della posizione e dell’impulso
+soddisfano la relazione
+\[
+\Delta x \, \Delta p \ge \hbar ,
+\]
+dove $\hbar = h/2\pi$ è la costante di Planck ridotta.
+\end{quote}
+
+L’impossibilità di conoscere simultaneamente posizione e impulso
+non è legata al disturbo arrecato dai processi di misura,
+ma alla \textbf{natura dello stato quantistico}.
+
+\subsection{Interpretazione fisica}
+
+La relazione di indeterminazione non implica che le misure siano
+imprecise per limiti sperimentali, bensì che lo stato quantistico
+non può essere caratterizzato simultaneamente da valori arbitrariamente
+ben definiti di posizione e impulso.
+
+In particolare:
+\begin{itemize}
+    \item uno stato con impulso ben definito risulta completamente
+    delocalizzato nello spazio;
+    \item uno stato fortemente localizzato nello spazio presenta
+    un’elevata incertezza sull’impulso.
+\end{itemize}
+
+Questo comportamento è una conseguenza diretta della descrizione ondulatoria
+della materia.
+
+\subsection{Esempi}
+
+\paragraph{Sistema macroscopico.}
+Consideriamo un pallone da calcio di massa
+$m = 450\,\mathrm{g}$ che si muove con velocità
+$v = 28.5\,\mathrm{m/s}$.
+Assumendo un’incertezza sull’impulso
+$\Delta p \sim 1\,\mathrm{kg\,m/s}$, dalla relazione di Heisenberg si ottiene
+\[
+\Delta x \sim 6.6 \times 10^{-34}\,\mathrm{m},
+\]
+un valore enormemente più piccolo delle dimensioni del corpo.
+Per sistemi macroscopici, l’indeterminazione è quindi del tutto trascurabile.
+
+\paragraph{Sistema microscopico.}
+Per un elettrone nell’atomo di idrogeno,
+con massa $m \simeq 9 \times 10^{-31}\,\mathrm{kg}$ e velocità tipica
+$v \simeq c/137$, assumendo un’incertezza relativa
+$\Delta v \sim 0.1\,v$, si ottiene
+\[
+\Delta x \sim 3.4 \times 10^{-9}\,\mathrm{m},
+\]
+dell’ordine delle dimensioni atomiche.
+In questo caso l’indeterminazione è fisicamente rilevante e non può essere ignorata.
+
+\subsection{Conseguenze del principio di indeterminazione}
+
+Per i corpi macroscopici l’indeterminazione sulla posizione è molto più piccola
+delle dimensioni caratteristiche del sistema, per cui la descrizione classica
+rimane valida come approssimazione.
+
+Per le particelle microscopiche, invece, l’indeterminazione è comparabile con
+le scale fisiche del sistema: la nozione classica di traiettoria perde significato
+e deve essere sostituita da una descrizione probabilistica basata sulla funzione
+d’onda.
+
+\section{Stati quantistici e spazio degli stati}
+
+In Meccanica Quantistica lo stato di un sistema fisico è descritto da un oggetto matematico astratto, detto \emph{stato quantistico}, che contiene tutte le informazioni fisiche accessibili sul sistema.  
+Gli stati quantistici non sono grandezze osservabili direttamente, ma permettono di calcolare le probabilità dei risultati delle misure.
+
+\subsection{Combinazione lineare e sovrapposizione}
+
+Così come le onde classiche possono sovrapporsi e interferire, anche gli stati quantistici obbediscono al principio di sovrapposizione.  
+Se $\lvert \vec{p}_1 \rangle$, $\lvert \vec{p}_2 \rangle$, $\lvert \vec{p}_3 \rangle$ rappresentano stati con impulso ben definito, uno stato quantistico generale può essere scritto come combinazione lineare:
+\[
+\lvert \psi \rangle = c_1 \lvert \vec{p}_1 \rangle + c_2 \lvert \vec{p}_2 \rangle + c_3 \lvert \vec{p}_3 \rangle.
+\]
+
+Lo stato $\lvert \psi \rangle$ non possiede un valore definito dell’impulso, pur essendo costruito a partire da stati che lo hanno.  
+La sovrapposizione è una proprietà intrinseca degli stati quantistici e non va interpretata come un’ignoranza sulle proprietà del sistema.
+
+\subsection{Normalizzazione degli stati}
+
+I coefficienti complessi $c_i$ determinano le probabilità dei possibili risultati di una misura.  
+La probabilità di misurare l’impulso $\vec{p}_i$ nello stato $\lvert \psi \rangle$ è data da
+\[
+P(\vec{p}_i) = \lvert \langle \vec{p}_i \vert \psi \rangle \rvert^2 = \lvert c_i \rvert^2.
+\]
+
+Poiché la probabilità totale deve essere unitaria, i coefficienti devono soddisfare la condizione di normalizzazione:
+\[
+\lvert c_1 \rvert^2 + \lvert c_2 \rvert^2 + \lvert c_3 \rvert^2 = 1.
+\]
+
+La normalizzazione garantisce la coerenza probabilistica della descrizione quantistica.
+
+\subsection{Qubit e sfera di Bloch}
+
+Un caso particolarmente importante è quello di un sistema a due stati, detto \emph{qubit}.  
+Uno stato di qubit può essere scritto come
+\[
+\lvert \psi \rangle = \cos\!\left(\frac{\theta}{2}\right)\lvert 0 \rangle
++ e^{i\phi}\sin\!\left(\frac{\theta}{2}\right)\lvert 1 \rangle.
+\]
+
+Le probabilità di misurare il sistema negli stati $\lvert 0 \rangle$ e $\lvert 1 \rangle$ sono:
+\[
+P_0 = \cos^2\!\left(\frac{\theta}{2}\right),
+\qquad
+P_1 = \sin^2\!\left(\frac{\theta}{2}\right),
+\qquad
+P_0 + P_1 = 1.
+\]
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/sfera_bloch.png}
+    \caption{Rappresentazione della sfera di Bloch per un qubit. Ogni punto sulla superficie della sfera corrisponde a uno stato quantistico puro, descritto dagli angoli $\theta$ e $\phi$.}
+    \label{fig:sfera-bloch}
+\end{figure}
+
+Lo stato del qubit può essere rappresentato geometricamente mediante la \emph{sfera di Bloch}, in cui ogni punto sulla superficie della sfera corrisponde a uno stato quantistico puro.  
+Gli angoli $\theta$ e $\phi$ individuano univocamente lo stato del sistema.
+
+\subsection{Caratteristiche degli stati quantistici}
+
+Gli stati quantistici presentano caratteristiche concettualmente nuove rispetto alla Meccanica Classica:
+\begin{itemize}
+    \item \textbf{Indeterminismo}: i risultati delle misure non sono determinati, ma descritti da leggi probabilistiche.
+    \item \textbf{Indistinguibilità delle particelle identiche}: particelle dello stesso tipo non sono etichettabili individualmente.
+    \item \textbf{Spin}: grandezza intrinseca puramente quantistica, priva di analogo classico.
+    \item \textbf{Bosoni e fermioni}: classificazione delle particelle in base alle proprietà di simmetria dello stato quantistico.
+\end{itemize}
+
+Gli stati quantistici non sono né onde né particelle nel senso classico, ma \emph{quanton}: entità descritte da funzioni d’onda che evolvono secondo le leggi della Meccanica Quantistica.  
+La funzione d’onda non rappresenta una traiettoria, ma una distribuzione di probabilità:
+\[
+P(x,t) = \lvert \psi(x,t) \rvert^2.
+\]
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/quanton.png}
+    \caption{Illustrazione concettuale della \emph{dualità onda--particella} e del “cambio di paradigma” introdotto dalla Meccanica Quantistica. 
+    Un’unica sorgente (al centro) illumina due schermi: a sinistra, una fenditura produce una figura \emph{diffusa} tipica di un fenomeno ondulatorio (diffrazione), mentre a destra un foro circolare genera una macchia più \emph{localizzata}, che richiama un comportamento corpuscolare. 
+    L’immagine non suggerisce che il sistema sia “davvero” un’onda o “davvero” una particella, ma che la descrizione in termini classici dipende dal contesto sperimentale e da quali grandezze vengono rese accessibili alla misura. 
+    Nel formalismo quantistico ciò si traduce nell’idea che lo stato del sistema è descritto da una funzione d’onda $\psi(x,t)$ (o, in generale, da un vettore di stato), la cui evoluzione è governata dall’equazione di Schrödinger; le predizioni riguardano invece le probabilità dei risultati, date da $P(x,t)=|\psi(x,t)|^2$. 
+    La presenza di figure “ondulatorie” o “puntiformi” è quindi compatibile con un’unica descrizione unitaria: il sistema è un \emph{quantone}, caratterizzato da sovrapposizione e interferenza, e soggetto a limiti intrinseci di determinazione (Heisenberg) che impediscono di attribuire simultaneamente proprietà classiche (come posizione e impulso) con precisione arbitraria.}
+    \label{fig:quanton}
+\end{figure}
+
+\section*{Riferimenti}
+I riferimenti per questo capitolo sono:
+\begin{itemize}
+    \item Materiale visto a lezione.
+    \item Materiale generato da ChatGPT 5.2 (openAI) per chiarimenti e spiegazioni aggiuntive.
+\end{itemize}
