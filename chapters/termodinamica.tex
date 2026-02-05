@@ -1264,9 +1264,12 @@ In una trasformazione isocora, il calore scambiato serve interamente a variare l
 
 Questo porta alla \textbf{definizione di calore molare a volume costante} $C_V$:
 
-\[
+\begin{equation}
+\boxed{
 C_V \equiv \frac{1}{n} \left( \frac{\delta Q}{dT} \right)_V
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Calore molare a volume costante}
 
 \subsubsection*{Energia interna del gas perfetto}
 
@@ -1346,11 +1349,15 @@ PdV = nRdT
 
 Sostituendo nell’equazione di prima
 
-
-\begin{align*}
-nC_P dT &= nRdT + nC_VdT &\text{dividendo per } ndT \\
-C_P &= C_V+R
-\end{align*}
+\begin{equation}
+\boxed{%
+\begin{aligned}
+nC_P\,dT &= nR\,dT + nC_V\,dT && \text{(dividendo per $n\,dT$)}\\
+C_P      &= C_V + R
+\end{aligned}%
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{\protect\numberline{\theequation} Relazione tra calori molari a pressione e volume costante}
 
 
 Questa relazione dice che a pressione costante, il calore fornito al gas serve a due cose:
@@ -1434,17 +1441,23 @@ Integrando tra stato iniziale e finale
 
 Da cui si tira fuori che
 
-\[
+\begin{equation}
+\boxed{
 TV^{\gamma -1} = \text{costante}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Relazione tra temperatura e volume in trasformazione adiabatica reversibile}
 
 \subsubsection*{Forme equivalenti}
 
 Utilizzando l’equazione di stato dei gas perfetti, sostituendo $T \propto  V^{-(\gamma-1)}$ si ottiene
 
-\[
+\begin{equation}
+\boxed{
 PV^{\gamma} = \text{costante}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Relazione tra pressione e volume in trasformazione adiabatica reversibile}
 
 \subsubsection*{Lavoro e variazioni di temperatura}
 
@@ -1498,7 +1511,7 @@ Solo dal primo principio sembrerebbe possibile:
 
 \textbf{In natura, tuttavia, questa simmetria non si verifica}. Il secondo principio della termodinamica introduce questi \textbf{limiti}.
 
-\subsection{Enuncialo di Clausius}
+\subsection{Enunciato di Clausius}
 
 \begin{quote}
 È impossibile realizzare una trasformazione termodinamica il cui unico risultato sia il trasferimento di calore da un sistema a temperatura inferiore a uno a temperatura superiore.
@@ -1606,9 +1619,12 @@ Nel caso di due sorgenti
 
 Il calore totale scambiato sul ciclo è
 
-\[
+\begin{equation}
+\boxed{
 Q = Q_C + Q_F
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Calore totale scambiato in ciclo}
 
 Dato che $Q_F < 0$ il lavoro compiuto dalla macchina risulta
 
@@ -1620,9 +1636,12 @@ L = Q_C + Q_F = |Q_C| - |Q_F|
 
 Il \textbf{rendimento} $\eta$ di una macchina termica è definito come rapporto tra il lavoro utile prodotto e il calore assorbito dalla sorgente calda
 
-\[
+\begin{equation}
+\boxed{
 \eta = \frac{L}{|Q_C|}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Definizione di rendimento di una macchina termica}
 
 Sostituendo $L = |Q_C| - |Q_F|$:
 
@@ -1633,9 +1652,12 @@ L
 
 Per il \textbf{ciclo di Carnot}, si può dimostrare che il rendimento non dipende dal gas usato né dai dettagli del ciclo, ma solo dalle \textbf{temperature} delle due sorgenti:
 
-\[
+\begin{equation}
+\boxed{
 \eta = 1 - \frac{|Q_F|}{|Q_C|} = 1 - \frac{T_F}{T_C}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Rendimento del ciclo di Carnot}
 
 Quindi, fissate $T_C$ e $T_F$, il ciclo di Carnot rappresenta una macchina termica reversibile con rendimento determinato unicamente dal rapporto tra le temperature.
 
@@ -1649,10 +1671,13 @@ Per una qualunque \textbf{macchina termica} che lavori tra due sorgenti a temper
 
 Ovvero:
 
-\[
+\begin{equation}
+\boxed{
 \eta = 1- \frac{|Q_F|}{|Q_C|}
- \leq 1 - \frac{T_F}{T_C}
-\]
+\leq 1 - \frac{T_F}{T_C}
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Teorema di Carnot}
 
 L’uguaglianza in questa equazione, vale se e solo se la macchina è \textbf{reversibile}. Questo significa che nessuna macchina reale può avere un rendimento superiore a quello di Carnot e che il ciclo di Carnot rappresenta un \textbf{limite teorico superiore} al rendimento.
 
@@ -1674,9 +1699,12 @@ Tenendo conto dei segni dei calori ($Q_C > 0, Q_F < 0$), questa relazione può e
 
 In forma più generale, se una trasformazione ciclica coinvolge più sorgenti termiche
 
-\[
+\begin{equation}
+\boxed{
 \sum_{i=C, F} \frac{Q_I}{T_i} \le 0
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Disuguaglianza di Clausius}
 
 Questa relazione è nota come \textbf{disuguaglianza di Clausius} ed è un \textbf{enunciato alternativo del secondo principio della Termodinamica}.
 
@@ -1684,9 +1712,12 @@ Questa relazione è nota come \textbf{disuguaglianza di Clausius} ed è un \text
 
 Si può dimostrare che la disuguaglianza di Clausius vale per \textbf{ogni ciclo termodinamico}. Nel caso in cui il ciclo approssimato come una successione di scambi di calore $\delta Q$ con sorgenti alla temperatura $T$, la disuguaglianza si può scrivere in forma integrale:
 
-\[
+\begin{equation}
+\boxed{
 \sum_{i=C, F} \frac{Q_I}{T_i} \le 0 \Rightarrow \oint \frac{dQ}{T} \le 0
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Disuguaglianza di Clausius in forma integrale}
 
 \subsection{Cicli reversibili}
 
@@ -1701,7 +1732,7 @@ Una conseguenza di questa equazione è il fatto che, scegliendo un ciclo formato
 \[
 \int_A^B \frac{\delta Q_{rev}}{T} + \int_B^A \frac{\delta Q_{rev}}{T}
  = 0 \Rightarrow
-\int_A^B \frac{\delta Q_{rev}}{T} = \int_B^A \frac{\delta Q_{rev}}{T}
+\int_A^B \frac{\delta Q_{rev}}{T} = - \int_B^A \frac{\delta Q_{rev}}{T}
 \]
 
 Questo implica che l’integrale tra due stati, lungo un percorso reversibile è \textbf{indipendente dalla trasformazione seguita} (dipende solo dagli estremi).
@@ -1716,9 +1747,12 @@ Poiché l’integrale
 
 dipende solo dagli stati $A$  e $B$, si introduce una nuova funzione di stato $S$, chiamata \textbf{entropia}, definita tramite:
 
-\[
+\begin{equation}
+\boxed{
 \int_A^B \frac{\delta Q_{rev}}{T} = S(B) - S(A)
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Definizione di entropia}
 
 Quindi l’entropia è una grandezza che:
 
@@ -1895,11 +1929,14 @@ Integrando tra $T_A$ e $T_B$:
 S(B) - S(A) = mc \int_{T_A}^{T_B} \frac{dT}{T} = mc \ln \left( \frac{T_B}{T_A} \right)
 \]
 
-Da questo segue che l’entropia di un solito può essere scritta come
+Da questo segue che l’entropia di un solido può essere scritta come
 
-\[
+\begin{equation}
+\boxed{
 S(T) = mc \ln T + k
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Entropia di un corpo solido}
 
 dove $k$ è una costante.
 
@@ -1988,18 +2025,18 @@ S(B)-S(A)
   + nR \ln\!\left(\frac{V_B}{V_A}\right).
 \end{align*}
 
-
-
-
 Quindi  possiamo dire che la variazione di entropia in un gas perfetto, in un qualsiasi tipo di trasformazione, è
 
-\[
+\begin{equation}
+\boxed{
 \Delta S
 =
 \underbrace{nC_V \ln\!\left(\frac{T_B}{T_A}\right)}_{\text{entropia di riscaldamento}}
 \;+\;
 \overbrace{nR \ln\!\left(\frac{V_B}{V_A}\right)}^{\text{entropia di espansione}}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Variazione di entropia in un gas perfetto}
 
 \section{Entropia e Disordine}
 
@@ -2062,12 +2099,12 @@ Se il setto viene aperto le molecole possono muoversi liberamente e diventano po
 	\item Una molecola a destra e l’altra a sinistra ($N_S = 1, N_D = 1)$
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=0.6\textwidth]{images/image 6.png}
+		\includegraphics[width=0.5\textwidth]{images/image 6.png}
 	\end{figure}
 	\item Entrambe le molecole a destra ($N_S = 0, N_D = 2)$
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=0.6\textwidth]{images/image 7.png}
+		\includegraphics[width=0.5\textwidth]{images/image 7.png}
 	\end{figure}
 \end{enumerate}
 
@@ -2095,12 +2132,12 @@ Se aumentiamo il numero totale di molecole:
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{images/image 8.png}
+	\includegraphics[width=0.5\textwidth]{images/image 8.png}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{images/image 9.png}
+	\includegraphics[width=0.5\textwidth]{images/image 9.png}
 \end{figure}
 
 Da questo esperimento possiamo capire che, nonostante a livello micrscopico le leggi della Natura non abbiano traccia di irreversibilità, e infatti non vietano configurazioni asimmetriche, le configurazioni con una più alta W sono quelle più probabili; queste ultime diventano altamente più probabili quando il numero di molecole diventa molto grande, e le fluttuazioni a configurazioni con W più piccola (asimmetriche) diventano molto poco probabili.
@@ -2113,9 +2150,12 @@ Da questo esperimento possiamo capire che, nonostante a livello micrscopico le l
 
 Per descrivere in modo più generale il legame tra entropia e probabilità, non è sufficiente limitarsi ai soli \textbf{sistemi isolati}. In questi casi entra in gioco una formulazione più ampia dell’entropia nota come \textbf{equazione di Gibbs}:
 
-\[
+\begin{equation}
+\boxed{
 S = - k_B \sum_{i=1}^W p_i \ln p_i
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Equazione di Gibbs}
 
 dove $p_i$ è la probabilità che il sistema si trovi nel microstato $i$.
 
@@ -2133,9 +2173,12 @@ e la formula di Gibbs si riduce alla relazione di Boltzmann $S = k_B \ln W$. Que
 
 Per un sistema termodinamico in equilibrio a temperatura $T$, le probabilità dei microstati non sono uguali ma seguono la \textbf{distribuzione di Boltzmann}:
 
-\[
+\begin{equation}
+\boxed{
 p_i = Ae^{-E_i/(k_BT)}
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Distribuzione di Boltzmann}
 
 dove $E_i$ è l’energia del microstato e $A$ è una costante di normalizzazione.
 
@@ -2154,15 +2197,18 @@ Da qui possiamo anche capire perché il termine disordine è solo una metafora, 
 
 Un’altra formulazione molto simile è \textbf{l’entropia di Shannon}
 
-\[
+\begin{equation}
+\boxed{
 S = - \alpha k_B \sum_i p_i \log_2 p_i
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Entropia di Shannon}
 
 La differenza principale evidenziata è che qui compare il logaritmo in base $2$, e un fattore $\alpha$ che normalizza.
 
 L’entropia di Shannon quantifica la \textbf{mancanza di informazione} che abbiamo su un sistema. In particolare, più grande è l’entropia di Shannon meno sappiamo \textbf{quale microstato} stia realizzando il macrostato osservato. Quindi se un macrostato può essere realizzato da molti microstati con probabilità distribuite, la nostra descrizione “macroscopica” contiene \textbf{meno informazioni} sul dettaglio microscopico.
 
-\subsection{Entropia e buchi neri (non per orale)}
+\subsection{Approfondimento: Entropia dei buchi neri}
 
 Un \textbf{buco nero} è un corpo celeste con un \textbf{campo gravitazionale estremamente intenso}, tanto che la sua \textbf{velocità di fuga} supera la velocità della luce. Per questo, ciò che entra in una certa regione dello spazio non può più uscire né comunicare con l’esterno.
 
@@ -2200,9 +2246,12 @@ S_{\text{buco nero}} = \frac{A}{4}, \quad A = 4\pi r^2_{sh}
 
 Sperimentalmente si osserva che, in \textbf{processi isotermi} che coinvolgono solo \textbf{stati di equilibrio interno} (cioè descrivibili completamente dai parametri termodinamici $P, T, \dots$ e non dipendenti dalla “storia” del materiale), la variazione di entropia tende a zero quando la temperatura tende allo \textbf{zero assoluto}:
 
-\[
+\begin{equation}
+\boxed{
 \lim_{T \rightarrow 0}\Delta S = 0
-\]
+}
+\end{equation}
+\addcontentsline{equ}{myequations}{Variazione di entropia allo zero assoluto}
 
 Questa osservazione viene elevata a principio fondamentale e viene chiamato \textbf{Terzo principio della Termodinamica}:
 
