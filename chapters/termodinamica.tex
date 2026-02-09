@@ -1761,58 +1761,100 @@ Quindi l’entropia è una grandezza che:
 	\item è definita a \textbf{meno di una costante additiva}, analogamente all'energia potenziale ed all'energia interna.
 \end{itemize}
 
-\subsection{Entropia e Secondo principio della Termodinamica}
+\subsection{Entropia e secondo principio della Termodinamica}
 
-Considerando due stati $A$ e $B$ collegati da:
+Consideriamo due stati di equilibrio $A$ e $B$ di un sistema termodinamico.
+Supponiamo che essi siano collegati da due trasformazioni diverse:
 
 \begin{itemize}
-	\item un percorso \textbf{irreversibile} $I$ $(A \rightarrow B)$;
-	\item un percorso \textbf{reversibile} $II$ $(B \rightarrow A)$.
+    \item una trasformazione \textbf{irreversibile} $I$ che porta il sistema da $A$ a $B$;
+    \item una trasformazione \textbf{reversibile} $II$ che riporta il sistema da $B$ ad $A$.
 \end{itemize}
 
-Applicando la disuguaglianza di Clausius:
+In questo modo si costruisce un \textbf{ciclo chiuso} $A \to B \to A$,
+costituito da un tratto irreversibile seguito da uno reversibile.
+Questo artificio è necessario perché la disuguaglianza di Clausius
+si applica a trasformazioni cicliche.
 
+\subsubsection*{Disuguaglianza di Clausius}
+
+Per qualunque ciclo termodinamico vale la disuguaglianza di Clausius:
 \[
-\oint \frac{\delta Q}{T} = \int_I \frac{\delta Q_{irr}}{T} + \int_{II} \frac{\delta Q_{rev}}{T}
+\oint \frac{\delta Q}{T} \le 0.
 \]
 
-Poiché il tratto $II$ va da $B$ ad $A$,
-
+Nel nostro caso, l’integrale ciclico può essere scomposto nella somma
+degli integrali lungo i due tratti del ciclo:
 \[
-\int_{II} \frac{\delta Q_{rev}}{T}
- = - \int_A^B \frac{\delta Q_{rev}}{T}
+\oint \frac{\delta Q}{T}
+=
+\int_I \frac{\delta Q_{\text{irr}}}{T}
++
+\int_{II} \frac{\delta Q_{\text{rev}}}{T}.
 \]
 
-ma per definizione di entropia lungo un percorso reversibile:
-
+Il tratto $II$ è una trasformazione reversibile che va da $B$ ad $A$;
+invertendo gli estremi di integrazione si ottiene:
 \[
-\int_A^B \frac{\delta Q_{rev}}{T} = S(B) - S(A)
+\int_{II} \frac{\delta Q_{\text{rev}}}{T}
+=
+- \int_A^B \frac{\delta Q_{\text{rev}}}{T}.
 \]
 
-Quindi
-
+Per definizione di entropia, lungo una trasformazione reversibile vale:
 \[
-\int_{II} \frac{\delta Q_{rev}}{T} - (S(B) - S(A)) \le 0
+\int_A^B \frac{\delta Q_{\text{rev}}}{T}
+=
+S(B) - S(A).
 \]
 
-da cui segue la relazione
-
+Pertanto:
 \[
-\int_A^B \frac{\delta Q_{irr}}{T}
- \le S(B) - S(A) = \Delta S
+\int_{II} \frac{\delta Q_{\text{rev}}}{T}
+=
+- \bigl[ S(B) - S(A) \bigr].
 \]
 
-Questa equazione dice che la variazione di entropia tra due stati è sempre \textbf{maggiore o uguale} all’integrale calcolato lungo un percorso irreversibile.
-
-\subsubsection*{Nota: trasformazione adiabatica}
-
-Nel caso di una trasformazione adiabatica, allora $\delta Q_{irr} = 0$, quindi
-
+Sostituendo questa espressione nella disuguaglianza di Clausius si ottiene:
 \[
-0 \le \Delta S \quad \Rightarrow \quad \Delta S_{\text{adiabatica}} \ge 0
+\int_I \frac{\delta Q_{\text{irr}}}{T}
+-
+\bigl[ S(B) - S(A) \bigr]
+\le 0.
 \]
 
-\emph{NB: Vale solo se la trasformazione è reversibile.}
+Riordinando i termini segue la relazione fondamentale:
+\[
+\int_A^B \frac{\delta Q_{\text{irr}}}{T}
+\le
+S(B) - S(A)
+\equiv \Delta S.
+\]
+
+Questa disuguaglianza afferma che la variazione di entropia tra due stati
+dipende solo dagli stati iniziale e finale, mentre l’integrale
+$\int \delta Q / T$ calcolato lungo un percorso irreversibile
+è sempre minore o uguale a $\Delta S$.
+L’uguaglianza vale solo nel caso di trasformazioni reversibili.
+
+\subsubsection*{Caso particolare: trasformazione adiabatica}
+
+Nel caso di una trasformazione adiabatica si ha:
+\[
+\delta Q_{\text{irr}} = 0,
+\]
+da cui segue immediatamente:
+\[
+0 \le \Delta S
+\quad \Rightarrow \quad
+\Delta S_{\text{adiabatica}} \ge 0.
+\]
+
+In particolare:
+\begin{itemize}
+    \item per un’adiabatica \textbf{reversibile} vale $\Delta S = 0$;
+    \item per un’adiabatica \textbf{irreversibile} vale $\Delta S > 0$.
+\end{itemize}
 
 \subsection{Secondo Principio espresso in termini di Entropia}
 
