@@ -502,19 +502,29 @@ che è l’equazione del \textbf{moto armonico semplice}.
 
 \subsection{Soluzione dell’equazione del moto}
 
-Poiché il moto è oscillatorio, cerchiamo una soluzione del tipo:
+Poiché l’equazione del moto è lineare e descrive un moto oscillatorio, si cerca una soluzione armonica del tipo
 \[
-\theta(t) = A \cos(\omega t + \varphi).
+\theta(t) = A \cos(\omega t + \varphi),
 \]
-Derivando due volte rispetto al tempo:
+dove \(A\) è l’ampiezza dell’oscillazione, \(\omega\) la pulsazione e \(\varphi\) una costante di fase.
+
+Derivando due volte rispetto al tempo si ottiene
 \[
-\frac{d^2 \theta}{dt^2} = -\omega^2 A \cos(\omega t + \varphi).
+\frac{d^2 \theta}{dt^2}
+= -\omega^2 A \cos(\omega t + \varphi).
 \]
-Sostituendo nell’equazione del moto si ottiene:
+
+Sostituendo \(\theta(t)\) e la sua derivata seconda nell’equazione del moto,
 \[
--\omega^2 A \cos(\omega t + \varphi) + \frac{g}{\ell} A \cos(\omega t + \varphi) = 0,
+\ddot{\theta} + \frac{g}{\ell}\theta = 0,
 \]
-da cui segue la condizione:
+si ricava
+\[
+-\omega^2 A \cos(\omega t + \varphi)
++ \frac{g}{\ell} A \cos(\omega t + \varphi) = 0.
+\]
+
+Affinché questa equazione sia soddisfatta per ogni istante di tempo \(t\), e per soluzioni non banali (\(A \neq 0\)), deve annullarsi il coefficiente del termine oscillante. Si ottiene quindi la condizione
 \begin{equation}
 \boxed{
 \omega = \sqrt{\frac{g}{\ell}}.
@@ -522,11 +532,11 @@ da cui segue la condizione:
 \end{equation}
 \addcontentsline{equ}{myequations}{Pulsazione del pendolo semplice}
 
-La pulsazione $\omega$ determina il periodo del moto:
+La pulsazione \(\omega\) determina il periodo del moto oscillatorio, che risulta
 \[
-T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{\ell}{g}}.
+T = \frac{2\pi}{\omega}
+= 2\pi\sqrt{\frac{\ell}{g}}.
 \]
-
 
 \paragraph{Condizioni iniziali diverse.}
 Consideriamo ora il caso in cui il pendolo venga lasciato partire dalla posizione di equilibrio, $\theta(0) = 0$, con velocità angolare iniziale nota. Partiamo dalla soluzione generale:
